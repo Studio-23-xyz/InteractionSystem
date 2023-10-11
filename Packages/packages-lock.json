@@ -11,18 +11,18 @@
       "hash": "23b7697b33f2725562ce77f61fd82a0ffbde0051"
     },
     "com.cysharp.unitask": {
-      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "version": "2.4.1",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "cfe509a55602ba5be6df7fa0468b10298b8a053d"
+      "url": "https://package.openupm.com"
     },
     "com.textus-games.serialized-reference-ui": {
-      "version": "https://github.com/TextusGames/UnitySerializedReferenceUI.git",
+      "version": "1.0.0",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "51aff6062610296c86f739a3e093c29d08388a95"
+      "url": "https://package.openupm.com"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",

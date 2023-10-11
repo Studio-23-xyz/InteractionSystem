@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "com.bdeshi.helpers": "https://github.com/BDeshiDev/BDeshiHelpers.git#upm",
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-    "com.textus-games.serialized-reference-ui": "https://github.com/TextusGames/UnitySerializedReferenceUI.git",
+    "com.cysharp.unitask": "2.4.1",
+    "com.textus-games.serialized-reference-ui": "1.0.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.cinemachine": "2.9.5",
     "com.unity.collab-proxy": "2.0.7",
@@ -44,5 +44,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp.unitask",
+        "com.textus-games.serialized-reference-ui"
+      ]
+    }
+  ]
 }
