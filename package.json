@@ -33,7 +33,7 @@
       {
         "displayName": "Functional Example",
         "description": "A scene containing example implementations of InteractableBase classes and nested interactions. Be sure to install DOTWEEN to run the samples.",
-        "path": "Samples~/InteractionSystem23_Demo1"
+        "path": "Samples~/InteractionSystem23/demo1"
       }
     ],  
   "repository": {

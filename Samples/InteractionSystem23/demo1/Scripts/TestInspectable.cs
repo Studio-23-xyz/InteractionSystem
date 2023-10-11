@@ -19,7 +19,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
             
         }
 
-        protected override void HandleInteractionInitialize()
+        protected override void HandleInteractionStarted()
         {
             _collider.gameObject.SetActive(false);
             _inspectionTarget.gameObject.SetActive(false);

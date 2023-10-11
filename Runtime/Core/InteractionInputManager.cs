@@ -16,7 +16,9 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         public Vector2 InspectionMoveInput => _inspectionMoveInput;
         [SerializeField]private float _inspectionZoomInput;
         public float InspectionZoomInput => _inspectionZoomInput;
-        
+
+        #region Input Action Ref
+
         [SerializeField] private InputActionReference _inspectDragDeltaAction;
         [SerializeField] private InputActionReference _inspectAction;
         [SerializeField] private InputActionReference _inspectDragAction;
@@ -26,8 +28,12 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         [SerializeField] private InputActionReference _inspectMoveAction;
         [SerializeField] private InputActionReference _inspectZoomAction;
         [SerializeField] private InputActionReference _inspectResetAction;
-        [SerializeField] InputActionReference  _debug1Action;
-        
+        [SerializeField] private InputActionReference _debug1Action;
+
+        #endregion
+
+        #region Buttons
+
         public List<InputButtonSlot> Buttons;
         public InputButtonSlot InspectButton { get;  private set;}
         public InputButtonSlot InspectionDragButton { get; private set; }
@@ -36,7 +42,9 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         public InputButtonSlot InteractCancelButton { get; private set; }
         public InputButtonSlot InspectResetButton { get; private set; }
         public InputButtonSlot Debug1Button { get; private set; }
+        
 
+        #endregion
         protected override void initialize()
         {
             Buttons = new List<InputButtonSlot>();
@@ -49,11 +57,39 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             Debug1Button = new InputButtonSlot("Debug1Button");
         }
 
-        public static Vector3 ConvertVecCamRelative(Camera cam, Vector3 dir)
+        private void OnZoomCancelled(InputAction.CallbackContext obj)
         {
-            return Quaternion.AngleAxis(cam.transform.rotation.eulerAngles.y, Vector3.up) * dir;
+            _inspectionZoomInput = 0;
         }
 
+        private void OnZoomPerformed(InputAction.CallbackContext obj)
+        {
+            _inspectionZoomInput = obj.ReadValue<float>();
+        }
+
+        private void OnMoveCancelled(InputAction.CallbackContext obj)
+        {
+            _inspectionMoveInput = Vector2.zero;
+        }
+
+        private void OnMovePerformed(InputAction.CallbackContext obj)
+        {
+            _inspectionMoveInput = obj.ReadValue<Vector2>();
+        }
+
+
+
+        #region Binding Events
+        void Bind(InputButtonSlot slot, InputActionReference action)
+        {
+            if(action == null)
+            {
+                Debug.LogWarning("action null for button " + slot.buttonName);
+                return;
+            }
+            slot.bind(action);
+            Buttons.Add(slot);
+        }
         void OnEnable()
         {
             BindAll();
@@ -85,38 +121,6 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             _inspectDragDeltaAction.action.performed += OnLookPerformed;
             _inspectDragDeltaAction.action.canceled += OnLookCancelled;
         }
-
-        private void OnZoomCancelled(InputAction.CallbackContext obj)
-        {
-            _inspectionZoomInput = 0;
-        }
-
-        private void OnZoomPerformed(InputAction.CallbackContext obj)
-        {
-            _inspectionZoomInput = obj.ReadValue<float>();
-        }
-
-        private void OnMoveCancelled(InputAction.CallbackContext obj)
-        {
-            _inspectionMoveInput = Vector2.zero;
-        }
-
-        private void OnMovePerformed(InputAction.CallbackContext obj)
-        {
-            _inspectionMoveInput = obj.ReadValue<Vector2>();
-        }
-
-        void Bind(InputButtonSlot slot, InputActionReference action)
-        {
-            if(action == null)
-            {
-                Debug.LogWarning("action null");
-                return;
-            }
-            slot.bind(action);
-            Buttons.Add(slot);
-        }
-        
         void OnDisable()
         {
             UnBindAll();
@@ -158,5 +162,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
                 inputButtonSlot.cleanup();
             }
         }
+
+        #endregion
     }
 }

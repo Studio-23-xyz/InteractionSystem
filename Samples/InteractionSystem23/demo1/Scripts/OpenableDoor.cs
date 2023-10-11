@@ -12,18 +12,12 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         [FormerlySerializedAs("doorAnimTime")] public float _doorAnimTime = 1.2f;
         [FormerlySerializedAs("doorObject")] public GameObject _doorObject;
         private Vector3 _closedEulerAngles;
-        private Vector3 _opendedEulerAngles;
+        private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
-        protected  void Awake()
-        {
-            _closedEulerAngles = _doorObject.transform.localRotation.eulerAngles;
-            _opendedEulerAngles = _closedEulerAngles + Vector3.up * _doorOpenAngle;
-        }
-        
         
         protected override async UniTask DoOpenInteraction(CancellationToken token)
         {
-            await AnimateDoor(_opendedEulerAngles)
+            await AnimateDoor(_openedEulerAngles)
                 .WithCancellation(token);
         }
         
@@ -36,7 +30,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         public override void SnapToOpenState()
         {
             base.SnapToOpenState();
-            _doorObject.transform.localRotation = Quaternion.Euler(_opendedEulerAngles);
+            _doorObject.transform.localRotation = Quaternion.Euler(_openedEulerAngles);
         }
         
         public override void SnapToClosedState()
@@ -47,7 +41,9 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 
         protected override void Initialize()
         {
-            
+            _closedEulerAngles = _doorObject.transform.localRotation.eulerAngles;
+            _openedEulerAngles = _closedEulerAngles + Vector3.up * _doorOpenAngle;
+            base.Initialize();
         }
 
         public override string GetPromptSuffix()
