@@ -29,7 +29,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 
         public override void SnapToDeactivatedState()
         {
-            _doorObject.transform.rotation = Quaternion.Euler(_openedEulerAngles);
+            _doorObject.transform.rotation = Quaternion.Euler(_closedEulerAngles);
         }
 
         protected override void HandleInteractionStarted()
