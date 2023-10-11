@@ -1,0 +1,49 @@
+{
+    "name": "com.studio23.ss2.interactionsystem23",
+    "version": "1.0.0",
+    "displayName": "Interaction System",
+    "description": "An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interaction",
+    "unity": "2022.3",
+    "unityRelease": "9f1",
+    "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
+    "changelogUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
+    "licensesUrl": "https://opensource.org/license/mit/",
+    "scopedRegistries":  [
+      {
+        "name": "Studio 23",
+        "url": "https://package.openupm.com",
+        "scopes": [
+          "com.studio23.ss2"
+        ]
+      }], 
+    "dependencies": {
+        "com.bdeshi.helpers": "https://github.com/BDeshiDev/BDeshiHelpers.git#upm",
+        "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+        "com.textus-games.serialized-reference-ui": "https://github.com/TextusGames/UnitySerializedReferenceUI.git",
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.render-pipelines.high-definition": "14.0.8",
+        "com.unity.textmeshpro": "3.0.6"
+   },
+   "keywords": [
+      "Interaction",
+      "Interaction System",
+      "System"
+    ],
+  "samples": [
+      {
+        "displayName": "Functional Example",
+        "description": "A scene containing example implementations of InteractableBase classes and nested interactions. Be sure to install DOTWEEN to run the samples.",
+        "path": "Samples~/InteractionSystem23_Demo1"
+      }
+    ],  
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Studio-23-xyz/interactionsystem23.git"    
+    },
+    "license": "MIT",  
+    "author": {
+      "name": "Studio 23",
+      "email": "contact@studio-23.xyz",
+      "url": "https://studio-23.xyz"
+    }
+  }
