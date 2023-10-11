@@ -1,5 +1,5 @@
 # InteractionSystem23
 ## Add via giturl
 ```
-https://github.com/BDeshiDev/InteractionSystem23.git#upm
+https://github.com/Studio-23-xyz/InteractionSystem23.git#upm
 ```
