@@ -10,7 +10,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
     public abstract class InstantSwitch : TogglableBase
     {
         
-        protected override void HandleInteractionInitialize()
+        protected override void HandleInteractionStarted()
         {
             
         }

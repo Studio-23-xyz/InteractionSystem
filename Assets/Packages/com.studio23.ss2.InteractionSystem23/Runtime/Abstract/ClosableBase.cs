@@ -14,12 +14,12 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         public string _objectName ="Only Closable";
 
         protected abstract UniTask DoCloseInteraction(CancellationToken token);
-        [FormerlySerializedAs("onClosed")] [FormerlySerializedAs("OnClosed")] public UnityEvent _onClosed;
-        [FormerlySerializedAs("canBeInterrupted")] [SerializeField] private bool _canBeInterrupted = false;
+        public UnityEvent OnClosed;
+        [SerializeField] private bool _canBeInterrupted = false;
         public override bool CanBeInterrupted => _canBeInterrupted;
         public override InputButtonSlot InputButton => InteractionInputManager.Instance.ToggleButton;
         
-        protected override void HandleInteractionInitialize()
+        protected override void HandleInteractionStarted()
         {
             
         }
@@ -37,7 +37,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         protected override void HandleInteractionCompleted()
         {
             _isOpen = false;
-            _onClosed.Invoke();
+            OnClosed.Invoke();
         }
 
         public virtual void SnapToOpenState()
@@ -49,7 +49,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         public virtual void SnapToClosedState()
         {
             _isOpen = false;
-            _onClosed.Invoke();
+            OnClosed.Invoke();
         }
 
         public override async UniTask DoInteraction(CancellationToken token)

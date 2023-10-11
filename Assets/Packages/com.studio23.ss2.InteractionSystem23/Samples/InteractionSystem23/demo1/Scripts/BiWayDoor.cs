@@ -16,9 +16,9 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 
         protected override void Initialize()
         {
-            base.Initialize();
             _closedEulerAngles = transform.rotation.eulerAngles;
             _openedEulerAngles = _closedEulerAngles + Vector3.up * _doorOpenAngle;
+            base.Initialize();
         }
 
         public override void SnapToActivatedState()
@@ -32,7 +32,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
             _doorObject.transform.rotation = Quaternion.Euler(_openedEulerAngles);
         }
 
-        protected override void HandleInteractionInitialize()
+        protected override void HandleInteractionStarted()
         {
             
         }

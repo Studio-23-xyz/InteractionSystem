@@ -22,7 +22,6 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractableBase => _currentInteractableBase;
 
-
         /// <summary>
         /// Fired when we start the first interaction on the stack
         /// Not fired when subinteractions are started 
@@ -123,7 +122,6 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             {
                 await DoInteraction();
             }
-   
         }
         
         protected override void initialize()
@@ -153,9 +151,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             {
                 _subInteractionCancellationTokens.Dispose();
             }
-
             _subInteractionCancellationTokens = new CancellationTokenSource();
-
         }
 
         private void HandleInteractableConfirmationCompleted(InteractableBase obj)

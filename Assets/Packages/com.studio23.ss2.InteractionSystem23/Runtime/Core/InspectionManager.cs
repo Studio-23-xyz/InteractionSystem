@@ -9,23 +9,28 @@ namespace com.studio23.ss2.InteractionSystem23.Core
 {
     public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>
     {
-        [FormerlySerializedAs("inspectionObjectParent")] public Transform _inspectionObjectParent;
+        [SerializeField] private bool _isDebug = false;
+        [FormerlySerializedAs("inspectionObjectParent")] 
+        public Transform _inspectionObjectParent;
         public Transform _player;
-        private bool _isDragging = false;
-        private bool _wantsToCancel = false;
-        private bool _isInspecting = false;
-        [SerializeField] private float _examinationSensitivity = 69;
+
         [FormerlySerializedAs("subInteractionFinder")] 
         [SerializeField] private PlayerInteractionFinder _subInteractionFinder;
+        
         private Transform _examinationObject;
         private Transform _ogParent;
         private Vector3 _ogOffset;
         private Quaternion _ogOrientation;
+        
+        private bool _isDragging = false;
+        private bool _wantsToCancel = false;
+        private bool _isInspecting = false;
+        [Header("Examination Controls")]
+        [SerializeField] private float _examinationSensitivity = 69;
         [FormerlySerializedAs("moveSpeed")] 
         [SerializeField] private float _moveSpeed = 2;
         [SerializeField] private float _zoomSpeed = 8/120f;
         private Camera _cam;
-        [SerializeField] private bool _isDebug = false;
 
         protected override void initialize()
         {

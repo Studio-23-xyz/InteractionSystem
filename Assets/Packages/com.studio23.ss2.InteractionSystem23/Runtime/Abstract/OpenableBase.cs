@@ -20,7 +20,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         private bool _canBeInterrupted = false;
         public override bool CanBeInterrupted => _canBeInterrupted;
 
-        protected override void HandleInteractionInitialize()
+        protected override void HandleInteractionStarted()
         {
             
         }
@@ -69,8 +69,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         }
 
         public override string GetPromptPrefix() => "Open";
-
-        protected virtual void Start()
+        protected override void Initialize()
         {
             if (_isOpen)
             {
@@ -81,5 +80,6 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
                 SnapToClosedState();
             }
         }
+
     }
 }

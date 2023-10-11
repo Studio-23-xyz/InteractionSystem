@@ -38,13 +38,13 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         
         
         /// <summary>
-        /// Called on start
+        /// Called on start()
         /// </summary>
         protected abstract void Initialize();
         /// <summary>
         /// Called before the interaction task is started
         /// </summary>
-        protected abstract void HandleInteractionInitialize();
+        protected abstract void HandleInteractionStarted();
         /// <summary>
         /// Called when an interaction is paused
         /// </summary>
@@ -82,7 +82,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         public void InitializeInteraction()
         {
             _curState = InteractionState.Active;
-            HandleInteractionInitialize();
+            HandleInteractionStarted();
 
             OnInteractionStarted?.Invoke(this);
         }
