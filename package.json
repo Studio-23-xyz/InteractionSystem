@@ -2,7 +2,7 @@
     "name": "com.studio23.ss2.interactionsystem23",
     "version": "1.0.0",
     "displayName": "Interaction System",
-    "description": "An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interaction",
+    "description": "An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interactions",
     "unity": "2022.3",
     "unityRelease": "9f1",
     "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
@@ -17,7 +17,7 @@
         ]
       }], 
     "dependencies": {
-        "com.bdeshi.helpers": "https://github.com/BDeshiDev/BDeshiHelpers.git#upm",
+        "com.bdeshi.helpers": "1.0.0",
         "com.cysharp.unitask": "2.4.1",
         "com.textus-games.serialized-reference-ui": "1.0.0",
         "com.unity.inputsystem": "1.7.0",
@@ -32,7 +32,7 @@
   "samples": [
       {
         "displayName": "Functional Example",
-        "description": "A scene containing example implementations of InteractableBase classes and nested interactions. Be sure to install DOTWEEN to run the samples.",
+        "description": "A scene containing example implementations of InteractableBase classes and nested interactions. To run: \n 1. Install DOTWEEN \n 2. Add the scripting define symbol UNITASK_DOTWEEN_SUPPORT in ProjectSettings/Player",
         "path": "Samples~/InteractionSystem23/demo1"
       }
     ],  
