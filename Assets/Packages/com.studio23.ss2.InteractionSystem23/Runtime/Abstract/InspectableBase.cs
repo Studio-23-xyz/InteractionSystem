@@ -50,7 +50,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
             return _inspectionTarget;
         }
         
-        public override async UniTask DoInteraction(CancellationToken token)
+        public override async UniTask DoNormalInteraction(CancellationToken token)
         {
             await InspectionManager.Instance.ShowInspectable(this, token);
         }

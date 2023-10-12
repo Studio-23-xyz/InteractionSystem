@@ -13,7 +13,8 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         [FormerlySerializedAs("doorObject")] public GameObject _doorObject;
         private Vector3 _closedEulerAngles;
         private Vector3 _opendedEulerAngles;
-        
+        [SerializeField] private float _disabledDoorPunchAmount = .0315f;
+
         protected  void Awake()
         {
             _closedEulerAngles = transform.rotation.eulerAngles;
@@ -31,7 +32,8 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
             await AnimateDoor(_closedEulerAngles)
                 .WithCancellation(token);
         }
-
+        
+      
         public override void SnapToOpenState()
         {
             base.SnapToOpenState();
@@ -47,6 +49,14 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         public override string GetPromptSuffix()
         {
             return _objectName;
+        }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            Debug.Log(this + " Door is disabled " , this);
+            return _doorObject.transform.DOShakePosition(_doorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount )
+                .SetEase(Ease.OutCirc)
+                .WithCancellation(token);
         }
     }
 }

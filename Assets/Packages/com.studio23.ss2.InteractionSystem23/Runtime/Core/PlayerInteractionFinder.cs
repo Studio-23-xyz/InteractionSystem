@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using com.bdeshi.helpers.Utility.Extensions;
 using com.studio23.ss2.InteractionSystem23.Abstract;
+using com.studio23.ss2.InteractionSystem23.Data;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -48,12 +49,12 @@ namespace com.studio23.ss2.InteractionSystem23.Core
                     {
                         var result = results[i];
                     
-                        //remove all interactables that we can't interact with
-                        if (!result.CheckCanStartInteraction(this))
+                        //remove all interactables that we need to hide
+                        //allow interactables that return disabled and show status
+                        if (result.EvaluateInteractionConditions(this) == InteractionConditionResult.Hide)
                         {
                             results.RemoveAt(i);
                         }
-
                     }
                 }
             }
