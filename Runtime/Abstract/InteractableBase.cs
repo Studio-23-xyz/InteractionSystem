@@ -13,6 +13,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
     public abstract class InteractableBase:MonoBehaviour
     {
         [SerializeField] InteractionState _curState;
+        [SerializeField] private InteractionConditionResult _lastEvaluationResult = InteractionConditionResult.Show;
         /// <summary>
         /// If interactionHoldTime <= 0, no hold interaction
         /// </summary>
@@ -33,6 +34,11 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         
         public abstract InputButtonSlot InputButton { get; }
         public InteractionState CurState => _curState;
+        /// <summary>
+        /// The InteractionConditionResult from last call of EvaluateInteractionConditions()
+        /// </summary>
+        public InteractionConditionResult LastEvaluationResult => _lastEvaluationResult;
+        
         //#TODO InteractionHoldTime usage
         public float InteractionHoldTime => _interactionHoldTime;
         
@@ -77,7 +83,8 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>
-        public abstract UniTask DoInteraction(CancellationToken token);
+        public abstract UniTask DoNormalInteraction(CancellationToken token);
+        public abstract UniTask DoDisabledInteraction(CancellationToken token);
 
         public void InitializeInteraction()
         {
@@ -107,16 +114,40 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
             OnInteractionResumed?.Invoke(this);
         }
         
-        public virtual bool CheckCanStartInteraction(PlayerInteractionFinder interactionFinder)
+        /// <summary>
+        /// External code should call this to evaluate the interaction conditions
+        /// Subclasses should override the internal version of this.
+        /// </summary>
+        /// <param name="interactionFinder"></param>
+        /// <returns></returns>
+        public InteractionConditionResult EvaluateInteractionConditions(PlayerInteractionFinder interactionFinder)
         {
             if (_curState != InteractionState.Inactive && CanBeInterrupted)
-                return false;
+                return InteractionConditionResult.Hide;
+            _lastEvaluationResult = EvaluateInteractionConditionsInternal(interactionFinder);
+            return _lastEvaluationResult;
+        }
+        
+        /// <summary>
+        /// Subclasses should override this to return their condition eval result
+        /// </summary>
+        /// <param name="interactionFinder"></param>
+        /// <returns></returns>
+        protected virtual InteractionConditionResult EvaluateInteractionConditionsInternal(PlayerInteractionFinder interactionFinder)
+        {
+            if (_curState != InteractionState.Inactive && CanBeInterrupted)
+                return InteractionConditionResult.Hide;
+            
+            var result = InteractionConditionResult.Show;
+            // If any condition says to hide or disable
+            // stop evaluating and just return that
             foreach (var condition in _interactionConditions)
             {
-                if (!condition.Evaluate(interactionFinder))
-                    return false;
+                result = condition.Evaluate(interactionFinder);
+                if (result != InteractionConditionResult.Show)
+                    return result;
             }
-            return true;
+            return result;
         }
             
         private void Start()
