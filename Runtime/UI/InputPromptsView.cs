@@ -26,7 +26,7 @@ namespace com.studio23.ss2.InteractionSystem23.UI
                 if (model.TryGetRegisteredInteractable(kv.Key, out var interactable))
                 {
                     promptView.gameObject.SetActive(true);
-                    promptView.SetPromptText(interactable);
+                    promptView.showInteractable(interactable);
                 }
                 else
                 {

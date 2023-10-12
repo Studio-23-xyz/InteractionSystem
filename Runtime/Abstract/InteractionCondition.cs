@@ -1,5 +1,6 @@
 using System;
 using com.studio23.ss2.InteractionSystem23.Core;
+using com.studio23.ss2.InteractionSystem23.Data;
 
 namespace com.studio23.ss2.InteractionSystem23.Abstract
 {
@@ -12,6 +13,6 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         /// </summary>
         /// <param name="playerInteractionFinder"></param>
         /// <returns></returns>
-        public abstract bool Evaluate(PlayerInteractionFinder playerInteractionFinder);
+        public abstract InteractionConditionResult Evaluate(PlayerInteractionFinder playerInteractionFinder);
     }
 }

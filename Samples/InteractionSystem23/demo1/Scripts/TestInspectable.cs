@@ -1,5 +1,7 @@
+using System.Threading;
 using com.studio23.ss2.InteractionSystem23.Abstract;
 using com.studio23.ss2.InteractionSystem23.Core;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
@@ -47,6 +49,13 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         public override string GetPromptSuffix()
         {
             return _objectName;
+        }
+
+        public override async UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            Debug.Log("can't inspect " + _objectName);
+
+            await UniTask.Yield();
         }
     }
 }

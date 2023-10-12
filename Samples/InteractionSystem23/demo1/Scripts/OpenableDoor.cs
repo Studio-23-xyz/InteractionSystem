@@ -14,7 +14,8 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         private Vector3 _closedEulerAngles;
         private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
-        
+        [SerializeField] private float _disabledDoorPunchAmount = .0315f;
+
         protected override async UniTask DoOpenInteraction(CancellationToken token)
         {
             await AnimateDoor(_openedEulerAngles)
@@ -49,6 +50,15 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         public override string GetPromptSuffix()
         {
             return _objectName;
+        }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            Debug.Log(this + " Door is disabled " , this);
+
+            return _doorObject.transform.DOShakePosition(_doorAnimTime*.5f, Vector3.one * _disabledDoorPunchAmount)
+                .SetEase(Ease.OutCirc)
+                .WithCancellation(token);
         }
     }
 }
