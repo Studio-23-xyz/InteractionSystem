@@ -13,6 +13,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         private Vector3 _closedEulerAngles;
         private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
+        [SerializeField] private float _disabledDoorPunchAmount = .0315f;
 
         protected override void Initialize()
         {
@@ -29,7 +30,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 
         public override void SnapToDeactivatedState()
         {
-            _doorObject.transform.rotation = Quaternion.Euler(_openedEulerAngles);
+            _doorObject.transform.rotation = Quaternion.Euler(_closedEulerAngles);
         }
 
         protected override void HandleInteractionStarted()
@@ -70,6 +71,15 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         {
             return _doorObject.transform.DORotate(endAngles, _doorAnimTime)
                 .SetEase(Ease.Linear);
+        }
+        
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            Debug.Log(this + " Door is disabled " , this);
+
+            return _doorObject.transform.DOShakePosition(_doorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount)
+                .SetEase(Ease.OutCirc)
+                .WithCancellation(token);
         }
     }
 }
