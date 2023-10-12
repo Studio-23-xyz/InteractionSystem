@@ -15,12 +15,12 @@ namespace com.studio23.ss2.InteractionSystem23.Core
     {
         [FormerlySerializedAs("interactionStack")] [SerializeField] 
         private List<InteractableBase> _interactionStack;
-        [FormerlySerializedAs("_currentInteractable")] [FormerlySerializedAs("currentInteractable")] [SerializeField] 
-        private InteractableBase _currentInteractableBase;
+        [FormerlySerializedAs("_currentInteractableBase")] [FormerlySerializedAs("currentInteractable")] [SerializeField] 
+        private InteractableBase _currentInteractable;
         [FormerlySerializedAs("inputPromptsController")] [SerializeField] 
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
-        [CanBeNull] public InteractableBase CurrentInteractableBase => _currentInteractableBase;
+        [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
 
         /// <summary>
         /// Fired when we start the first interaction on the stack
@@ -34,7 +34,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         /// </summary>
         public event Action OnInteractionChainEnded;
         
-        public bool IsRunningInteraction => CurrentInteractableBase != null;
+        public bool IsRunningInteraction => CurrentInteractable != null;
         public bool _isDebug = false;
 
         public async UniTask DoInteraction()
@@ -44,34 +44,46 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             while (_interactionStack.Count > 0)
             {
                 //cache this so that we have the interrupted one after cancellation
-                _currentInteractableBase = _interactionStack[^1];
-                Dlog("Do interaction "+ _currentInteractableBase, _currentInteractableBase);
+                _currentInteractable = _interactionStack[^1];
+                Dlog("Do interaction "+ _currentInteractable, _currentInteractable);
                 //the state of the interactable is saved
                 //if it was cancelled previously, we resume
                 //else it is an interaction we are newly intializing 
-                if (_currentInteractableBase.CurState == InteractionState.Paused)
+                if (_currentInteractable.CurState == InteractionState.Paused)
                 {
-                    _currentInteractableBase.ResumeInteraction();
+                    _currentInteractable.ResumeInteraction();
                 }
                 else
                 {
-                    _currentInteractableBase.InitializeInteraction();
+                    _currentInteractable.InitializeInteraction();
                 }
 
-                var isCanceled = await _currentInteractableBase
-                    .DoInteraction(_subInteractionCancellationTokens.Token)
-                    .SuppressCancellationThrow();
-                Dlog( _currentInteractableBase + " interation task end, Cancelled: " +  isCanceled, _currentInteractableBase);
+                bool isCancelled;
+                if (_currentInteractable.LastEvaluationResult == InteractionConditionResult.Show)
+                {
+                    isCancelled = await _currentInteractable
+                        .DoNormalInteraction(_subInteractionCancellationTokens.Token)
+                        .SuppressCancellationThrow();
+                }
+                else
+                {
+                    isCancelled = await _currentInteractable
+                        .DoDisabledInteraction(_subInteractionCancellationTokens.Token)
+                        .SuppressCancellationThrow();
+                }
+                
+                
+                Dlog( _currentInteractable + " interation task end, Cancelled: " +  isCancelled, _currentInteractable);
                 // check task status to handle cancellation
-                if (isCanceled)
+                if (isCancelled)
                 {
                     // if the task has been cancelled
                     // we assume that a sub interaction was added
                     // cur.pause()
                     // Debug.Log("interaction pause  " + currentInteractable);
-                    _currentInteractableBase.PauseInteraction();
+                    _currentInteractable.PauseInteraction();
                     RefreshCancellationToken();
-                    Dlog("interaction pause " + _currentInteractableBase + " push new one " );
+                    Dlog("interaction pause " + _currentInteractable + " push new one " );
 
                     // the new subinteraction is already at the top of the stack
                     // at the next loop, it will pick the new subinteraction and await that
@@ -84,14 +96,14 @@ namespace com.studio23.ss2.InteractionSystem23.Core
                     {
                         _interactionStack.RemoveAt(_interactionStack.Count - 1);
                     }
-                    Dlog("interaction Stack pop " + _currentInteractableBase + " interactionStack.Count " + _interactionStack.Count);
+                    Dlog("interaction Stack pop " + _currentInteractable + " interactionStack.Count " + _interactionStack.Count);
 
-                    _currentInteractableBase.CompleteInteraction();
+                    _currentInteractable.CompleteInteraction();
                 }
  
             }
 
-            _currentInteractableBase = null;
+            _currentInteractable = null;
             OnInteractionChainEnded?.Invoke();
         }
 
@@ -103,11 +115,11 @@ namespace com.studio23.ss2.InteractionSystem23.Core
 
         public async void StartNewInteraction(InteractableBase newInteractableBase)
         {
-            if(_currentInteractableBase != null && !_currentInteractableBase.CanBeInterrupted)
+            if(_currentInteractable != null && !_currentInteractable.CanBeInterrupted)
             {
                 // NOTE: This shouldn't even fire. 
                 // unless someone allowed a subinteractable to proc when a non-interruptible was running
-                Debug.LogWarning("Can't interrupt current interactable: "+ _currentInteractableBase, _currentInteractableBase);
+                Debug.LogWarning("Can't interrupt current interactable: "+ _currentInteractable, _currentInteractable);
                 return;
             }
             Dlog(" start new interaction " + newInteractableBase);

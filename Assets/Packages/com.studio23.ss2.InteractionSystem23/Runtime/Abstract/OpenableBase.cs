@@ -1,6 +1,7 @@
 using System.Threading;
 using com.bdeshi.helpers.Input;
 using com.studio23.ss2.InteractionSystem23.Core;
+using com.studio23.ss2.InteractionSystem23.Data;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
@@ -53,7 +54,7 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
             _isOpen = false;
         }
 
-        public override async UniTask DoInteraction(CancellationToken token)
+        public override async UniTask DoNormalInteraction(CancellationToken token)
         {
             if (!_isOpen)
             {
@@ -61,11 +62,11 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
             }
         }
 
-        public override bool CheckCanStartInteraction(PlayerInteractionFinder finder)
+        protected override InteractionConditionResult EvaluateInteractionConditionsInternal(PlayerInteractionFinder finder)
         {
             if (_isOpen)
-                return false;
-            return base.CheckCanStartInteraction(finder);
+                return InteractionConditionResult.Hide;
+            return base.EvaluateInteractionConditionsInternal(finder);
         }
 
         public override string GetPromptPrefix() => "Open";
