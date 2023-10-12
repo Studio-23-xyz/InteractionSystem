@@ -97,8 +97,10 @@ namespace com.studio23.ss2.InteractionSystem23.Core
                         _interactionStack.RemoveAt(_interactionStack.Count - 1);
                     }
                     Dlog("interaction Stack pop " + _currentInteractable + " interactionStack.Count " + _interactionStack.Count);
-
-                    _currentInteractable.CompleteInteraction();
+                    if (_currentInteractable.LastEvaluationResult == InteractionConditionResult.Show)
+                    {
+                        _currentInteractable.CompleteInteraction();
+                    }
                 }
  
             }

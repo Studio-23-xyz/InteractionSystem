@@ -1521,6 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -1560,6 +1561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -2055,6 +2057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -2090,6 +2093,7 @@ MonoBehaviour:
   _doorAnimTime: 1.2
   _doorObject: {fileID: 710948533}
   _doorOpenAngle: -90
+  _disabledDoorPunchAmount: 0.0315
   references:
     version: 2
     RefIds: []
@@ -3249,6 +3253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -3288,6 +3293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -4633,6 +4639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -4668,6 +4675,7 @@ MonoBehaviour:
   _doorAnimTime: 1.2
   _doorObject: {fileID: 1908982330}
   _doorOpenAngle: -90
+  _disabledDoorPunchAmount: 0.0315
   references:
     version: 2
     RefIds: []
@@ -6509,7 +6517,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5d8e8ee4a98c7f44e8fb677f40e2f2b8, type: 2}
     - target: {fileID: 8136828257843240882, guid: af01bcdb4c6fe3c418b716e0784a7dad, type: 3}
       propertyPath: _isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8136828257843240882, guid: af01bcdb4c6fe3c418b716e0784a7dad, type: 3}
       propertyPath: objectName
