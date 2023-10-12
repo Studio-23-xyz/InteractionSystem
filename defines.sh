@@ -99,15 +99,6 @@ function update_git_repository_with_samples() {
     git subtree split -P "$package_dir" -b upm
     git checkout upm
 
-    # If the 'Samples' directory exists, rename it and commit the change
-    if [[ -f "defines.sh" ]]; then
-        rm -f "defines.sh"
-    fi
-
-    if [[ -f "updateSamples.sh" ]]; then
-        rm -f "updateSamples.sh"
-    fi
-
     if [[ -d "Samples" ]]; then
         git mv Samples Samples~
         rm -f Samples.meta
