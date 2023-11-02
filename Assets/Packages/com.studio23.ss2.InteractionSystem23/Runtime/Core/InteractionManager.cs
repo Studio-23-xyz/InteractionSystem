@@ -2,22 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using com.bdeshi.helpers.Utility;
-using com.studio23.ss2.InteractionSystem23.Abstract;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Data;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     public class InteractionManager:MonoBehaviourSingletonPersistent<InteractionManager>
     {
-        [FormerlySerializedAs("interactionStack")] [SerializeField] 
+        [SerializeField] 
         private List<InteractableBase> _interactionStack;
-        [FormerlySerializedAs("_currentInteractableBase")] [FormerlySerializedAs("currentInteractable")] [SerializeField] 
+        [SerializeField] 
         private InteractableBase _currentInteractable;
-        [FormerlySerializedAs("inputPromptsController")] [SerializeField] 
+        [SerializeField] 
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;

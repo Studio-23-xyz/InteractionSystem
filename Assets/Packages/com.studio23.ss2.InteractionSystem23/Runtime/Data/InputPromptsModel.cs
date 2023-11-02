@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using com.bdeshi.helpers.Input;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using UnityEngine;
 
-namespace com.studio23.ss2.InteractionSystem23.Data
+namespace Studio23.SS2.InteractionSystem23.Data
 {
     public class InputPromptsModel:MonoBehaviour
     {

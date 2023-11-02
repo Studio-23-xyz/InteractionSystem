@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace com.studio23.ss2.InteractionSystem23.Abstract
+namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class InputPromptsControllerBase : MonoBehaviour
     {

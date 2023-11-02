@@ -4,7 +4,7 @@ using com.bdeshi.helpers.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     public class InteractionInputManager : MonoBehaviourSingletonPersistent<InteractionInputManager>
     {

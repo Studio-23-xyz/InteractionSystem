@@ -1,11 +1,11 @@
 using System.Threading;
 using com.bdeshi.helpers.Utility;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>
     {

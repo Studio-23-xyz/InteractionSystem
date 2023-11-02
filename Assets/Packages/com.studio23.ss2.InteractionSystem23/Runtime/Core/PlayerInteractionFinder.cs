@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using com.bdeshi.helpers.Utility.Extensions;
-using com.studio23.ss2.InteractionSystem23.Abstract;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Data;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     /// <summary>
     /// Looks for Interactables on scene based on camera position and orientation

@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using com.bdeshi.helpers.Utility;
-using com.studio23.ss2.InteractionSystem23.Abstract;
-using com.studio23.ss2.InteractionSystem23.Data;
-using com.studio23.ss2.InteractionSystem23.UI;
+using Studio23.SS2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.UI;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     public class InputPromptsController: InputPromptsControllerBase
     {

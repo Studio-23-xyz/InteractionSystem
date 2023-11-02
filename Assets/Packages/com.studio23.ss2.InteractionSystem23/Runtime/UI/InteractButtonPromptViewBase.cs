@@ -1,7 +1,7 @@
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using UnityEngine;
 
-namespace com.studio23.ss2.InteractionSystem23.UI
+namespace Studio23.SS2.InteractionSystem23.UI
 {
     public abstract class InteractButtonPromptViewBase : MonoBehaviour
     {

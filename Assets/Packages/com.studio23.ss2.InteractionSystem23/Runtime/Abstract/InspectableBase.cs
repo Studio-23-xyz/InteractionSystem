@@ -1,11 +1,11 @@
 using System.Threading;
 using com.bdeshi.helpers.Input;
-using com.studio23.ss2.InteractionSystem23.Core;
+using Studio23.SS2.InteractionSystem23.Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Abstract
+namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class InspectableBase : InteractableBase
     {

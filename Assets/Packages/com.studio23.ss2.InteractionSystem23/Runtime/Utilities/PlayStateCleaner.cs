@@ -1,7 +1,7 @@
-﻿using com.studio23.ss2.InteractionSystem23.Core;
+﻿using Studio23.SS2.InteractionSystem23.Core;
 using UnityEditor;
 
-namespace com.studio23.ss2.InteractionSystem23.Utilities
+namespace Studio23.SS2.InteractionSystem23.Utilities
 {
     #if UNITY_EDITOR
     /// <summary>

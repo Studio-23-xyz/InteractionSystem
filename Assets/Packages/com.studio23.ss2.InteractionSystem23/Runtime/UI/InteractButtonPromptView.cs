@@ -1,10 +1,10 @@
-using com.studio23.ss2.InteractionSystem23.Abstract;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace com.studio23.ss2.InteractionSystem23.UI
+namespace Studio23.SS2.InteractionSystem23.UI
 {
     public class InteractButtonPromptView:InteractButtonPromptViewBase
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
 	public class TestCharacterInputs : MonoBehaviour
 	{
@@ -10,10 +10,8 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 		public Vector2 _look;
 		public bool _jump;
 		public bool _sprint;
-
-		 [Header("Movement Settings")]
+		[Header("Movement Settings")]
 		public bool _analogMovement;
-
 		[Header("Mouse Cursor Settings")]
 		public bool _cursorLocked = true; 
 		public bool _cursorInputForLook = true;

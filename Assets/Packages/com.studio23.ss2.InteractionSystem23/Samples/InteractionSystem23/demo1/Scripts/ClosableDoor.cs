@@ -1,19 +1,19 @@
 using System.Threading;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
     public class ClosableDoor: ClosableBase
     {
-        [FormerlySerializedAs("doorAnimTime")] public float _doorAnimTime = 1.2f;
-        [FormerlySerializedAs("doorObject")] public GameObject _doorObject;
+        [SerializeField] float _doorAnimTime = 1.2f;
+        [SerializeField] GameObject _doorObject;
+        [SerializeField] float _disabledDoorPunchAmount = .0315f;
         private Vector3 _closedEulerAngles;
         private Vector3 _opendedEulerAngles;
-        [SerializeField] private float _disabledDoorPunchAmount = .0315f;
 
         protected  void Awake()
         {
@@ -32,7 +32,6 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
             await AnimateDoor(_closedEulerAngles)
                 .WithCancellation(token);
         }
-        
       
         public override void SnapToOpenState()
         {
@@ -54,7 +53,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         public override UniTask DoDisabledInteraction(CancellationToken token)
         {
             Debug.Log(this + " Door is disabled " , this);
-            return _doorObject.transform.DOShakePosition(_doorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount )
+            return _doorObject.transform.DOShakePosition(_doorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount)
                 .SetEase(Ease.OutCirc)
                 .WithCancellation(token);
         }

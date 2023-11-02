@@ -2,62 +2,46 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
 	[RequireComponent(typeof(CharacterController))]
 	[RequireComponent(typeof(PlayerInput))]
 	public class TestCharacterController : MonoBehaviour
 	{
-		[FormerlySerializedAs("moveSpeed")]
-		[FormerlySerializedAs("MoveSpeed")]
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float _moveSpeed = 4.0f;
-		[FormerlySerializedAs("sprintSpeed")] [FormerlySerializedAs("SprintSpeed")] [Tooltip("Sprint speed of the character in m/s")]
+		[Tooltip("Sprint speed of the character in m/s")]
 		public float _sprintSpeed = 6.0f;
-		[FormerlySerializedAs("rotationSpeed")] [FormerlySerializedAs("RotationSpeed")] [Tooltip("Rotation speed of the character")]
+		[Tooltip("Rotation speed of the character")]
 		public float _rotationSpeed = 1.0f;
-		[FormerlySerializedAs("speedChangeRate")] [FormerlySerializedAs("SpeedChangeRate")] [Tooltip("Acceleration and deceleration")]
+		[Tooltip("Acceleration and deceleration")]
 		public float _speedChangeRate = 10.0f;
-
-		[FormerlySerializedAs("jumpHeight")]
-		[FormerlySerializedAs("JumpHeight")]
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float _jumpHeight = 1.2f;
-		[FormerlySerializedAs("gravity")]
-		[FormerlySerializedAs("Gravity")] 
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float _gravity = -15.0f;
-
-		[FormerlySerializedAs("jumpTimeout")]
-		[FormerlySerializedAs("JumpTimeout")]
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
 		public float _jumpTimeout = 0.1f;
-		[FormerlySerializedAs("fallTimeout")] [FormerlySerializedAs("FallTimeout")] [Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
+		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float _fallTimeout = 0.15f;
-
-		[FormerlySerializedAs("grounded")]
-		[FormerlySerializedAs("Grounded")]
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 		public bool _grounded = true;
-		[FormerlySerializedAs("groundedOffset")] [FormerlySerializedAs("GroundedOffset")] [Tooltip("Useful for rough ground")]
+		[Tooltip("Useful for rough ground")]
 		public float _groundedOffset = -0.14f;
-		[FormerlySerializedAs("groundedRadius")] [FormerlySerializedAs("GroundedRadius")] [Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
+		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
 		public float _groundedRadius = 0.5f;
-		[FormerlySerializedAs("groundLayers")] [FormerlySerializedAs("GroundLayers")] [Tooltip("What layers the character uses as ground")]
+		[Tooltip("What layers the character uses as ground")]
 		public LayerMask _groundLayers;
-
-		[FormerlySerializedAs("cinemachineCameraTarget")]
-		[FormerlySerializedAs("CinemachineCameraTarget")]
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 		public GameObject _cinemachineCameraTarget;
-		[FormerlySerializedAs("TopClamp")] [Tooltip("How far in degrees can you move the camera up")]
+		[Tooltip("How far in degrees can you move the camera up")]
 		public float _topClamp = 90.0f;
-		[FormerlySerializedAs("BottomClamp")] [Tooltip("How far in degrees can you move the camera down")]
+		[Tooltip("How far in degrees can you move the camera down")]
 		public float _bottomClamp = -90.0f;
 
 		// cinemachine
@@ -77,7 +61,6 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 		private CharacterController _controller;
 		private TestCharacterInputs _input;
 		private GameObject _mainCamera;
-		
 		private const float Threshold = 0.01f;
 
 		private bool IsCurrentDeviceMouse

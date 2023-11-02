@@ -1,16 +1,16 @@
 using System.Threading;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
     public class OpenableDoor: OpenableBase
     {
-        [FormerlySerializedAs("doorAnimTime")] public float _doorAnimTime = 1.2f;
-        [FormerlySerializedAs("doorObject")] public GameObject _doorObject;
+        public float _doorAnimTime = 1.2f;
+        public GameObject _doorObject;
         private Vector3 _closedEulerAngles;
         private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
