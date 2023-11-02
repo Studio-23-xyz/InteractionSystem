@@ -18,6 +18,7 @@ namespace Studio23.SS2.InteractionSystem23.UI
         {
             return _promptsMap[buttonSlot];
         }
+
         public override void UpdatePromptsView(InputPromptsModel model)
         {
             foreach (var kv in _promptsMap)
@@ -48,7 +49,6 @@ namespace Studio23.SS2.InteractionSystem23.UI
                 buttonPrompt.gameObject.SetActive(false);
             }
         }
-        
         
         public override void HidePrompts()
         {

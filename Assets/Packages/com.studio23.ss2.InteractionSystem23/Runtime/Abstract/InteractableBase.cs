@@ -19,17 +19,12 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
         /// </summary>
         [SerializeField]  
         float _interactionHoldTime = 0;
-        [FormerlySerializedAs("_onInteractionStarted")] [FormerlySerializedAs("onInteractionStarted")]
         public UnityEvent<InteractableBase> OnInteractionStarted;
-        [FormerlySerializedAs("_onInteractionPaused")] [FormerlySerializedAs("onInteractionPaused")]
         public UnityEvent<InteractableBase> OnInteractionPaused;
-        [FormerlySerializedAs("_onInteractionResumed")] [FormerlySerializedAs("onInteractionResumed")]
         public UnityEvent<InteractableBase> OnInteractionResumed;
-        [FormerlySerializedAs("_onInteractionCompleted")] [FormerlySerializedAs("onInteractionCompleted")]
         public UnityEvent<InteractableBase> OnInteractionCompleted;
 
-        [SerializeReference]
-        [SerializeReferenceButton]
+        [SerializeReference, SerializeReferenceButton]
         private List<InteractionCondition> _interactionConditions = new List<InteractionCondition>();
         
         public abstract InputButtonSlot InputButton { get; }
@@ -38,11 +33,7 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
         /// The InteractionConditionResult from last call of EvaluateInteractionConditions()
         /// </summary>
         public InteractionConditionResult LastEvaluationResult => _lastEvaluationResult;
-        
-        //#TODO InteractionHoldTime usage
         public float InteractionHoldTime => _interactionHoldTime;
-        
-        
         /// <summary>
         /// Called on start()
         /// </summary>

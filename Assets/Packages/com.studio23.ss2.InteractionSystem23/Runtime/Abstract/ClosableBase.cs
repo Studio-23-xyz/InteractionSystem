@@ -12,7 +12,7 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
     public abstract class ClosableBase: InteractableBase
     {
         [SerializeField] private bool _isOpen = true;
-        public string _objectName ="Only Closable";
+        [SerializeField] protected string _objectName ="Only Closable";
 
         protected abstract UniTask DoCloseInteraction(CancellationToken token);
         public UnityEvent OnClosed;

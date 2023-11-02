@@ -9,26 +9,20 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class InspectableBase : InteractableBase
     {
-        [FormerlySerializedAs("objectName")] [FormerlySerializedAs("ObjectName")] 
-        public string _objectName = "Shinpachi's shinpachis";
-        [FormerlySerializedAs("inspectionTarget")] [SerializeField] 
+        [SerializeField] protected string _objectName = "Shinpachi's shinpachis";
+        [SerializeField] 
         protected Transform _inspectionTarget;
-        [FormerlySerializedAs("inspectionRotationSensitivity")] [SerializeField] 
+        [SerializeField] 
         protected float _inspectionRotationSensitivity = 1;
-        [FormerlySerializedAs("inspectionOffset")] [SerializeField] 
+        [SerializeField] 
         protected Vector3 _inspectionOffset = new Vector3(0,1.75f,1);
-        
-        [FormerlySerializedAs("inspectionScaleMultiplier")] 
-        public float _inspectionScaleMultiplier = 1;
-        [FormerlySerializedAs("originalInspectionTargetScale")] 
+
+        [SerializeField] float _inspectionScaleMultiplier = 1;
         [SerializeField] Vector3 _originalInspectionTargetScale;
-        [FormerlySerializedAs("inspectionTargetMaxOffset")] 
         [SerializeField] float _inspectionTargetMaxOffset = 3;
-
-        [FormerlySerializedAs("canBeInterrupted")] 
-        [SerializeField] private bool _canBeInterrupted = true;
-
+        [SerializeField] bool _canBeInterrupted = true;
         [SerializeField] float _inspectionTargetMaxZoom = 1;
+
         public Vector3 OriginalInspectionTargetScale => _originalInspectionTargetScale;
         public Vector3 InspectionScale => _originalInspectionTargetScale * _inspectionScaleMultiplier;
         public Vector3 InspectionOffset => _inspectionOffset;

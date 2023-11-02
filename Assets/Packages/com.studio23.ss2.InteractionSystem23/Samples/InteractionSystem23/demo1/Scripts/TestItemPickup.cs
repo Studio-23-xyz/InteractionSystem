@@ -11,7 +11,6 @@ namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
         [SerializeField] private string _pickUpName = "Shinpachi's shinpachis";
 
         public override bool CanBeInterrupted => _canBeInterrupted;
-     
         public override string PickUpName => _pickUpName;
 
         protected override void Initialize()

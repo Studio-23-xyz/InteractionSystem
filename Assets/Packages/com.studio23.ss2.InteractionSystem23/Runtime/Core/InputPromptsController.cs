@@ -13,7 +13,6 @@ namespace Studio23.SS2.InteractionSystem23.Core
     {
         private InputPromptsModel _model;
         private InputPromptsViewBase _view;
-        
         [SerializeField] private FiniteTimer _remainingPressTimer = new FiniteTimer(-69);
 
         private void Start()

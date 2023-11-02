@@ -10,11 +10,9 @@ namespace Studio23.SS2.InteractionSystem23.Core
     public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>
     {
         [SerializeField] private bool _isDebug = false;
-        [FormerlySerializedAs("inspectionObjectParent")] 
-        public Transform _inspectionObjectParent;
-        public Transform _player;
+        public Transform InspectionObjectParent;
+        public Transform Player;
 
-        [FormerlySerializedAs("subInteractionFinder")] 
         [SerializeField] private PlayerInteractionFinder _subInteractionFinder;
         
         private Transform _examinationObject;
@@ -27,7 +25,6 @@ namespace Studio23.SS2.InteractionSystem23.Core
         private bool _isInspecting = false;
         [Header("Examination Controls")]
         [SerializeField] private float _examinationSensitivity = 69;
-        [FormerlySerializedAs("moveSpeed")] 
         [SerializeField] private float _moveSpeed = 2;
         [SerializeField] private float _zoomSpeed = 8/120f;
         private Camera _cam;
@@ -71,9 +68,9 @@ namespace Studio23.SS2.InteractionSystem23.Core
 
         void FindPlayer()
         {
-            if (_player == null)
+            if (Player == null)
             {
-                _player = GameObject.FindWithTag("Player").transform;
+                Player = GameObject.FindWithTag("Player").transform;
             }
         }
         
@@ -150,7 +147,7 @@ namespace Studio23.SS2.InteractionSystem23.Core
             
             
             _examinationObject.gameObject.SetActive(true);
-            _examinationObject.parent = _inspectionObjectParent;
+            _examinationObject.parent = InspectionObjectParent;
             _examinationObject.localPosition = Vector3.zero;
             _examinationObject.localRotation = Quaternion.identity;
             _examinationObject.localScale = inspectable.InspectionScale;
@@ -164,8 +161,8 @@ namespace Studio23.SS2.InteractionSystem23.Core
             _isDragging = false;
             _isInspecting = true;
             
-            _inspectionObjectParent.transform.parent = _player;
-            _inspectionObjectParent.localPosition = inspectable.InspectionOffset;
+            InspectionObjectParent.transform.parent = Player;
+            InspectionObjectParent.localPosition = inspectable.InspectionOffset;
 
             
             //#TODO fix the render texture issue and update this
@@ -190,7 +187,7 @@ namespace Studio23.SS2.InteractionSystem23.Core
         {
             _isInspecting = false;
             Dlog("end inspection " + inspectable);
-            _inspectionObjectParent.transform.parent = this.transform;
+            InspectionObjectParent.transform.parent = this.transform;
             UnMoveInspectableForInspection(inspectable);
         }
 
@@ -204,7 +201,7 @@ namespace Studio23.SS2.InteractionSystem23.Core
         {
             if(_subInteractionFinder == null)
                 return;
-            _subInteractionFinder.transform.position = _player.position;
+            _subInteractionFinder.transform.position = Player.position;
             var interactions = _subInteractionFinder.FindInteractables();
             InteractionManager.Instance.ShowNewInteractables(interactions);
         }

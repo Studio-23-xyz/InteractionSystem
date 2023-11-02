@@ -21,7 +21,6 @@ namespace Studio23.SS2.InteractionSystem23.Core
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
-
         /// <summary>
         /// Fired when we start the first interaction on the stack
         /// Not fired when subinteractions are started 
@@ -33,9 +32,8 @@ namespace Studio23.SS2.InteractionSystem23.Core
         /// Not fired when subinteractions are completed
         /// </summary>
         public event Action OnInteractionChainEnded;
-        
         public bool IsRunningInteraction => CurrentInteractable != null;
-        public bool _isDebug = false;
+        public bool IsDebug = false;
 
         public async UniTask DoInteraction()
         {
@@ -72,7 +70,6 @@ namespace Studio23.SS2.InteractionSystem23.Core
                         .SuppressCancellationThrow();
                 }
                 
-                
                 Dlog( _currentInteractable + " interation task end, Cancelled: " +  isCancelled, _currentInteractable);
                 // check task status to handle cancellation
                 if (isCancelled)
@@ -104,7 +101,6 @@ namespace Studio23.SS2.InteractionSystem23.Core
                 }
  
             }
-
             _currentInteractable = null;
             OnInteractionChainEnded?.Invoke();
         }
@@ -146,7 +142,7 @@ namespace Studio23.SS2.InteractionSystem23.Core
         public void Dlog(string message, UnityEngine.Object context = null)
         {
             #if UNITY_EDITOR
-            if (_isDebug)
+            if (IsDebug)
             {
                 Debug.Log(message, context);
             }

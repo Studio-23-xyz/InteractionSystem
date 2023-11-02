@@ -12,7 +12,6 @@ namespace Studio23.SS2.InteractionSystem23.UI
         [SerializeField] private Slider _progressSlider;
         [SerializeField] private GameObject _disabledIndicator;
         
-
         public override void showInteractable(InteractableBase interactableBase)
         {
             _promptTMP.text = interactableBase.GetPromptPrefix() + ":"+ interactableBase.GetPromptSuffix();
@@ -28,6 +27,5 @@ namespace Studio23.SS2.InteractionSystem23.UI
         {
             _progressSlider.value = progress;
         }
-        
     }
 }

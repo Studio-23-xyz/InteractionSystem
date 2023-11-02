@@ -51,7 +51,8 @@
       "url": "https://package.openupm.com",
       "scopes": [
         "com.cysharp.unitask",
-        "com.textus-games.serialized-reference-ui"
+        "com.textus-games.serialized-reference-ui",
+        "com.mackysoft.serializereference-extensions"
       ]
     }
   ]

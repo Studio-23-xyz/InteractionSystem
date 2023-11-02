@@ -11,13 +11,12 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class OpenableBase: InteractableBase
     {
-        [FormerlySerializedAs("isOpen")] [SerializeField] private bool _isOpen = false;
-        [FormerlySerializedAs("objectName")] public string _objectName ="DarkSoulsDoor";
+        [SerializeField] bool _isOpen = false;
+        [SerializeField] protected string _objectName ="DarkSoulsDoor";
         public override InputButtonSlot InputButton => InteractionInputManager.Instance.ToggleButton;
         protected abstract UniTask DoOpenInteraction(CancellationToken token);
-        [FormerlySerializedAs("onOpened")] [FormerlySerializedAs("OnOpened")] 
-        public UnityEvent _onOpened;
-        [FormerlySerializedAs("canBeInterrupted")] [SerializeField] 
+
+        public UnityEvent OnOpened;
         private bool _canBeInterrupted = false;
         public override bool CanBeInterrupted => _canBeInterrupted;
 
@@ -39,13 +38,13 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
         protected override void HandleInteractionCompleted()
         {
             _isOpen = true;
-            _onOpened.Invoke();
+            OnOpened.Invoke();
         }
 
         public virtual void SnapToOpenState()
         {
             _isOpen = true;
-            _onOpened.Invoke();
+            OnOpened.Invoke();
         }
         
         
@@ -70,6 +69,9 @@ namespace Studio23.SS2.InteractionSystem23.Abstract
         }
 
         public override string GetPromptPrefix() => "Open";
+
+        public override string GetPromptSuffix() => _objectName;
+
         protected override void Initialize()
         {
             if (_isOpen)

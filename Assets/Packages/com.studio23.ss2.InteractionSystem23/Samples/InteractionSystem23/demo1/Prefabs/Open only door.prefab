@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7b8efbd09a41db340af69771c27e06b4, type: 2}
+  - {fileID: 2100000, guid: 38e3496c9ac9aac4e88ea2bdf08ee0ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -132,22 +133,16 @@ MonoBehaviour:
   OnInteractionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  _interactionConditions:
-  - rid: 3741282082262351874
+  _interactionConditions: []
   _isOpen: 0
   _objectName: DarkSoulsDoor
-  _onOpened:
+  OnOpened:
     m_PersistentCalls:
       m_Calls: []
-  _canBeInterrupted: 0
-  _doorAnimTime: 1.2
-  _doorObject: {fileID: 1175752701873927346}
+  DoorAnimTime: 0.6
+  DoorObject: {fileID: 1175752701873927346}
   _doorOpenAngle: 90
+  _disabledDoorPunchAmount: 0.0315
   references:
     version: 2
-    RefIds:
-    - rid: 3741282082262351874
-      type: {class: TestInventoryInteractionCondition, ns: com.studio23.ss2.InteractionSystem23.Samples.Demo1, asm: Assembly-CSharp}
-      data:
-        _checkIfHasItem: 1
-        _itemName: Yellow Key
+    RefIds: []
