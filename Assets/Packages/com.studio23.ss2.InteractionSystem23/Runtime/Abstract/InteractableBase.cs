@@ -6,7 +6,6 @@ using Studio23.SS2.InteractionSystem23.Data;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem23.Abstract
 {

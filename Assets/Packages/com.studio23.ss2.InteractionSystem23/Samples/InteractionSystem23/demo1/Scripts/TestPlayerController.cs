@@ -2,7 +2,7 @@ using Studio23.SS2.InteractionSystem23.Core;
 using Studio23.SS2.InteractionSystem23.Samples.Demo1;
 using UnityEngine;
 
-namespace Packages.Studio23.ss2.InteractionSystem23.Samples.Demo1.Scripts
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1.Scripts
 {
     public class TestPlayerController:MonoBehaviour
     {

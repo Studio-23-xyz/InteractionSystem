@@ -3,13 +3,13 @@ using com.bdeshi.helpers.Input;
 using Studio23.SS2.InteractionSystem23.Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class InspectableBase : InteractableBase
     {
-        [SerializeField] protected string _objectName = "Shinpachi's shinpachis";
+        [SerializeField] 
+        protected string _objectName = "Shinpachi's shinpachis";
         [SerializeField] 
         protected Transform _inspectionTarget;
         [SerializeField] 

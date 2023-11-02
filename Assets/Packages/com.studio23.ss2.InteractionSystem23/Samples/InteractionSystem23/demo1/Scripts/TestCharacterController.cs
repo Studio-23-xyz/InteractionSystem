@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
@@ -61,7 +60,7 @@ namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 		private CharacterController _controller;
 		private TestCharacterInputs _input;
 		private GameObject _mainCamera;
-		private const float Threshold = 0.01f;
+		private const float _threshold = 0.01f;
 
 		private bool IsCurrentDeviceMouse
 		{
@@ -118,7 +117,7 @@ namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 		private void CameraRotation()
 		{
 			// if there is an input
-			if (_input.Look.sqrMagnitude >= Threshold)
+			if (_input.Look.sqrMagnitude >= _threshold)
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;

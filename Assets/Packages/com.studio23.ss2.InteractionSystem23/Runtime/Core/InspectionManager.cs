@@ -3,7 +3,6 @@ using com.bdeshi.helpers.Utility;
 using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem23.Core
 {
@@ -27,6 +26,9 @@ namespace Studio23.SS2.InteractionSystem23.Core
         [SerializeField] private float _examinationSensitivity = 69;
         [SerializeField] private float _moveSpeed = 2;
         [SerializeField] private float _zoomSpeed = 8/120f;
+        public bool ExaminationXAxisInverted = false;
+        public bool ExaminationYAxisInverted = false;
+
         private Camera _cam;
 
         protected override void initialize()
@@ -213,8 +215,8 @@ namespace Studio23.SS2.InteractionSystem23.Core
             if (_isDragging && dragDelta != Vector2.zero)
             {
                 // Scale the drag delta by the rotation speed
-                float rotationAmountX = -dragDelta.x * dragSensitivity * Time.deltaTime;
-                float rotationAmountY = dragDelta.y * dragSensitivity * Time.deltaTime;
+                float rotationAmountX = (ExaminationXAxisInverted ? 1:-1) * dragDelta.x * dragSensitivity * Time.deltaTime;
+                float rotationAmountY = (ExaminationYAxisInverted ? 1:-1) * dragDelta.y * dragSensitivity * Time.deltaTime;
 
                 // Rotate the object relative to its current rotation
                 //#TODO if we do camera stacking, then space.world would not be an issue.

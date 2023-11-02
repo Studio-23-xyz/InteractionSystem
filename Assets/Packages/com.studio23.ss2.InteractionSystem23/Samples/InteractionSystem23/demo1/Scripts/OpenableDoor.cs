@@ -3,7 +3,6 @@ using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {

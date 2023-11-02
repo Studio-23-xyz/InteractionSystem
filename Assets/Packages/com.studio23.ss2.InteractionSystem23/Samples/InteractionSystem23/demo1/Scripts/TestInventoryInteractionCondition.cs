@@ -11,10 +11,8 @@ namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
     {
         [Tooltip("If checked, evaluate if inventory has item, else evaluate if inventory doesn't have it.")]
         [SerializeField] bool _checkIfHasItem = true;
-
         [SerializeField] private InteractionConditionResult _resultIfConditionPassed = InteractionConditionResult.Show;
         [SerializeField] private InteractionConditionResult _resultIfConditionFailed = InteractionConditionResult.Disable;
-
         [SerializeField] string _itemName = "Shinpachi's Shinpachis";
         public override InteractionConditionResult Evaluate(PlayerInteractionFinder playerInteractionFinder)
         {

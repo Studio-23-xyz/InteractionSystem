@@ -7,7 +7,6 @@ using Studio23.SS2.InteractionSystem23.Data;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem23.Core
 {
