@@ -118,7 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc13c9415db4f90b5ac8477e6db8949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curState: 0
+  _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -139,8 +140,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _canBeInterrupted: 0
-  doorAnimTime: 1.2
-  doorObject: {fileID: 8436029770496485766}
+  _doorAnimTime: 1.2
+  _doorObject: {fileID: 8436029770496485766}
+  _disabledDoorPunchAmount: 0.0315
   references:
     version: 2
     RefIds: []

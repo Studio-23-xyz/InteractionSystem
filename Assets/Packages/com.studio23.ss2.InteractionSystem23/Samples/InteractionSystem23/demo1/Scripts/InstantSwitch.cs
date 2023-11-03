@@ -1,15 +1,14 @@
 using System.Threading;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
     /// <summary>
     /// A basic switch that sends activation and deactivation events instantly
     /// </summary>
     public abstract class InstantSwitch : TogglableBase
     {
-        
         protected override void HandleInteractionStarted()
         {
             

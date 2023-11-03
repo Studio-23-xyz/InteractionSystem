@@ -1,20 +1,17 @@
 using System.Threading;
 using com.bdeshi.helpers.Utility;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>
     {
         [SerializeField] private bool _isDebug = false;
-        [FormerlySerializedAs("inspectionObjectParent")] 
-        public Transform _inspectionObjectParent;
-        public Transform _player;
+        public Transform InspectionObjectParent;
+        public Transform Player;
 
-        [FormerlySerializedAs("subInteractionFinder")] 
         [SerializeField] private PlayerInteractionFinder _subInteractionFinder;
         
         private Transform _examinationObject;
@@ -27,9 +24,11 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         private bool _isInspecting = false;
         [Header("Examination Controls")]
         [SerializeField] private float _examinationSensitivity = 69;
-        [FormerlySerializedAs("moveSpeed")] 
         [SerializeField] private float _moveSpeed = 2;
         [SerializeField] private float _zoomSpeed = 8/120f;
+        public bool ExaminationXAxisInverted = false;
+        public bool ExaminationYAxisInverted = false;
+
         private Camera _cam;
 
         protected override void initialize()
@@ -71,9 +70,9 @@ namespace com.studio23.ss2.InteractionSystem23.Core
 
         void FindPlayer()
         {
-            if (_player == null)
+            if (Player == null)
             {
-                _player = GameObject.FindWithTag("Player").transform;
+                Player = GameObject.FindWithTag("Player").transform;
             }
         }
         
@@ -150,7 +149,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             
             
             _examinationObject.gameObject.SetActive(true);
-            _examinationObject.parent = _inspectionObjectParent;
+            _examinationObject.parent = InspectionObjectParent;
             _examinationObject.localPosition = Vector3.zero;
             _examinationObject.localRotation = Quaternion.identity;
             _examinationObject.localScale = inspectable.InspectionScale;
@@ -164,8 +163,8 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             _isDragging = false;
             _isInspecting = true;
             
-            _inspectionObjectParent.transform.parent = _player;
-            _inspectionObjectParent.localPosition = inspectable.InspectionOffset;
+            InspectionObjectParent.transform.parent = Player;
+            InspectionObjectParent.localPosition = inspectable.InspectionOffset;
 
             
             //#TODO fix the render texture issue and update this
@@ -190,7 +189,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         {
             _isInspecting = false;
             Dlog("end inspection " + inspectable);
-            _inspectionObjectParent.transform.parent = this.transform;
+            InspectionObjectParent.transform.parent = this.transform;
             UnMoveInspectableForInspection(inspectable);
         }
 
@@ -204,7 +203,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         {
             if(_subInteractionFinder == null)
                 return;
-            _subInteractionFinder.transform.position = _player.position;
+            _subInteractionFinder.transform.position = Player.position;
             var interactions = _subInteractionFinder.FindInteractables();
             InteractionManager.Instance.ShowNewInteractables(interactions);
         }
@@ -216,8 +215,8 @@ namespace com.studio23.ss2.InteractionSystem23.Core
             if (_isDragging && dragDelta != Vector2.zero)
             {
                 // Scale the drag delta by the rotation speed
-                float rotationAmountX = -dragDelta.x * dragSensitivity * Time.deltaTime;
-                float rotationAmountY = dragDelta.y * dragSensitivity * Time.deltaTime;
+                float rotationAmountX = (ExaminationXAxisInverted ? 1:-1) * dragDelta.x * dragSensitivity * Time.deltaTime;
+                float rotationAmountY = (ExaminationYAxisInverted ? 1:-1) * dragDelta.y * dragSensitivity * Time.deltaTime;
 
                 // Rotate the object relative to its current rotation
                 //#TODO if we do camera stacking, then space.world would not be an issue.

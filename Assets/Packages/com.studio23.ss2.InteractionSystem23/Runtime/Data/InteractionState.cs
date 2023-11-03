@@ -1,4 +1,4 @@
-namespace com.studio23.ss2.InteractionSystem23.Data
+namespace Studio23.SS2.InteractionSystem23.Data
 {
     public enum InteractionState{
         Inactive,//interaction hasn't started yet.

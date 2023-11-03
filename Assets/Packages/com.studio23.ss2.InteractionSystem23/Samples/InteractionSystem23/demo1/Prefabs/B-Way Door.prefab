@@ -119,17 +119,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curState: 0
+  _lastEvaluationResult: 0
   _interactionHoldTime: 0
-  _onInteractionStarted:
+  OnInteractionStarted:
     m_PersistentCalls:
       m_Calls: []
-  _onInteractionPaused:
+  OnInteractionPaused:
     m_PersistentCalls:
       m_Calls: []
-  _onInteractionResumed:
+  OnInteractionResumed:
     m_PersistentCalls:
       m_Calls: []
-  _onInteractionCompleted:
+  OnInteractionCompleted:
     m_PersistentCalls:
       m_Calls: []
   _interactionConditions: []
@@ -142,8 +143,10 @@ MonoBehaviour:
       m_Calls: []
   _isActive: 0
   _canBeInterrupted: 0
-  _doorAnimTime: 1.2
-  _doorObject: {fileID: 2321497763348886076}
+  DoorAnimTime: 1.2
+  DoorObject: {fileID: 2321497763348886076}
+  _doorOpenAngle: 90
+  _disabledDoorPunchAmount: 0.0315
   references:
     version: 2
     RefIds: []

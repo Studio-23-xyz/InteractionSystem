@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using com.bdeshi.helpers.Input;
-using com.studio23.ss2.InteractionSystem23.Core;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Core;
+using Studio23.SS2.InteractionSystem23.Data;
 using UnityEngine;
 
-namespace com.studio23.ss2.InteractionSystem23.UI
+namespace Studio23.SS2.InteractionSystem23.UI
 {
     public class InputPromptsView:InputPromptsViewBase
     {
@@ -18,6 +18,7 @@ namespace com.studio23.ss2.InteractionSystem23.UI
         {
             return _promptsMap[buttonSlot];
         }
+
         public override void UpdatePromptsView(InputPromptsModel model)
         {
             foreach (var kv in _promptsMap)
@@ -48,7 +49,6 @@ namespace com.studio23.ss2.InteractionSystem23.UI
                 buttonPrompt.gameObject.SetActive(false);
             }
         }
-        
         
         public override void HidePrompts()
         {

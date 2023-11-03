@@ -1,8 +1,8 @@
 using System;
-using com.studio23.ss2.InteractionSystem23.Core;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Core;
+using Studio23.SS2.InteractionSystem23.Data;
 
-namespace com.studio23.ss2.InteractionSystem23.Abstract
+namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     [Serializable]
     public abstract class InteractionCondition

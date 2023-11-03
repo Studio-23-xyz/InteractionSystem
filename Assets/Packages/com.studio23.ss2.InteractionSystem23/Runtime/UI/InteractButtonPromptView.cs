@@ -1,10 +1,10 @@
-using com.studio23.ss2.InteractionSystem23.Abstract;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace com.studio23.ss2.InteractionSystem23.UI
+namespace Studio23.SS2.InteractionSystem23.UI
 {
     public class InteractButtonPromptView:InteractButtonPromptViewBase
     {
@@ -12,7 +12,6 @@ namespace com.studio23.ss2.InteractionSystem23.UI
         [SerializeField] private Slider _progressSlider;
         [SerializeField] private GameObject _disabledIndicator;
         
-
         public override void showInteractable(InteractableBase interactableBase)
         {
             _promptTMP.text = interactableBase.GetPromptPrefix() + ":"+ interactableBase.GetPromptSuffix();
@@ -28,6 +27,5 @@ namespace com.studio23.ss2.InteractionSystem23.UI
         {
             _progressSlider.value = progress;
         }
-        
     }
 }

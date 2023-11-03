@@ -1,25 +1,20 @@
 using System.Threading;
 using com.bdeshi.helpers.Input;
-using com.studio23.ss2.InteractionSystem23.Core;
+using Studio23.SS2.InteractionSystem23.Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Abstract
+namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class TogglableBase : InteractableBase
     {
-        [FormerlySerializedAs("objectName")] public string _objectName ="Switch";
-
-        [FormerlySerializedAs("onDeactivated")] 
+        [SerializeField] string _objectName ="Switch";
         [SerializeField]
         protected UnityEvent _onDeactivated;
-        [FormerlySerializedAs("onActivated")] 
         [SerializeField] 
         private UnityEvent _onActivated;
-        
-        [FormerlySerializedAs("isActive")] 
+       
         [SerializeField] 
         protected bool _isActive = false;
         public bool IsActive => _isActive;
@@ -35,7 +30,6 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         protected abstract UniTask DoActivateInteraction(CancellationToken cancellationToken);
         protected abstract UniTask DoDeactivateInteraction(CancellationToken cancellationToken);
         
-
         protected override void Initialize()
         {
             if (_isActive)
@@ -79,6 +73,5 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         {
             return _objectName;
         }
-
     }
 }

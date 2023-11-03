@@ -2,26 +2,24 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using com.bdeshi.helpers.Utility;
-using com.studio23.ss2.InteractionSystem23.Abstract;
-using com.studio23.ss2.InteractionSystem23.Data;
+using Studio23.SS2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Data;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Core
+namespace Studio23.SS2.InteractionSystem23.Core
 {
     public class InteractionManager:MonoBehaviourSingletonPersistent<InteractionManager>
     {
-        [FormerlySerializedAs("interactionStack")] [SerializeField] 
+        [SerializeField] 
         private List<InteractableBase> _interactionStack;
-        [FormerlySerializedAs("_currentInteractableBase")] [FormerlySerializedAs("currentInteractable")] [SerializeField] 
+        [SerializeField] 
         private InteractableBase _currentInteractable;
-        [FormerlySerializedAs("inputPromptsController")] [SerializeField] 
+        [SerializeField] 
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
-
         /// <summary>
         /// Fired when we start the first interaction on the stack
         /// Not fired when subinteractions are started 
@@ -33,9 +31,8 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         /// Not fired when subinteractions are completed
         /// </summary>
         public event Action OnInteractionChainEnded;
-        
         public bool IsRunningInteraction => CurrentInteractable != null;
-        public bool _isDebug = false;
+        public bool IsDebug = false;
 
         public async UniTask DoInteraction()
         {
@@ -72,7 +69,6 @@ namespace com.studio23.ss2.InteractionSystem23.Core
                         .SuppressCancellationThrow();
                 }
                 
-                
                 Dlog( _currentInteractable + " interation task end, Cancelled: " +  isCancelled, _currentInteractable);
                 // check task status to handle cancellation
                 if (isCancelled)
@@ -104,7 +100,6 @@ namespace com.studio23.ss2.InteractionSystem23.Core
                 }
  
             }
-
             _currentInteractable = null;
             OnInteractionChainEnded?.Invoke();
         }
@@ -146,7 +141,7 @@ namespace com.studio23.ss2.InteractionSystem23.Core
         public void Dlog(string message, UnityEngine.Object context = null)
         {
             #if UNITY_EDITOR
-            if (_isDebug)
+            if (IsDebug)
             {
                 Debug.Log(message, context);
             }

@@ -1,15 +1,15 @@
 using System.Threading;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
     public class BiWayDoor:TogglableBase
     {
-        public float _doorAnimTime = 1.2f;
-        public GameObject _doorObject;
+        public float DoorAnimTime = 1.2f;
+        public GameObject DoorObject;
         private Vector3 _closedEulerAngles;
         private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
@@ -24,13 +24,12 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 
         public override void SnapToActivatedState()
         {
-            _doorObject.transform.rotation = Quaternion.Euler(_openedEulerAngles);
-
+            DoorObject.transform.rotation = Quaternion.Euler(_openedEulerAngles);
         }
 
         public override void SnapToDeactivatedState()
         {
-            _doorObject.transform.rotation = Quaternion.Euler(_closedEulerAngles);
+            DoorObject.transform.rotation = Quaternion.Euler(_closedEulerAngles);
         }
 
         protected override void HandleInteractionStarted()
@@ -69,7 +68,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
 
         Tween AnimateDoor(Vector3 endAngles)
         {
-            return _doorObject.transform.DORotate(endAngles, _doorAnimTime)
+            return DoorObject.transform.DORotate(endAngles, DoorAnimTime)
                 .SetEase(Ease.Linear);
         }
         
@@ -77,7 +76,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         {
             Debug.Log(this + " Door is disabled " , this);
 
-            return _doorObject.transform.DOShakePosition(_doorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount)
+            return DoorObject.transform.DOShakePosition(DoorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount)
                 .SetEase(Ease.OutCirc)
                 .WithCancellation(token);
         }

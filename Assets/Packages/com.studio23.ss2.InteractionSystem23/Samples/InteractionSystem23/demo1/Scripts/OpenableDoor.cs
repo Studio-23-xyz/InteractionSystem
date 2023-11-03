@@ -1,16 +1,15 @@
 using System.Threading;
-using com.studio23.ss2.InteractionSystem23.Abstract;
+using Studio23.SS2.InteractionSystem23.Abstract;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
+namespace Studio23.SS2.InteractionSystem23.Samples.Demo1
 {
     public class OpenableDoor: OpenableBase
     {
-        [FormerlySerializedAs("doorAnimTime")] public float _doorAnimTime = 1.2f;
-        [FormerlySerializedAs("doorObject")] public GameObject _doorObject;
+        public float DoorAnimTime = 1.2f;
+        public GameObject DoorObject;
         private Vector3 _closedEulerAngles;
         private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
@@ -24,25 +23,25 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         
         Tween AnimateDoor(Vector3 endAngles)
         {
-            return _doorObject.transform.DOLocalRotate(endAngles, _doorAnimTime)
+            return DoorObject.transform.DOLocalRotate(endAngles, DoorAnimTime)
                 .SetEase(Ease.Linear);
         }
 
         public override void SnapToOpenState()
         {
             base.SnapToOpenState();
-            _doorObject.transform.localRotation = Quaternion.Euler(_openedEulerAngles);
+            DoorObject.transform.localRotation = Quaternion.Euler(_openedEulerAngles);
         }
         
         public override void SnapToClosedState()
         {
             base.SnapToClosedState();
-            _doorObject.transform.localRotation = Quaternion.Euler(_closedEulerAngles);
+            DoorObject.transform.localRotation = Quaternion.Euler(_closedEulerAngles);
         }
 
         protected override void Initialize()
         {
-            _closedEulerAngles = _doorObject.transform.localRotation.eulerAngles;
+            _closedEulerAngles = DoorObject.transform.localRotation.eulerAngles;
             _openedEulerAngles = _closedEulerAngles + Vector3.up * _doorOpenAngle;
             base.Initialize();
         }
@@ -56,7 +55,7 @@ namespace com.studio23.ss2.InteractionSystem23.Samples.Demo1
         {
             Debug.Log(this + " Door is disabled " , this);
 
-            return _doorObject.transform.DOShakePosition(_doorAnimTime*.5f, Vector3.one * _disabledDoorPunchAmount)
+            return DoorObject.transform.DOShakePosition(DoorAnimTime*.5f, Vector3.one * _disabledDoorPunchAmount)
                 .SetEase(Ease.OutCirc)
                 .WithCancellation(token);
         }

@@ -1,8 +1,8 @@
 using com.bdeshi.helpers.Input;
-using com.studio23.ss2.InteractionSystem23.Core;
+using Studio23.SS2.InteractionSystem23.Core;
 using UnityEngine;
 
-namespace com.studio23.ss2.InteractionSystem23.Abstract
+namespace Studio23.SS2.InteractionSystem23.Abstract
 {
     public abstract class ItemPickupBase : InteractableBase
     {
@@ -15,10 +15,8 @@ namespace com.studio23.ss2.InteractionSystem23.Abstract
         }
 
         public override string GetPromptPrefix() => "Pickup";
-        public override string GetPromptSuffix()
-        {
-            return PickUpName;
-        }
+
+        public override string GetPromptSuffix() => PickUpName;
         
         public virtual void AddPickupToInventory()
         {
