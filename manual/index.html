@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interaction System |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interaction System |  |  ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.json">
+      <meta name="docfx:tocrel" content="../toc.json">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Documentation~/manual/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 align="center">Interaction System</h1>
+
+<p align="center">
+<a href="https://openupm.com/packages/com.studio23.ss2.interactionsystem/"><img src="https://img.shields.io/npm/v/com.studio23.ss2.interactionsystem?label=openupm&amp;registry_uri=https://package.openupm.com"></a>
+</p>
+<p>Introducing an Interaction System package for Unity.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#Getting-Started">Getting Started</a></li>
+</ul>
+</li>
+<li><a href="#Extensions">Extensions</a></li>
+</ol>
+<h2 id="installation">Installation</h2>
+<h3 id="install-via-git-url">Install via Git URL</h3>
+<p>You can also use the &quot;Install from Git URL&quot; option from Unity Package Manager to install the package.</p>
+<pre><code>https://github.com/Studio-23-xyz/InteractionSystem.git#upm
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="playerinteractionfinder">PlayerInteractionFinder</h3>
+<p>The PlayerInteractionFinder class is responsible for locating interactable objects based on the camera's position and orientation.</p>
+<p>Example Usage:</p>
+<pre><code class="lang-C#">// Attach the PlayerInteractionFinder component to a GameObject in your scene.
+// The camera reference should be assigned in the inspector.
+// The Interaction Layer Mask and Obstacle Layer Mask can be adjusted as needed.
+// Set other parameters such as Interaction Find Distance and Interaction Sphere Cast Radius.
+
+public class YourClass : MonoBehaviour
+{
+    [SerializeField] private PlayerInteractionFinder interactionFinder;
+
+    private void Start()
+    {
+        // Optionally, set the main camera explicitly (if not set in the inspector).
+        interactionFinder.SetCam(Camera.main);
+    }
+
+    private void Update()
+    {
+        List&lt;InteractableBase&gt; interactables = interactionFinder.FindInteractables();
+        // Use the list of interactables as needed.
+    }
+}
+</code></pre>
+<h3 id="interactionmanager">InteractionManager</h3>
+<p>The InteractionManager class manages the interaction stack and handles interaction events.</p>
+<p>Example Usage:</p>
+<pre><code class="lang-C#">// Attach the InteractionManager component to a GameObject in your scene.
+// Set up the required references and events.
+
+public class YourClass : MonoBehaviour
+{
+    [SerializeField] private InteractionManager interactionManager;
+
+    private void Start()
+    {
+        // Subscribe to interaction events if needed.
+        interactionManager.OnInteractionChainStarted += YourMethod;
+        interactionManager.OnInteractionChainEnded += YourMethod;
+    }
+
+    // Other relevant methods and event handlers...
+}
+</code></pre>
+<h3 id="interactioninputmanager">InteractionInputManager</h3>
+<p>The InteractionInputManager class manages input actions and buttons related to interactions.</p>
+<p>Example Usage:</p>
+<pre><code class="lang-C#">// Attach the InteractionInputManager component to a GameObject in your scene.
+// Set up input actions and buttons as needed.
+
+public class YourClass : MonoBehaviour
+{
+    [SerializeField] private InteractionInputManager inputManager;
+
+    private void Start()
+    {
+        // Subscribe to input events if needed.
+        inputManager.OnInteractableConfirmed += YourMethod;
+        inputManager.OnInteractableConfirmationStarted += YourMethod;
+        inputManager.OnInteractableConfirmationCancelled += YourMethod;
+    }
+
+    // Other relevant methods and event handlers...
+}
+</code></pre>
+<h3 id="inspectionmanager">InspectionManager</h3>
+<p>The InspectionManager class handles the inspection of interactable objects.</p>
+<h3 id="inputpromptscontroller">InputPromptsController</h3>
+<p>Manage input prompts for interactions.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Documentation~/manual/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/Studio-23-xyz" target="_blank">Studio-23-xyz</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

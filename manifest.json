@@ -1,0 +1,674 @@
+{
+  "sitemap": {
+    "baseUrl": "https://studio-23-xyz.github.io/InteractionSystem/"
+  },
+  "source_base_path": "/home/runner/work/InteractionSystem/InteractionSystem/Documentation~",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForCompletion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForCompletion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForKill.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForKill.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForPosition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForRewind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForRewind.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForStart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForStart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleAudio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleAudio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModulePhysics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModulePhysics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModulePhysics2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModulePhysics2D.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleSprite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleSprite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleUI.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleUI.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleUnityVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleUnityVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleUtils.Physics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleUtils.Physics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.DOTweenModuleUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.DOTweenModuleUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DG.Tweening.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DG.Tweening.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.ClosableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.ClosableBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.ItemPickupBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.ItemPickupBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.OpenableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.OpenableBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.TogglableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.TogglableBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Abstract.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Core.InputPromptsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Core.InputPromptsController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Core.InspectionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Core.InteractionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Data.InputPromptsModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Data.InputPromptsModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Data.InteractionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Data.InteractionState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.InstantSwitch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.InstantSwitch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.Scripts.TestPlayerController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.Scripts.TestPlayerController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.Scripts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.Scripts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestCharacterController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestCharacterController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestCharacterInputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestCharacterInputs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InputPromptsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InputPromptsView.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InputPromptsViewBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InputPromptsViewBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptView.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "changelog/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "changelog/toc.md",
+      "output": {
+        ".json": {
+          "relative_path": "changelog/toc.json"
+        },
+        ".html": {
+          "relative_path": "changelog/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "license/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "license/toc.md",
+      "output": {
+        ".json": {
+          "relative_path": "license/toc.json"
+        },
+        ".html": {
+          "relative_path": "license/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
