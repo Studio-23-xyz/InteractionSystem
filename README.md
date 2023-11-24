@@ -2,15 +2,7 @@
 <p align="center">
 <a href="https://openupm.com/packages/com.studio23.ss2.interactionsystem/"><img src="https://img.shields.io/npm/v/com.studio23.ss2.interactionsystem?label=openupm&amp;registry_uri=https://package.openupm.com" /></a>
 </p>
-
-Introducing an Interaction System package for Unity.
-
-## Table of Contents
-
-1. [Installation](#installation)
-2. [Usage](#usage)
-   - [Getting Started](#Getting-Started)
-3. [Extensions](#Extensions)
+"An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interactions.
 
 ## Installation
 
@@ -20,93 +12,86 @@ You can also use the "Install from Git URL" option from Unity Package Manager to
 ```
 https://github.com/Studio-23-xyz/InteractionSystem.git#upm
 ```
-
+### Install from OpenUPM:
+```
+https://openupm.com/packages/com.studio23.ss2.interactionsystem/
+```
 ## Usage
-
-
-### PlayerInteractionFinder
-The PlayerInteractionFinder class is responsible for locating interactable objects based on the camera's position and orientation.
-
-Example Usage:
-
-```C#
-// Attach the PlayerInteractionFinder component to a GameObject in your scene.
-// The camera reference should be assigned in the inspector.
-// The Interaction Layer Mask and Obstacle Layer Mask can be adjusted as needed.
-// Set other parameters such as Interaction Find Distance and Interaction Sphere Cast Radius.
-
-public class YourClass : MonoBehaviour
-{
-    [SerializeField] private PlayerInteractionFinder interactionFinder;
-
-    private void Start()
-    {
-        // Optionally, set the main camera explicitly (if not set in the inspector).
-        interactionFinder.SetCam(Camera.main);
-    }
-
-    private void Update()
-    {
-        List<InteractableBase> interactables = interactionFinder.FindInteractables();
-        // Use the list of interactables as needed.
-    }
-}
+The samples scene contains an example setup. You will need in the scene:
+1. An `InteractionManager` singleton.
+2. An `InteractionPromptController` configured in the scene
+3. The `InteractionPromptController` will require an `InteractionPromptModel` and `InteractionPromptView` configured in the scene.
+4. A `PlayerInteractionFinder` to detect interactables in the scene.
+ 
+### Finding and showing Interactions
+The `PlayerInteractionFinder` class raycasts through the scene to detect interactables. The `_interactionLayerMask` field controls which layers it checks. 
+To show them:
+```
+var interactables = _interactionFinder.FindInteractables();
+InteractionManager.Instance.ShowNewInteractables(interactables);
 ```
 
-### InteractionManager
-The InteractionManager class manages the interaction stack and handles interaction events.
+#### Starting interactions
+InteractionPromptController handles hold confirmation and starting interation.. The InteractionManager will automatically start a confirmation once the InteractionPromptController confirms one.
 
-Example Usage:
+#### Hold interactions
+If the `_interactionHoldTime ` field on the interactable is > 0, then the InteractionPromptController will require holding the button for that amount of time.
 
-```C#
-// Attach the InteractionManager component to a GameObject in your scene.
-// Set up the required references and events.
+You have to tell the InteractionManager to start the interaction:
 
-public class YourClass : MonoBehaviour
-{
-    [SerializeField] private InteractionManager interactionManager;
-
-    private void Start()
-    {
-        // Subscribe to interaction events if needed.
-        interactionManager.OnInteractionChainStarted += YourMethod;
-        interactionManager.OnInteractionChainEnded += YourMethod;
-    }
-
-    // Other relevant methods and event handlers...
-}
+#### Changing the text shown in the InteractionPrompt for an interactable
+Override the following functions:
+```
+  /// <summary>
+  /// Interaction prompt prefix(ex: "Inspect")
+  /// </summary>
+  /// <returns></returns>
+  public abstract string GetPromptPrefix();
+  /// <summary>
+  /// Interaction prompt suffix that appears after the prompt
+  /// </summary>
+  /// <returns></returns>
+  public abstract string GetPromptSuffix();
+  /// <summary>
 ```
 
-### InteractionInputManager
-The InteractionInputManager class manages input actions and buttons related to interactions.
+#### Custom Interaction Prompt UI
+You can inherit from the `InteractionPromptView` class to customize the Prompt UI.
 
-Example Usage:
-
-```C#
-// Attach the InteractionInputManager component to a GameObject in your scene.
-// Set up input actions and buttons as needed.
-
-public class YourClass : MonoBehaviour
-{
-    [SerializeField] private InteractionInputManager inputManager;
-
-    private void Start()
-    {
-        // Subscribe to input events if needed.
-        inputManager.OnInteractableConfirmed += YourMethod;
-        inputManager.OnInteractableConfirmationStarted += YourMethod;
-        inputManager.OnInteractableConfirmationCancelled += YourMethod;
-    }
-
-    // Other relevant methods and event handlers...
-}
+#### Knowing when Interaction starts/ends
+InteractionManager fires the following events to tell you that
 ```
+        /// <summary>
+        /// Fired when we start the first interaction on the stack
+        /// Not fired when subinteractions are started 
+        /// </summary>
+        public event Action OnInteractionChainStarted;
+        /// <summary>
+        /// Fired when we complete all the interactions on the stack
+        /// Or when we cancel the interaction confirmation without anything in the stack
+        /// Not fired when subinteractions are completed
+        /// </summary>
+        public event Action OnInteractionChainEnded;
+        public bool IsRunningInteraction{get;}
+```
+`InteractionManager.IsRunningInteraction` can also be used to synchronously check if an interaction is running
 
-### InspectionManager
-The InspectionManager class handles the inspection of interactable objects.
+#### SubInteractions
+If you start an interaction while one is running, the old interaction is paused and the new interaction is started as a subinteraciton. When the subinteraction ends, the old interaction is resumed.
 
+#### Custom Interactions
+You can define your own Interactable by inheriting from `InteractableBase`.
 
+#### Interactable state
+Interactables can be in 3 states:
+```
+    public enum InteractionState{
+        Inactive,//interaction hasn't started yet.
+        Active,//runing interaction logic
+        Paused,// running a sub-interaction or some other case when we don't want the interaction to run logic
+    }
+```
+The `CurState` field returns the Interactable's current state. InteractableBase handles setting the value. So Custome Interactables inheriting from it don't need to manually set it.
 
-### InputPromptsController
-Manage input prompts for interactions.
-
+#### Known Issues
+When an inspectable is inspected , it can spawn inside colliders. This will be fixed when we figure out a way to overlay camera renders on HDRP.
