@@ -15,76 +15,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForCompletion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForCompletion.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForKill.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForKill.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForPosition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForPosition.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForRewind.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForRewind.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForStart.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.WaitForStart.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenCYInstruction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenCYInstruction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/DG.Tweening.DOTweenModuleAudio.yml",
       "output": {
         ".html": {
@@ -99,46 +29,6 @@
       "output": {
         ".html": {
           "relative_path": "api/DG.Tweening.DOTweenModulePhysics.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenModulePhysics2D.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenModulePhysics2D.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenModuleSprite.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenModuleSprite.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenModuleUI.Utils.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenModuleUI.Utils.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DG.Tweening.DOTweenModuleUI.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DG.Tweening.DOTweenModuleUI.html"
         }
       },
       "version": ""
