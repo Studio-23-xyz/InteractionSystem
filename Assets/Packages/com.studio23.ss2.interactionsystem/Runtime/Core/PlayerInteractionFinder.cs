@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using com.bdeshi.helpers.Utility.Extensions;
+using Bdeshi.Helpers.Utility.Extensions;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Data;
 using UnityEngine;

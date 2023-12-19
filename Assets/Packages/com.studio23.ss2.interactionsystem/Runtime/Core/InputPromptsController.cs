@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using com.bdeshi.helpers.Utility;
+using Bdeshi.Helpers.Utility;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Data;
 using Studio23.SS2.InteractionSystem.UI;
@@ -25,9 +25,9 @@ namespace Studio23.SS2.InteractionSystem.Core
             _view = GetComponent<InputPromptsViewBase>();
             _model.OnPromptsChanged += _view.UpdatePromptsView;
 
-            InteractionInputManager.Instance.InspectButton.addPerformedCallback(gameObject, HandleInspectPressed);
-            InteractionInputManager.Instance.PickupButton.addPerformedCallback(gameObject, HandlePickupPressed);
-            InteractionInputManager.Instance.ToggleButton.addPerformedCallback(gameObject, HandleTogglePressed);
+            InteractionInputManager.Instance.InspectButton.AddCancelledCallback(gameObject, HandleInspectPressed);
+            InteractionInputManager.Instance.PickupButton.AddCancelledCallback(gameObject, HandlePickupPressed);
+            InteractionInputManager.Instance.ToggleButton.AddCancelledCallback(gameObject, HandleTogglePressed);
         }
 
         private async void HandleTogglePressed()
@@ -82,7 +82,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             buttonPrompt.SetProgress(0);
 
             _remainingPressTimer.reset(interactableBase.InteractionHoldTime);
-            while (interactableBase.InputButton.isHeld)
+            while (interactableBase.InputButton.IsHeld)
             {
                 _remainingPressTimer.safeUpdateTimer(Time.deltaTime);
                 buttonPrompt.SetProgress(_remainingPressTimer.Ratio);
