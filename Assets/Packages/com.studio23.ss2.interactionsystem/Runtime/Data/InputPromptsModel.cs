@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using com.bdeshi.helpers.Input;
+using Bdeshi.Helpers.Input;
 using Studio23.SS2.InteractionSystem.Abstract;
 using UnityEngine;
 

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
-using com.bdeshi.helpers.Input;
-using com.bdeshi.helpers.Utility;
+using Bdeshi.Helpers.Input;
+using Bdeshi.Helpers.Utility;
+using Bdeshi.Helpers;
+using Bdeshi.Helpers.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -45,7 +47,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         
 
         #endregion
-        protected override void initialize()
+        protected override void Initialize()
         {
             Buttons = new List<InputButtonSlot>();
             InspectButton = new InputButtonSlot("InspectButton");
@@ -84,10 +86,10 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             if(action == null)
             {
-                Debug.LogWarning("action null for button " + slot.buttonName);
+                Debug.LogWarning("action null for button " + slot.ButtonName);
                 return;
             }
-            slot.bind(action);
+            slot.Bind(action);
             Buttons.Add(slot);
         }
         void OnEnable()
@@ -133,7 +135,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
             foreach (var inputButtonSlot in Buttons)
             {
-                inputButtonSlot.unBind();
+                inputButtonSlot.UnBind();
             }
 
             _inspectMoveAction.action.performed -= OnMovePerformed;
@@ -159,7 +161,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 return;
             foreach (var inputButtonSlot in Instance.Buttons)
             {
-                inputButtonSlot.cleanup();
+                inputButtonSlot.Cleanup();
             }
         }
 

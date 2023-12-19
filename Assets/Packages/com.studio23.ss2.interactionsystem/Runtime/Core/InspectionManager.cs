@@ -1,5 +1,5 @@
 using System.Threading;
-using com.bdeshi.helpers.Utility;
+using Bdeshi.Helpers.Utility;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -31,17 +31,17 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private Camera _cam;
 
-        protected override void initialize()
+        protected override void Initialize()
         {
             _subInteractionFinder = GetComponentInChildren<PlayerInteractionFinder>();
         }
 
         private void Start()
         {
-            InteractionInputManager.Instance.InspectionDragButton.addPerformedCallback(gameObject, HandleInspectDragPerformed);
-            InteractionInputManager.Instance.InspectionDragButton.addCancelledCallback(gameObject, HandleInspectDragCancelled);
-            InteractionInputManager.Instance.InteractCancelButton.addPerformedCallback(gameObject, HandleInspectionCancelled);
-            InteractionInputManager.Instance.InspectResetButton.addPerformedCallback(gameObject, HandleInspectResetPerformed);
+            InteractionInputManager.Instance.InspectionDragButton.AddPerformedCallback(gameObject, HandleInspectDragPerformed);
+            InteractionInputManager.Instance.InspectionDragButton.AddCancelledCallback(gameObject, HandleInspectDragCancelled);
+            InteractionInputManager.Instance.InteractCancelButton.AddPerformedCallback(gameObject, HandleInspectionCancelled);
+            InteractionInputManager.Instance.InspectResetButton.AddPerformedCallback(gameObject, HandleInspectResetPerformed);
         }
 
         private void HandleInspectResetPerformed()

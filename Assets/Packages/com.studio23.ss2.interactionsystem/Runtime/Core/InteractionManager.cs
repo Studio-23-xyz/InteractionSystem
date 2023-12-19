@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using com.bdeshi.helpers.Utility;
+using Bdeshi.Helpers.Utility;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
@@ -133,7 +133,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             }
         }
         
-        protected override void initialize()
+        protected override void Initialize()
         {
             RefreshCancellationToken();
         }

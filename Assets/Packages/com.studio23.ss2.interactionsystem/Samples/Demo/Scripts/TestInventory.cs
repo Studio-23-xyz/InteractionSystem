@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using com.bdeshi.helpers.Utility;
+using Bdeshi.Helpers.Utility;
 using UnityEngine;
 
 namespace Studio23.SS2.InteractionSystem.Samples.Demo1
@@ -7,7 +7,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
     public class TestInventory:MonoBehaviourSingletonPersistent<TestInventory>
     {
         HashSet<string> _items;
-        protected override void initialize()
+        protected override void Initialize()
         {
             _items = new HashSet<string>();
         }
