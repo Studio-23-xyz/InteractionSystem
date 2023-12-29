@@ -36,7 +36,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         #region Buttons
 
-        public List<InputButtonSlot> Buttons;
+        public List<InputButtonSlot> Buttons ;
         public InputButtonSlot InspectButton { get;  private set;}
         public InputButtonSlot InspectionDragButton { get; private set; }
         public InputButtonSlot ToggleButton { get; private set; }
@@ -133,10 +133,14 @@ namespace Studio23.SS2.InteractionSystem.Core
             if (_inputActionMap == null)
                 return;
 
-            foreach (var inputButtonSlot in Buttons)
+            if (Buttons != null)
             {
-                inputButtonSlot.UnBind();
+                foreach (var inputButtonSlot in Buttons)
+                {
+                    inputButtonSlot.UnBind();
+                }
             }
+            
 
             _inspectMoveAction.action.performed -= OnMovePerformed;
             _inspectMoveAction.action.canceled -= OnMoveCancelled;
