@@ -110,6 +110,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f4e20475-66c0-4175-8356-33dc26ca75c3",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pickup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a0b8f38f-ff72-4351-973c-4a39bd6c4dbc",
                     "path": "<Keyboard>/r",
                     "interactions": "",

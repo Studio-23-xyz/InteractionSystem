@@ -22,7 +22,11 @@ namespace Studio23.SS2.InteractionSystem.Core
         // Collider[] _colliderCache = new Collider[69];
         private void Start()
         {
-            SetCam(Camera.main);
+            if (_cam == null)
+            {
+                SetCam(Camera.main);
+            }
+            
         }
 
         /// <summary>
@@ -38,6 +42,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             if (Physics.SphereCast(InteractionRayOrigin,  _interactionSphereCastRadius,InteractionFindDirection,
                     out var hit, _interactionFindDistance, mask, QueryTriggerInteraction.Collide))
             {
+                
                 // for subinteractables, interactable layer itself could be obstacle mask
                 // this saves us a getcomponent call anyways
                 if (_interactionLayerMask.Contains(hit))
@@ -54,6 +59,12 @@ namespace Studio23.SS2.InteractionSystem.Core
                             results.RemoveAt(i);
                         }
                     }
+                    Debug.DrawRay(InteractionRayOrigin, InteractionFindDirection.normalized * hit.distance, Color.green);
+                }
+                else
+                {
+                    Debug.DrawRay(InteractionRayOrigin, InteractionFindDirection.normalized * _interactionFindDistance, Color.red);
+
                 }
             }
 
