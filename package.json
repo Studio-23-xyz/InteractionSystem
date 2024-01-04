@@ -1,0 +1,48 @@
+{
+    "name": "com.studio23.ss2.interactionsystem",
+    "version": "1.2.2",
+    "displayName": "Interaction System",
+    "description": "An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interactions",
+    "unity": "2022.3",
+    "unityRelease": "10f1",
+    "documentationUrl": "https://studio-23-xyz.github.io/InteractionSystem/manual/",
+    "changelogUrl": "https://studio-23-xyz.github.io/InteractionSystem/changelog/CHANGELOG.html",
+    "licensesUrl": "https://studio-23-xyz.github.io/InteractionSystem/license/LICENSE.html",
+    "scopedRegistries":  [
+      {
+        "name": "Studio 23",
+        "url": "https://package.openupm.com",
+        "scopes": [
+          "com.studio23.ss2"
+        ]
+      }], 
+    "dependencies": {
+        "com.bdeshi.helpers": "1.0.0",
+        "com.cysharp.unitask": "2.4.1",
+        "com.textus-games.serialized-reference-ui": "1.0.0",
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.textmeshpro": "3.0.6"
+   },
+   "keywords": [
+      "Interaction",
+      "Interaction System",
+      "System"
+    ],
+  "samples": [
+      {
+        "displayName": "Functional Example",
+        "description": "A scene containing example implementations of InteractableBase classes and nested interactions. To run: \n 1. Install DOTWEEN \n 2. Add the scripting define symbol UNITASK_DOTWEEN_SUPPORT in ProjectSettings/Player",
+        "path": "Samples/Demo/"
+      }
+    ],  
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Studio-23-xyz/interactionsystem.git"    
+    },
+    "license": "MIT",  
+    "author": {
+      "name": "Studio 23",
+      "email": "contact@studio-23.xyz",
+      "url": "https://studio-23.xyz"
+    }
+  }
