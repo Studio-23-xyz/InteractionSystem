@@ -59,6 +59,8 @@ namespace Studio23.SS2.InteractionSystem.Core
             Debug1Button = new InputButtonSlot("Debug1Button");
         }
 
+        
+        
         private void OnZoomCancelled(InputAction.CallbackContext obj)
         {
             _inspectionZoomInput = 0;
@@ -127,6 +129,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             UnBindAll();
         }
+
 
         private void UnBindAll()
         {

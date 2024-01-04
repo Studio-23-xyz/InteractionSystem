@@ -25,9 +25,9 @@ namespace Studio23.SS2.InteractionSystem.Core
             _view = GetComponent<InputPromptsViewBase>();
             _model.OnPromptsChanged += _view.UpdatePromptsView;
 
-            InteractionInputManager.Instance.InspectButton.AddCancelledCallback(gameObject, HandleInspectPressed);
-            InteractionInputManager.Instance.PickupButton.AddCancelledCallback(gameObject, HandlePickupPressed);
-            InteractionInputManager.Instance.ToggleButton.AddCancelledCallback(gameObject, HandleTogglePressed);
+            InteractionInputManager.Instance.InspectButton.AddPerformedCallback(gameObject, HandleInspectPressed);
+            InteractionInputManager.Instance.PickupButton.AddPerformedCallback(gameObject, HandlePickupPressed);
+            InteractionInputManager.Instance.ToggleButton.AddPerformedCallback(gameObject, HandleTogglePressed);
         }
 
         private async void HandleTogglePressed()
