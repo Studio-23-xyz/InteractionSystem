@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8042310538741597858}
   - component: {fileID: 3688298174200314943}
   m_Layer: 0
-  m_Name: InspectionCamera
+  m_Name: InspectionRTCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
