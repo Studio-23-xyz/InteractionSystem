@@ -100,6 +100,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 UpdateInspectableMove(inspectable);
                 FindSubInteraction();
                 await UniTask.Yield(token);
+                await UniTask.NextFrame(token);
             }
             InteractionManager.Instance.Dlog("examine TASK end");
         }
