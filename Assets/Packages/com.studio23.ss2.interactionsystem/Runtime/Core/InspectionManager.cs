@@ -5,7 +5,6 @@ using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
@@ -102,7 +101,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 FindSubInteraction();
                 await UniTask.Yield(token);
             }
-            Debug.Log("examine TASK end");
+            InteractionManager.Instance.Dlog("examine TASK end");
         }
         
         public void Dlog(string message, UnityEngine.Object context = null)
@@ -249,18 +248,11 @@ namespace Studio23.SS2.InteractionSystem.Core
             {
                 // Scale the drag delta by the rotation speed
                 float rotationAmountX = (ExaminationXAxisInverted ? 1:-1) * dragDelta.x * dragSensitivity * Time.deltaTime;
-                float rotationAmountY = (ExaminationYAxisInverted ? -1:1) * dragDelta.y * dragSensitivity * Time.deltaTime;
+                float rotationAmountY = (ExaminationYAxisInverted ? 1:-1) * dragDelta.y * dragSensitivity * Time.deltaTime;
 
-                // Rotate the object relative to its current rotation
-                //#TODO if we do camera stacking, then space.world would not be an issue.
-                // but we can do that only if we fix the rendertexture issue
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.up, rotationAmountX);
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.right, rotationAmountY);
                 spawnedExaminationObject.localPosition = Vector3.zero;
-                // spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, Vector3.right, rotationAmountX);
-                // spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, Vector3.up, rotationAmountY);
-                // InspectionObjectParent.Rotate( _inspectionCamera.transform.up, rotationAmountX);                
-                // InspectionObjectParent.Rotate(_inspectionCamera.transform.right, rotationAmountY);                
             }
         }
 
