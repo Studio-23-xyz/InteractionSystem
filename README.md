@@ -81,6 +81,7 @@ If you start an interaction while one is running, the old interaction is paused 
 
 #### Custom Interactions
 You can define your own Interactable by inheriting from `InteractableBase`.
+Be sure to use the cancelaltion token when overriding `DoNormalInteraction()` and `DoDisabledInteraction()` if you want subinteractions.
 
 #### Interactable state
 Interactables can be in 3 states:
