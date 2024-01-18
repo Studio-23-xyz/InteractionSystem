@@ -1645,6 +1645,19 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.Player
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.Player
   nameWithType: InspectionManager.Player
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)
+  name: SetGameCamera(Camera)
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_SetGameCamera_Camera_
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)
+  nameWithType: InspectionManager.SetGameCamera(Camera)
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera*
+  name: SetGameCamera
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_SetGameCamera_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera
+  nameWithType: InspectionManager.SetGameCamera
 - uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.ShowInspectable(Studio23.SS2.InteractionSystem.Abstract.InspectableBase,System.Threading.CancellationToken)
   name: ShowInspectable(InspectableBase, CancellationToken)
   href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_ShowInspectable_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_System_Threading_CancellationToken_
