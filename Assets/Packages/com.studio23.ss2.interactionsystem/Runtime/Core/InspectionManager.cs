@@ -1,8 +1,10 @@
 using System.Threading;
 using Bdeshi.Helpers.Utility;
+using Cinemachine;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
@@ -29,8 +31,9 @@ namespace Studio23.SS2.InteractionSystem.Core
         public bool ExaminationXAxisInverted = false;
         public bool ExaminationYAxisInverted = false;
 
-        private Camera _cam;
-
+        [SerializeField] Camera _mainCamera;
+        [SerializeField] Camera  _inspectionCamera;
+        [SerializeField] private Canvas _inspectionBackgroundCanvas;
         protected override void Initialize()
         {
             _subInteractionFinder = GetComponentInChildren<PlayerInteractionFinder>();
@@ -38,6 +41,8 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void Start()
         {
+            FindMainCamera();
+
             InteractionInputManager.Instance.InspectionDragButton.AddPerformedCallback(gameObject, HandleInspectDragPerformed);
             InteractionInputManager.Instance.InspectionDragButton.AddCancelledCallback(gameObject, HandleInspectDragCancelled);
             InteractionInputManager.Instance.InteractCancelButton.AddPerformedCallback(gameObject, HandleInspectionCancelled);
@@ -67,6 +72,16 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _isDragging = true;
         }
+        
+        /// <summary>
+        /// set The camera that the RT camera copies position of
+        /// camera.main in most cases.
+        /// </summary>
+        /// <param name="cam"></param>
+        public void SetGameCamera(Camera cam)
+        {
+            _mainCamera = cam;
+        }
 
         void FindPlayer()
         {
@@ -85,8 +100,9 @@ namespace Studio23.SS2.InteractionSystem.Core
                 UpdateInspectableMove(inspectable);
                 FindSubInteraction();
                 await UniTask.Yield(token);
+                await UniTask.NextFrame(token);
             }
-            Debug.Log("examine TASK end");
+            InteractionManager.Instance.Dlog("examine TASK end");
         }
         
         public void Dlog(string message, UnityEngine.Object context = null)
@@ -108,10 +124,10 @@ namespace Studio23.SS2.InteractionSystem.Core
             {
                 Vector3 moveAmount = InteractionInputManager.Instance.InspectionMoveInput;
                 var zoomAmount = InteractionInputManager.Instance.InspectionZoomInput;
-                moveAmount = _cam.transform.right * moveAmount.x 
-                             + _cam.transform.up * moveAmount.y
+                moveAmount = _inspectionCamera.transform.right * moveAmount.x 
+                             + _inspectionCamera.transform.up * moveAmount.y
                              ;
-                moveAmount += _cam.transform.forward * zoomAmount * _zoomSpeed;
+                moveAmount += _inspectionCamera.transform.forward * zoomAmount * _zoomSpeed;
                 
                 moveAmount *= _moveSpeed * Time.deltaTime;
                 
@@ -143,10 +159,10 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void MoveInspectableForInspection(InspectableBase inspectable)
         {
+            InspectionObjectParent.localRotation = Quaternion.identity;
             _ogParent = _examinationObject.transform.parent;
             _ogOffset = _examinationObject.localPosition;
             _ogOrientation = _examinationObject.localRotation;
-            
             
             _examinationObject.gameObject.SetActive(true);
             _examinationObject.parent = InspectionObjectParent;
@@ -158,14 +174,21 @@ namespace Studio23.SS2.InteractionSystem.Core
         public void HandleInteractionInitialize(InspectableBase inspectable)
         {
             FindPlayer();
-            FindCamera();
+
+            _inspectionBackgroundCanvas.worldCamera = _mainCamera;
+            _inspectionBackgroundCanvas.gameObject.SetActive(true);
+            //urp camera stacking
+            var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
+            cameraData.cameraStack.Add(_inspectionCamera);
+            
+            _subInteractionFinder.SetCam(_inspectionCamera);
+
             _wantsToCancel = false;
             _isDragging = false;
             _isInspecting = true;
             
-            InspectionObjectParent.transform.parent = Player;
-            InspectionObjectParent.localPosition = inspectable.InspectionOffset;
-
+            // InspectionObjectParent.transform.parent = Player;
+            // InspectionObjectParent.localPosition = inspectable.InspectionOffset;
             
             //#TODO fix the render texture issue and update this
             Dlog("start inspection " + inspectable);
@@ -173,9 +196,14 @@ namespace Studio23.SS2.InteractionSystem.Core
             MoveInspectableForInspection(inspectable);
         }
 
-        private void FindCamera()
+
+
+        private void FindMainCamera()
         {
-            _cam = Camera.main;
+            if (_mainCamera == null)
+            {
+                _mainCamera = Camera.main;    
+            }
         }
 
         public void HandleInspectablePaused(InspectableBase inspectable)
@@ -189,8 +217,13 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _isInspecting = false;
             Dlog("end inspection " + inspectable);
-            InspectionObjectParent.transform.parent = this.transform;
+            // InspectionObjectParent.transform.parent = this.transform;
             UnMoveInspectableForInspection(inspectable);
+            
+            _inspectionBackgroundCanvas.gameObject.SetActive(false);
+            //urp camera stacking undo
+            var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
+            cameraData.cameraStack.Remove(_inspectionCamera);
         }
 
         public void HandleInspectableResumed(InspectableBase inspectable)
@@ -218,11 +251,9 @@ namespace Studio23.SS2.InteractionSystem.Core
                 float rotationAmountX = (ExaminationXAxisInverted ? 1:-1) * dragDelta.x * dragSensitivity * Time.deltaTime;
                 float rotationAmountY = (ExaminationYAxisInverted ? 1:-1) * dragDelta.y * dragSensitivity * Time.deltaTime;
 
-                // Rotate the object relative to its current rotation
-                //#TODO if we do camera stacking, then space.world would not be an issue.
-                // but we can do that only if we fix the rendertexture issue
-                spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _cam.transform.up, rotationAmountX);
-                spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _cam.transform.right, rotationAmountY);
+                spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.up, rotationAmountX);
+                spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.right, rotationAmountY);
+                spawnedExaminationObject.localPosition = Vector3.zero;
             }
         }
 
