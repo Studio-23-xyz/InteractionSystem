@@ -1,8 +1,10 @@
 # Changelog
 
-## [v1.1.3] - 11-24-2023
-
-### Updated
+## [v1.3.0]
+- Convert to URP
+- Use cam stacking instead of 
+## [v1.2.0] 
+- Fix null-ref issue when destroying duplicate singleton
 - Refactored Namespace
 
 ## [v1.1.0] 

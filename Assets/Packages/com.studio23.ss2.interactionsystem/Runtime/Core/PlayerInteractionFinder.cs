@@ -26,7 +26,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             {
                 SetCam(Camera.main);
             }
-            
         }
 
         /// <summary>

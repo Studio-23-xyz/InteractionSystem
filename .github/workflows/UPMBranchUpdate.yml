@@ -29,16 +29,20 @@ jobs:
       id: get-version
       run: echo ::set-output name=version::$(jq -r .version ${{ steps.find-package-json.outputs.package-json-path }})
 
-    - name: Create Git Tag
-      if: steps.get-version.outputs.version != ''
-      run: git tag v${{ steps.get-version.outputs.version }} upm
-
-    - name: Push Branch and Tags
+    - name: Push Branch 
       run: |
         git checkout upm
         if [[ -d "Samples" ]]; then
           git mv Samples Samples~
           rm -f Samples.meta
+          git config --global user.name 'github-bot'
+          git config --global user.email 'github-bot@users.noreply.github.com'
+          git commit -am "fix: Samples => Samples~"
         fi
         git push -f -u origin upm
-        git push --tags
+        
+    - name: Create Git Tag
+      if: steps.get-version.outputs.version != ''
+      run:  |
+         git tag v${{ steps.get-version.outputs.version }} upm
+         git push origin --tags

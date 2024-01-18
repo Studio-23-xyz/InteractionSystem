@@ -92,6 +92,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 }
 
                 await UniTask.Yield();
+                await UniTask.NextFrame();
             }
             buttonPrompt.SetProgress(0);
             buttonPrompt.ToggleProgressSlider(false);
