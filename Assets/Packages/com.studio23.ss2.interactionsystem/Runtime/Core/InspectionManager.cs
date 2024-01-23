@@ -1,6 +1,5 @@
 using System.Threading;
 using Bdeshi.Helpers.Utility;
-using Cinemachine;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -12,7 +11,6 @@ namespace Studio23.SS2.InteractionSystem.Core
     {
         [SerializeField] private bool _isDebug = false;
         public Transform InspectionObjectParent;
-        public Transform Player;
 
         [SerializeField] private PlayerInteractionFinder _subInteractionFinder;
         
@@ -83,19 +81,16 @@ namespace Studio23.SS2.InteractionSystem.Core
             _mainCamera = cam;
         }
 
-        void FindPlayer()
-        {
-            if (Player == null)
-            {
-                Player = GameObject.FindWithTag("Player").transform;
-            }
-        }
         
         private async UniTask ExaminationTask(InspectableBase inspectable, CancellationToken token)
         {
             InteractionManager.Instance.Dlog("examine TASK start");
-            while (!_wantsToCancel)
+            while (true)
             {
+                if((_wantsToCancel && inspectable.CanExitInspection) || inspectable.ForceExitInspection)
+                {
+                    break;
+                }
                 UpdateDrag(inspectable, _examinationObject);
                 UpdateInspectableMove(inspectable);
                 FindSubInteraction();
@@ -151,6 +146,8 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void UnMoveInspectableForInspection(InspectableBase inspectable)
         {
+            Debug.Log($"unmove {_ogParent} {inspectable}", _ogParent);
+
             _examinationObject.parent = _ogParent;
             _examinationObject.localPosition = _ogOffset;
             _examinationObject.localRotation = _ogOrientation;
@@ -159,21 +156,30 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void MoveInspectableForInspection(InspectableBase inspectable)
         {
-            InspectionObjectParent.localRotation = Quaternion.identity;
             _ogParent = _examinationObject.transform.parent;
             _ogOffset = _examinationObject.localPosition;
             _ogOrientation = _examinationObject.localRotation;
+
+            Debug.Log($"move {_ogParent} {inspectable}", _ogParent);
             
             _examinationObject.gameObject.SetActive(true);
             _examinationObject.parent = InspectionObjectParent;
-            _examinationObject.localPosition = Vector3.zero;
-            _examinationObject.localRotation = Quaternion.identity;
+            _examinationObject.localPosition = inspectable.InspectionPosOffset;
+            _examinationObject.localRotation = Quaternion.Euler(inspectable.InspectionRotOffset);
+            _examinationObject.localScale = inspectable.InspectionScale;
+
+            //_examinationObject.parent = InspectionObjectParent;
+            //_examinationObject.position = InspectionObjectParent.position;
+            //_examinationObject.rotation = Quaternion.Euler(InspectionObjectParent.rotation.eulerAngles +
+            //    _examinationObject.eulerAngles)
+            //    ;
             _examinationObject.localScale = inspectable.InspectionScale;
         }
 
         public void HandleInteractionInitialize(InspectableBase inspectable)
         {
-            FindPlayer();
+            Debug.Log($"HandleInteractionInitialize {_ogParent} {inspectable}", 
+                inspectable.GetInspectionTarget().parent);
 
             _inspectionBackgroundCanvas.worldCamera = _mainCamera;
             _inspectionBackgroundCanvas.gameObject.SetActive(true);
@@ -236,7 +242,6 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             if(_subInteractionFinder == null)
                 return;
-            _subInteractionFinder.transform.position = Player.position;
             var interactions = _subInteractionFinder.FindInteractables();
             InteractionManager.Instance.ShowNewInteractables(interactions);
         }

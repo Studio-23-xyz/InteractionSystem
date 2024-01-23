@@ -16,35 +16,64 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         [SerializeField] 
         protected float _inspectionRotationSensitivity = 1;
         [SerializeField] 
-        protected Vector3 _inspectionOffset = new Vector3(0,1.75f,1);
+        protected Vector3 _inspectionPosOffset = new Vector3(0,0,0);
+        [SerializeField] 
+        protected Vector3 _inspectionRotOffset = new Vector3(0,0,0);
 
         [SerializeField] float _inspectionScaleMultiplier = 1;
-        [SerializeField] Vector3 _originalInspectionTargetScale;
+        [SerializeField] Vector3 _inspectionTargetScale = Vector3.one;
         [SerializeField] float _inspectionTargetMaxOffset = 3;
         [SerializeField] bool _canBeInterrupted = true;
         [SerializeField] float _inspectionTargetMaxZoom = 1;
 
-        public Vector3 OriginalInspectionTargetScale => _originalInspectionTargetScale;
-        public Vector3 InspectionScale => _originalInspectionTargetScale * _inspectionScaleMultiplier;
-        public Vector3 InspectionOffset => _inspectionOffset;
+        public Vector3 OriginalInspectionTargetScale => _inspectionTargetScale;
+        public Vector3 InspectionScale => _inspectionTargetScale * _inspectionScaleMultiplier;
+        public Vector3 InspectionPosOffset => _inspectionPosOffset;
+        public Vector3 InspectionRotOffset => _inspectionRotOffset;
         public float InspectionTargetMaxOffset => _inspectionTargetMaxOffset;
         public float InspectionTargetMaxZoom => _inspectionTargetMaxZoom;
         public float InspectionRotationSensitivity => _inspectionRotationSensitivity;
         public override InputButtonSlot InputButton => InteractionInputManager.Instance.InspectButton;
         public override bool CanBeInterrupted => _canBeInterrupted;
-
+        public virtual bool CanExitInspection => true;
+        public virtual bool ForceExitInspection => false;
         public override string GetPromptPrefix() => "Inspect";
 
         protected virtual void Awake()
         {
-            _originalInspectionTargetScale = _inspectionTarget.localScale;
+            _inspectionTargetScale = _inspectionTarget.localScale;
         }
 
         public Transform GetInspectionTarget()
         {
             return _inspectionTarget;
         }
-        
+
+
+        protected override void HandleInteractionStarted()
+        {
+            _inspectionTarget.gameObject.SetActive(false);
+
+            InspectionManager.Instance.HandleInteractionInitialize(this);
+        }
+
+        protected override void HandleInteractionPause()
+        {
+            InspectionManager.Instance.HandleInspectablePaused(this);
+        }
+
+        protected override void HandleInteractionResumed()
+        {
+            InspectionManager.Instance.HandleInspectableResumed(this);
+        }
+
+        protected override void HandleInteractionCompleted()
+        {
+            Debug.Log("completed "  + this, this);
+            _inspectionTarget.gameObject.SetActive(true);
+            InspectionManager.Instance.HandleInspectableCompleted(this);
+        }
+
         public override async UniTask DoNormalInteraction(CancellationToken token)
         {
             await InspectionManager.Instance.ShowInspectable(this, token);

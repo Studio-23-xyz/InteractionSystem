@@ -113,8 +113,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// <returns></returns>
         public InteractionConditionResult EvaluateInteractionConditions(PlayerInteractionFinder interactionFinder)
         {
-            if (_curState != InteractionState.Inactive && CanBeInterrupted)
-                return InteractionConditionResult.Hide;
             _lastEvaluationResult = EvaluateInteractionConditionsInternal(interactionFinder);
             return _lastEvaluationResult;
         }
@@ -127,6 +125,9 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         protected virtual InteractionConditionResult EvaluateInteractionConditionsInternal(PlayerInteractionFinder interactionFinder)
         {
             if (_curState != InteractionState.Inactive && CanBeInterrupted)
+                return InteractionConditionResult.Hide;
+            //don't show if component is disabled
+            if (!enabled)
                 return InteractionConditionResult.Hide;
             
             var result = InteractionConditionResult.Show;
