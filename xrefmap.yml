@@ -546,6 +546,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanBeInterrupted
   nameWithType: InspectableBase.CanBeInterrupted
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection
+  name: CanExitInspection
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_CanExitInspection
+  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection
+  nameWithType: InspectableBase.CanExitInspection
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection*
+  name: CanExitInspection
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_CanExitInspection_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection
+  nameWithType: InspectableBase.CanExitInspection
 - uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.DoNormalInteraction(System.Threading.CancellationToken)
   name: DoNormalInteraction(CancellationToken)
   href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_DoNormalInteraction_System_Threading_CancellationToken_
@@ -559,6 +572,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.DoNormalInteraction
   nameWithType: InspectableBase.DoNormalInteraction
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection
+  name: ForceExitInspection
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_ForceExitInspection
+  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection
+  nameWithType: InspectableBase.ForceExitInspection
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection*
+  name: ForceExitInspection
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_ForceExitInspection_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection
+  nameWithType: InspectableBase.ForceExitInspection
 - uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.GetInspectionTarget
   name: GetInspectionTarget()
   href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_GetInspectionTarget
@@ -585,6 +611,58 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.GetPromptPrefix
   nameWithType: InspectableBase.GetPromptPrefix
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted
+  name: HandleInteractionCompleted()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionCompleted
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted()
+  nameWithType: InspectableBase.HandleInteractionCompleted()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted*
+  name: HandleInteractionCompleted
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionCompleted_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted
+  nameWithType: InspectableBase.HandleInteractionCompleted
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause
+  name: HandleInteractionPause()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionPause
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause()
+  nameWithType: InspectableBase.HandleInteractionPause()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause*
+  name: HandleInteractionPause
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionPause_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause
+  nameWithType: InspectableBase.HandleInteractionPause
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed
+  name: HandleInteractionResumed()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionResumed
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed()
+  nameWithType: InspectableBase.HandleInteractionResumed()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed*
+  name: HandleInteractionResumed
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionResumed_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed
+  nameWithType: InspectableBase.HandleInteractionResumed
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted
+  name: HandleInteractionStarted()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionStarted
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted()
+  nameWithType: InspectableBase.HandleInteractionStarted()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted*
+  name: HandleInteractionStarted
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionStarted_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted
+  nameWithType: InspectableBase.HandleInteractionStarted
 - uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InputButton
   name: InputButton
   href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InputButton
@@ -598,19 +676,32 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InputButton
   nameWithType: InspectableBase.InputButton
-- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset
-  name: InspectionOffset
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionOffset
-  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset
-  nameWithType: InspectableBase.InspectionOffset
-- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset*
-  name: InspectionOffset
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionOffset_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset
+  name: InspectionPosOffset
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionPosOffset
+  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset
+  nameWithType: InspectableBase.InspectionPosOffset
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset*
+  name: InspectionPosOffset
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionPosOffset_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset
-  nameWithType: InspectableBase.InspectionOffset
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset
+  nameWithType: InspectableBase.InspectionPosOffset
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset
+  name: InspectionRotOffset
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionRotOffset
+  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset
+  nameWithType: InspectableBase.InspectionRotOffset
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset*
+  name: InspectionRotOffset
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionRotOffset_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset
+  nameWithType: InspectableBase.InspectionRotOffset
 - uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotationSensitivity
   name: InspectionRotationSensitivity
   href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionRotationSensitivity
@@ -676,12 +767,18 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase.OriginalInspectionTargetScale
   nameWithType: InspectableBase.OriginalInspectionTargetScale
-- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionOffset
-  name: _inspectionOffset
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionOffset
-  commentId: F:Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionOffset
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionOffset
-  nameWithType: InspectableBase._inspectionOffset
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionPosOffset
+  name: _inspectionPosOffset
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionPosOffset
+  commentId: F:Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionPosOffset
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionPosOffset
+  nameWithType: InspectableBase._inspectionPosOffset
+- uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionRotOffset
+  name: _inspectionRotOffset
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionRotOffset
+  commentId: F:Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionRotOffset
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionRotOffset
+  nameWithType: InspectableBase._inspectionRotOffset
 - uid: Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionRotationSensitivity
   name: _inspectionRotationSensitivity
   href: api/Studio23.SS2.InteractionSystem.Abstract.InspectableBase.html#Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionRotationSensitivity
@@ -1639,12 +1736,6 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.InspectionObjectParent
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.InspectionObjectParent
   nameWithType: InspectionManager.InspectionObjectParent
-- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.Player
-  name: Player
-  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_Player
-  commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.Player
-  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.Player
-  nameWithType: InspectionManager.Player
 - uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)
   name: SetGameCamera(Camera)
   href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_SetGameCamera_Camera_

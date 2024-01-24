@@ -155,18 +155,6 @@
       <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_Initialize">InteractableBase.Initialize()</a>
     </div>
     <div>
-      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleInteractionStarted">InteractableBase.HandleInteractionStarted()</a>
-    </div>
-    <div>
-      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleInteractionPause">InteractableBase.HandleInteractionPause()</a>
-    </div>
-    <div>
-      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleInteractionResumed">InteractableBase.HandleInteractionResumed()</a>
-    </div>
-    <div>
-      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleInteractionCompleted">InteractableBase.HandleInteractionCompleted()</a>
-    </div>
-    <div>
       <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_GetPromptSuffix">InteractableBase.GetPromptSuffix()</a>
     </div>
     <div>
@@ -202,8 +190,8 @@
 
 
 
-  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionOffset">
-  _inspectionOffset
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionPosOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionPosOffset">
+  _inspectionPosOffset
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -211,7 +199,37 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Vector3 _inspectionOffset</code></pre>
+    <pre><code class="lang-csharp hljs">protected Vector3 _inspectionPosOffset</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase__inspectionRotOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase._inspectionRotOffset">
+  _inspectionRotOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 _inspectionRotOffset</code></pre>
   </div>
 
 
@@ -329,7 +347,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_CanBeInterrupted" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanBeInterrupted">
   CanBeInterrupted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Prevents another subinteraction from starting when this is running</p>
@@ -357,11 +375,73 @@
 
 
 
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_CanExitInspection_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_CanExitInspection" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.CanExitInspection">
+  CanExitInspection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CanExitInspection { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_ForceExitInspection_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_ForceExitInspection" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.ForceExitInspection">
+  ForceExitInspection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ForceExitInspection { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InputButton_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InputButton*"></a>
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InputButton" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InputButton">
   InputButton
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -388,18 +468,49 @@
 
 
 
-  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionOffset_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset*"></a>
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionPosOffset_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset*"></a>
 
-  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionOffset">
-  InspectionOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionPosOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionPosOffset">
+  InspectionPosOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 InspectionOffset { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 InspectionPosOffset { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionRotOffset_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionRotOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotOffset">
+  InspectionRotOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 InspectionRotOffset { get; }</code></pre>
   </div>
 
 
@@ -423,7 +534,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionRotationSensitivity" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionRotationSensitivity">
   InspectionRotationSensitivity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -454,7 +565,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionScale" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionScale">
   InspectionScale
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -485,7 +596,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionTargetMaxOffset" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionTargetMaxOffset">
   InspectionTargetMaxOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -516,7 +627,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_InspectionTargetMaxZoom" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.InspectionTargetMaxZoom">
   InspectionTargetMaxZoom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -547,7 +658,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_OriginalInspectionTargetScale" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.OriginalInspectionTargetScale">
   OriginalInspectionTargetScale
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -582,7 +693,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_Awake" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.Awake">
   Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -608,7 +719,7 @@
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_DoNormalInteraction_System_Threading_CancellationToken_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.DoNormalInteraction(System.Threading.CancellationToken)">
   DoNormalInteraction(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The actual async interaction task
@@ -646,7 +757,7 @@ The interactable should assume that it can be interrupted any time during intera
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_GetInspectionTarget" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.GetInspectionTarget">
   GetInspectionTarget()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -677,7 +788,7 @@ The interactable should assume that it can be interrupted any time during intera
 
   <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_GetPromptPrefix" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.GetPromptPrefix">
   GetPromptPrefix()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Interaction prompt prefix(ex: &quot;Inspect&quot;)</p>
@@ -694,6 +805,114 @@ The interactable should assume that it can be interrupted any time during intera
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionCompleted_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionCompleted" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionCompleted">
+  HandleInteractionCompleted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an interaction is completed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleInteractionCompleted()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionPause_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionPause" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionPause">
+  HandleInteractionPause()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an interaction is paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleInteractionPause()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionResumed_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionResumed" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionResumed">
+  HandleInteractionResumed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a paused interaction is resumed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleInteractionResumed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionStarted_" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_InspectableBase_HandleInteractionStarted" data-uid="Studio23.SS2.InteractionSystem.Abstract.InspectableBase.HandleInteractionStarted">
+  HandleInteractionStarted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/InspectableBase.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before the interaction task is started</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleInteractionStarted()</code></pre>
+  </div>
+
+
 
 
 
