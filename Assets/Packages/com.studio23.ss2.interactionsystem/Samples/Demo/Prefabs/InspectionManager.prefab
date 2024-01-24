@@ -214,7 +214,7 @@ MonoBehaviour:
   _isDebug: 0
   InspectionObjectParent: {fileID: 8091632281314902993}
   _subInteractionFinder: {fileID: 0}
-  _examinationSensitivity: 138
+  _examinationSensitivity: 466.44
   _moveSpeed: 1
   _zoomSpeed: 0.06666667
   ExaminationXAxisInverted: 0
