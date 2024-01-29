@@ -25,7 +25,8 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public UnityEvent<InteractableBase> OnInteractionCompleted;
 
         [SerializeReference, SerializeReferenceButton]
-        private List<InteractionCondition> _interactionConditions = new List<InteractionCondition>();
+        protected List<InteractionCondition> _interactionConditions = new List<InteractionCondition>();
+        public List<InteractionCondition> InteractionConditions => _interactionConditions;
         
         public abstract InputButtonSlot InputButton { get; }
         public InteractionState CurState => _curState;
