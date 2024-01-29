@@ -1011,6 +1011,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InputButton
   nameWithType: InteractableBase.InputButton
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionConditions
+  name: InteractionConditions
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_InteractionConditions
+  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionConditions
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionConditions
+  nameWithType: InteractableBase.InteractionConditions
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionConditions*
+  name: InteractionConditions
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_InteractionConditions_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionConditions
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionConditions
+  nameWithType: InteractableBase.InteractionConditions
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.InteractionHoldTime
   name: InteractionHoldTime
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_InteractionHoldTime
@@ -1087,6 +1100,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.ResumeInteraction
   nameWithType: InteractableBase.ResumeInteraction
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase._interactionConditions
+  name: _interactionConditions
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase__interactionConditions
+  commentId: F:Studio23.SS2.InteractionSystem.Abstract.InteractableBase._interactionConditions
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase._interactionConditions
+  nameWithType: InteractableBase._interactionConditions
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition
   name: InteractionCondition
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.html
