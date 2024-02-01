@@ -492,12 +492,6 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.OnInteractableConfirmationStarted
   fullName: Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.OnInteractableConfirmationStarted
   nameWithType: InputPromptsControllerBase.OnInteractableConfirmationStarted
-- uid: Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.OnInteractableConfirmed
-  name: OnInteractableConfirmed
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.html#Studio23_SS2_InteractionSystem_Abstract_InputPromptsControllerBase_OnInteractableConfirmed
-  commentId: F:Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.OnInteractableConfirmed
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.OnInteractableConfirmed
-  nameWithType: InputPromptsControllerBase.OnInteractableConfirmed
 - uid: Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.SetInteractables(System.Collections.Generic.List{Studio23.SS2.InteractionSystem.Abstract.InteractableBase})
   name: SetInteractables(List<InteractableBase>)
   href: api/Studio23.SS2.InteractionSystem.Abstract.InputPromptsControllerBase.html#Studio23_SS2_InteractionSystem_Abstract_InputPromptsControllerBase_SetInteractables_System_Collections_Generic_List_Studio23_SS2_InteractionSystem_Abstract_InteractableBase__
