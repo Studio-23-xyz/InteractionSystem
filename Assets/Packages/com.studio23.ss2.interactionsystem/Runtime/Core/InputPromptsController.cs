@@ -67,7 +67,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             {
                 _view.HidePrompts();
                 _model.ClearPrompts();
-                OnInteractableConfirmed?.Invoke(interactableBase);
+                InteractionManager.Instance.StartNewInteraction(interactableBase);
             }
             else
             {
