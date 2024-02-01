@@ -163,10 +163,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             _subInteractionCancellationTokens = new CancellationTokenSource();
         }
 
-        private void HandleInteractableConfirmationCompleted(InteractableBase obj)
-        {
-            StartNewInteraction(obj);
-        }
+    
 
         public void ShowNewInteractables(List<InteractableBase> interactables)
         {
@@ -196,7 +193,6 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         private void Start()
         {
-            _inputPromptsController.OnInteractableConfirmed.AddListener(HandleInteractableConfirmationCompleted); 
             _inputPromptsController.OnInteractableConfirmationStarted.AddListener(HandleInteractableConfirmationStarted);
             _inputPromptsController.OnInteractableConfirmationCancelled.AddListener(HandleInteractableConfirmationCancelled);
         }
@@ -211,7 +207,6 @@ namespace Studio23.SS2.InteractionSystem.Core
 
             if (_inputPromptsController != null)
             {
-                _inputPromptsController.OnInteractableConfirmed.RemoveListener(HandleInteractableConfirmationCompleted);
                 _inputPromptsController.OnInteractableConfirmationStarted.RemoveListener(HandleInteractableConfirmationStarted);
                 _inputPromptsController.OnInteractableConfirmationCancelled.RemoveListener(HandleInteractableConfirmationCancelled);
             }

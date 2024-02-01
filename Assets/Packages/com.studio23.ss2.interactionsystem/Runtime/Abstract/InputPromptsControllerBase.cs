@@ -6,7 +6,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class InputPromptsControllerBase : MonoBehaviour
     {
-        public UnityEvent<InteractableBase> OnInteractableConfirmed;
         public UnityEvent<InteractableBase> OnInteractableConfirmationStarted;
         public UnityEvent<InteractableBase> OnInteractableConfirmationCancelled;
 
