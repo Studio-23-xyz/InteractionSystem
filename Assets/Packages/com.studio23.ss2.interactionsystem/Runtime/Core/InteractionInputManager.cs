@@ -44,9 +44,8 @@ namespace Studio23.SS2.InteractionSystem.Core
         public InputButtonSlot InteractCancelButton { get; private set; }
         public InputButtonSlot InspectResetButton { get; private set; }
         public InputButtonSlot Debug1Button { get; private set; }
-        
-
         #endregion
+        
         protected override void Initialize()
         {
             Buttons = new List<InputButtonSlot>();
@@ -59,8 +58,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             Debug1Button = new InputButtonSlot("Debug1Button");
         }
 
-        
-        
         private void OnZoomCancelled(InputAction.CallbackContext obj)
         {
             _inspectionZoomInput = 0;
@@ -80,11 +77,9 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _inspectionMoveInput = obj.ReadValue<Vector2>();
         }
-
-
-
+        
         #region Binding Events
-        void Bind(InputButtonSlot slot, InputActionReference action)
+        public void Bind(InputButtonSlot slot, InputActionReference action)
         {
             if(action == null)
             {
@@ -143,7 +138,6 @@ namespace Studio23.SS2.InteractionSystem.Core
                     inputButtonSlot.UnBind();
                 }
             }
-            
 
             _inspectMoveAction.action.performed -= OnMovePerformed;
             _inspectMoveAction.action.canceled -= OnMoveCancelled;
