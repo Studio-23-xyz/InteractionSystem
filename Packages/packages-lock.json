@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.bdeshi.categorylogger": {
+      "version": "1.0.9",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.bdeshi.helpers": {
       "version": "https://github.com/BDeshiDev/BDeshiHelpers.git#upm",
       "depth": 0,
