@@ -8,6 +8,7 @@ using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
@@ -34,8 +35,8 @@ namespace Studio23.SS2.InteractionSystem.Core
         public event Action OnInteractionChainEnded;
         public bool IsRunningInteraction => CurrentInteractable != null;
   
-        public ICategoryLogger<LogCategory> Logger => _logger; 
-        [SerializeField] SerializableCategoryLogger<LogCategory> _logger = new ((LogCategory)~0); 
+        public ICategoryLogger<InteractionLogCategory> Logger => _logger; 
+        [SerializeField] SerializableCategoryLogger<InteractionLogCategory> _logger = new ((InteractionLogCategory)~0); 
         
         public async UniTask DoInteraction()
         {
@@ -46,18 +47,18 @@ namespace Studio23.SS2.InteractionSystem.Core
                 //cache this so that we have the interrupted one after cancellation
                 _currentInteractable = _interactionStack[^1];
                 
-                Logger.Log(LogCategory.InteractionPop, $"{_currentInteractable}{_currentInteractable}", _currentInteractable);
+                Logger.Log(InteractionLogCategory.InteractionPop, $"{_currentInteractable}{_currentInteractable}", _currentInteractable);
                 //the state of the interactable is saved
                 //if it was cancelled previously, we resume
                 //else it is an interaction we are newly intializing 
                 if (_currentInteractable.CurState == InteractionState.Paused)
                 {
-                    Logger.Log(LogCategory.InteractionResume, $"{_currentInteractable} {_currentInteractable}", _currentInteractable);
+                    Logger.Log(InteractionLogCategory.InteractionResume, $"{_currentInteractable} {_currentInteractable}", _currentInteractable);
                     _currentInteractable.ResumeInteraction();
                 }
                 else
                 {
-                    Logger.Log(LogCategory.InteractionStart, $"{_currentInteractable} {_currentInteractable}", _currentInteractable);
+                    Logger.Log(InteractionLogCategory.InteractionStart, $"{_currentInteractable} {_currentInteractable}", _currentInteractable);
                     _currentInteractable.InitializeInteraction();
                 }
 
@@ -75,7 +76,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                         .SuppressCancellationThrow();
                 }
                 
-                Logger.Log(LogCategory.InteractionEnd,
+                Logger.Log(InteractionLogCategory.InteractionEnd,
                     $"{_currentInteractable} interaction task end, Cancelled: {isCancelled}", _currentInteractable);
                 // check task status to handle cancellation
                 if (isCancelled)
@@ -86,7 +87,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                     // Debug.Log("interaction pause  " + currentInteractable);
                     _currentInteractable.PauseInteraction();
                     RefreshCancellationToken();
-                    Logger.Log(LogCategory.InteractionPause | LogCategory.InteractionCancelled,
+                    Logger.Log(InteractionLogCategory.InteractionPause | InteractionLogCategory.InteractionCancelled,
                         $"interaction pause {_currentInteractable}");
 
                     // the new subinteraction is already at the top of the stack
@@ -100,7 +101,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                     {
                         _interactionStack.RemoveAt(_interactionStack.Count - 1);
                     }
-                    Logger.Log( LogCategory.InteractionPop,
+                    Logger.Log( InteractionLogCategory.InteractionPop,
                         $"interaction Stack pop {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
                     if (_currentInteractable.LastEvaluationResult == InteractionConditionResult.Show)
                     {
@@ -127,7 +128,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 Debug.LogWarning($"Can't interrupt current interactable: {_currentInteractable}", _currentInteractable);
                 return;
             }
-            Logger.Log(LogCategory.InteractionPush,$" Push new interaction {newInteractableBase}");
+            Logger.Log(InteractionLogCategory.InteractionPush,$" Push new interaction {newInteractableBase}");
             AddInteraction(newInteractableBase);
 
             if (_interactionStack.Count > 1)
@@ -207,19 +208,19 @@ namespace Studio23.SS2.InteractionSystem.Core
                 _inputPromptsController.OnInteractableConfirmationCancelled.RemoveListener(HandleInteractableConfirmationCancelled);
             }
         }
-
-        [Flags]
-        public enum LogCategory
-        {
-            InteractionPush = 1 << 0,
-            InteractionPause = 1 << 1,
-            InteractionResume = 1 << 2,
-            InteractionPop = 1 << 3,
-            InteractionChain = 1 << 4,
-            InteractionStart = 1 << 5,
-            InteractionEnd = 1 << 6,
-            InteractionCancelled = 1 << 7,
-            DoInteraction = 1 << 8,
-        }
+    }
+    
+    [Flags]
+    public enum InteractionLogCategory
+    {
+        InteractionPush = 1 << 0,
+        InteractionPause = 1 << 1,
+        InteractionResume = 1 << 2,
+        InteractionPop = 1 << 3,
+        InteractionChain = 1 << 4,
+        InteractionStart = 1 << 5,
+        InteractionEnd = 1 << 6,
+        InteractionCancelled = 1 << 7,
+        DoInteraction = 1 << 8,
     }
 }

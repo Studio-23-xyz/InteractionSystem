@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
-    public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>, ISubLoggerMixin<InteractionManager.LogCategory>
+    public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>, ISubLoggerMixin<InteractionLogCategory>
     {
         [SerializeField] private bool _isDebug = false;
         public Transform InspectionObjectParent;
@@ -85,7 +85,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         private async UniTask ExaminationTask(InspectableBase inspectable, CancellationToken token)
         {
-            Logger.Log(InteractionManager.LogCategory.DoInteraction, "examine TASK start");
+            Logger.Log(InteractionLogCategory.DoInteraction, "examine TASK start");
             while (true)
             {
                 if((_wantsToCancel && inspectable.CanExitInspection) || inspectable.ForceExitInspection)
@@ -98,7 +98,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 await UniTask.Yield(token);
                 await UniTask.NextFrame(token);
             }
-            Logger.Log(InteractionManager.LogCategory.DoInteraction,"examine TASK end");
+            Logger.Log(InteractionLogCategory.DoInteraction,"examine TASK end");
         }
         
         public void Dlog(string message, UnityEngine.Object context = null)
@@ -257,6 +257,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             await ExaminationTask(inspectable, token);
         }
 
-        public ICategoryLogger<InteractionManager.LogCategory> Logger => InteractionManager.Instance.Logger;
+        public ICategoryLogger<InteractionLogCategory> Logger => InteractionManager.Instance.Logger;
     }
 }
