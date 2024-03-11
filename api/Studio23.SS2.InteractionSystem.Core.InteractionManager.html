@@ -89,7 +89,7 @@
 
 
   <h1 id="Studio23_SS2_InteractionSystem_Core_InteractionManager" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager" class="text-break">
-Class InteractionManager  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class InteractionManager  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -123,40 +123,6 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_IsDebug" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.IsDebug">
-  IsDebug
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDebug</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -165,7 +131,7 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_CurrentInteractable" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.CurrentInteractable">
   CurrentInteractable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -196,7 +162,7 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_IsRunningInteraction" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.IsRunningInteraction">
   IsRunningInteraction
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -223,29 +189,27 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
+  <a id="Studio23_SS2_InteractionSystem_Core_InteractionManager_Logger_" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger*"></a>
 
-
-  <a id="Studio23_SS2_InteractionSystem_Core_InteractionManager_Dlog_" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog*"></a>
-
-  <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_Dlog_System_String_UnityEngine_Object_" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog(System.String,UnityEngine.Object)">
-  Dlog(string, Object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_Logger" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger">
+  Logger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dlog(string message, UnityEngine.Object context = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ICategoryLogger&lt;InteractionLogCategory&gt; Logger { get; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>context</code> <span class="xref">Object</span></dt>
+    <dt><span class="xref">ICategoryLogger</span>&lt;<a class="xref" href="Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html">InteractionLogCategory</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -256,15 +220,15 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
 
 
-
-
+  <h2 class="section" id="methods">Methods
+</h2>
 
 
   <a id="Studio23_SS2_InteractionSystem_Core_InteractionManager_DoInteraction_" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.DoInteraction*"></a>
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_DoInteraction" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.DoInteraction">
   DoInteraction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -295,7 +259,7 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_Initialize" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -321,7 +285,7 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_ShowNewInteractables_System_Collections_Generic_List_Studio23_SS2_InteractionSystem_Abstract_InteractableBase__" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.ShowNewInteractables(System.Collections.Generic.List{Studio23.SS2.InteractionSystem.Abstract.InteractableBase})">
   ShowNewInteractables(List&lt;InteractableBase&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -352,7 +316,7 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_StartNewInteraction_Studio23_SS2_InteractionSystem_Abstract_InteractableBase_" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.StartNewInteraction(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)">
   StartNewInteraction(InteractableBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -386,7 +350,7 @@ Class InteractionManager  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_OnInteractionChainEnded" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionChainEnded">
   OnInteractionChainEnded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when we complete all the interactions on the stack
@@ -419,7 +383,7 @@ Not fired when subinteractions are completed</p>
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InteractionManager_OnInteractionChainStarted" data-uid="Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionChainStarted">
   OnInteractionChainStarted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InteractionManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when we start the first interaction on the stack

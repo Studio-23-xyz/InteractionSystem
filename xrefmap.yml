@@ -1749,6 +1749,19 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.InspectionObjectParent
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.InspectionObjectParent
   nameWithType: InspectionManager.InspectionObjectParent
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger
+  name: Logger
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_Logger
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger
+  nameWithType: InspectionManager.Logger
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger*
+  name: Logger
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_Logger_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger
+  nameWithType: InspectionManager.Logger
 - uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)
   name: SetGameCamera(Camera)
   href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_SetGameCamera_Camera_
@@ -1781,6 +1794,19 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.Core.InteractionInputManager
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager
   nameWithType: InteractionInputManager
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind(InputButtonSlot,InputActionReference)
+  name: Bind(InputButtonSlot, InputActionReference)
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Bind_InputButtonSlot_InputActionReference_
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind(InputButtonSlot,InputActionReference)
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind(InputButtonSlot, InputActionReference)
+  nameWithType: InteractionInputManager.Bind(InputButtonSlot, InputActionReference)
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind*
+  name: Bind
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Bind_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind
+  nameWithType: InteractionInputManager.Bind
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Buttons
   name: Buttons
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Buttons
@@ -1943,6 +1969,66 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton
   nameWithType: InteractionInputManager.ToggleButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory
+  name: InteractionLogCategory
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html
+  commentId: T:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory
+  nameWithType: InteractionLogCategory
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.DoInteraction
+  name: DoInteraction
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_DoInteraction
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.DoInteraction
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.DoInteraction
+  nameWithType: InteractionLogCategory.DoInteraction
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionCancelled
+  name: InteractionCancelled
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionCancelled
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionCancelled
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionCancelled
+  nameWithType: InteractionLogCategory.InteractionCancelled
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionChain
+  name: InteractionChain
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionChain
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionChain
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionChain
+  nameWithType: InteractionLogCategory.InteractionChain
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionEnd
+  name: InteractionEnd
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionEnd
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionEnd
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionEnd
+  nameWithType: InteractionLogCategory.InteractionEnd
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPause
+  name: InteractionPause
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionPause
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPause
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPause
+  nameWithType: InteractionLogCategory.InteractionPause
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPop
+  name: InteractionPop
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionPop
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPop
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPop
+  nameWithType: InteractionLogCategory.InteractionPop
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPush
+  name: InteractionPush
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionPush
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPush
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionPush
+  nameWithType: InteractionLogCategory.InteractionPush
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionResume
+  name: InteractionResume
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionResume
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionResume
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionResume
+  nameWithType: InteractionLogCategory.InteractionResume
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionStart
+  name: InteractionStart
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html#Studio23_SS2_InteractionSystem_Core_InteractionLogCategory_InteractionStart
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionStart
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.InteractionStart
+  nameWithType: InteractionLogCategory.InteractionStart
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionManager
   name: InteractionManager
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html
@@ -1962,22 +2048,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.CurrentInteractable
   nameWithType: InteractionManager.CurrentInteractable
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog(System.String,UnityEngine.Object)
-  name: Dlog(string, Object)
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_Dlog_System_String_UnityEngine_Object_
-  commentId: M:Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog(System.String,UnityEngine.Object)
-  name.vb: Dlog(String, Object)
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog(string, UnityEngine.Object)
-  fullName.vb: Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog(String, UnityEngine.Object)
-  nameWithType: InteractionManager.Dlog(string, UnityEngine.Object)
-  nameWithType.vb: InteractionManager.Dlog(String, UnityEngine.Object)
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog*
-  name: Dlog
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_Dlog_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.Dlog
-  nameWithType: InteractionManager.Dlog
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.DoInteraction
   name: DoInteraction()
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_DoInteraction
@@ -2004,12 +2074,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.Initialize
   nameWithType: InteractionManager.Initialize
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.IsDebug
-  name: IsDebug
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_IsDebug
-  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionManager.IsDebug
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.IsDebug
-  nameWithType: InteractionManager.IsDebug
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.IsRunningInteraction
   name: IsRunningInteraction
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_IsRunningInteraction
@@ -2023,6 +2087,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.IsRunningInteraction
   nameWithType: InteractionManager.IsRunningInteraction
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger
+  name: Logger
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_Logger
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger
+  nameWithType: InteractionManager.Logger
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger*
+  name: Logger
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_Logger_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.Logger
+  nameWithType: InteractionManager.Logger
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionChainEnded
   name: OnInteractionChainEnded
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_OnInteractionChainEnded

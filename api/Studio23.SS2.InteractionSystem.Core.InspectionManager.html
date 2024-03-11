@@ -89,7 +89,7 @@
 
 
   <h1 id="Studio23_SS2_InteractionSystem_Core_InspectionManager" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager" class="text-break">
-Class InspectionManager  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class InspectionManager  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InspectionManager : MonoBehaviourSingletonPersistent&lt;InspectionManager&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class InspectionManager : MonoBehaviourSingletonPersistent&lt;InspectionManager&gt;, ISubLoggerMixin&lt;InteractionLogCategory&gt;</code></pre>
   </div>
 
 
@@ -115,6 +115,12 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ISubLoggerMixin</span>&lt;<a class="xref" href="Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html">InteractionLogCategory</a>&gt;</div>
+    </dd>
+  </dl>
 
 
 
@@ -130,7 +136,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_ExaminationXAxisInverted" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.ExaminationXAxisInverted">
   ExaminationXAxisInverted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -160,7 +166,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_ExaminationYAxisInverted" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.ExaminationYAxisInverted">
   ExaminationYAxisInverted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -190,7 +196,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_InspectionObjectParent" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.InspectionObjectParent">
   InspectionObjectParent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -217,6 +223,41 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Studio23_SS2_InteractionSystem_Core_InspectionManager_Logger_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger*"></a>
+
+  <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_Logger" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger">
+  Logger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICategoryLogger&lt;InteractionLogCategory&gt; Logger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ICategoryLogger</span>&lt;<a class="xref" href="Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html">InteractionLogCategory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -225,7 +266,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_Dlog_System_String_UnityEngine_Object_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.Dlog(System.String,UnityEngine.Object)">
   Dlog(string, Object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -258,7 +299,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectableCompleted_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectableCompleted(Studio23.SS2.InteractionSystem.Abstract.InspectableBase)">
   HandleInspectableCompleted(InspectableBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -289,7 +330,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectablePaused_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectablePaused(Studio23.SS2.InteractionSystem.Abstract.InspectableBase)">
   HandleInspectablePaused(InspectableBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -320,7 +361,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectableResumed_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectableResumed(Studio23.SS2.InteractionSystem.Abstract.InspectableBase)">
   HandleInspectableResumed(InspectableBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -351,7 +392,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInteractionInitialize_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInteractionInitialize(Studio23.SS2.InteractionSystem.Abstract.InspectableBase)">
   HandleInteractionInitialize(InspectableBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -382,7 +423,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_Initialize" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -408,7 +449,7 @@ Class InspectionManager  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_SetGameCamera_Camera_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)">
   SetGameCamera(Camera)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>set The camera that the RT camera copies position of
@@ -441,7 +482,7 @@ camera.main in most cases.</p>
 
   <h3 id="Studio23_SS2_InteractionSystem_Core_InspectionManager_ShowInspectable_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_System_Threading_CancellationToken_" data-uid="Studio23.SS2.InteractionSystem.Core.InspectionManager.ShowInspectable(Studio23.SS2.InteractionSystem.Abstract.InspectableBase,System.Threading.CancellationToken)">
   ShowInspectable(InspectableBase, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Core/InspectionManager.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
