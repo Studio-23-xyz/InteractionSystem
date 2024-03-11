@@ -1,5 +1,6 @@
 using System.Threading;
 using Bdeshi.Helpers.Utility;
+using BDeshi.Logging;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
-    public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>
+    public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>, ISubLoggerMixin<InteractionLogCategory>
     {
         [SerializeField] private bool _isDebug = false;
         public Transform InspectionObjectParent;
@@ -84,7 +85,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         private async UniTask ExaminationTask(InspectableBase inspectable, CancellationToken token)
         {
-            InteractionManager.Instance.Dlog("examine TASK start");
+            Logger.Log(InteractionLogCategory.DoInteraction, "examine TASK start");
             while (true)
             {
                 if((_wantsToCancel && inspectable.CanExitInspection) || inspectable.ForceExitInspection)
@@ -97,7 +98,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 await UniTask.Yield(token);
                 await UniTask.NextFrame(token);
             }
-            InteractionManager.Instance.Dlog("examine TASK end");
+            Logger.Log(InteractionLogCategory.DoInteraction,"examine TASK end");
         }
         
         public void Dlog(string message, UnityEngine.Object context = null)
@@ -160,8 +161,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             _ogOffset = _examinationObject.localPosition;
             _ogOrientation = _examinationObject.localRotation;
 
-            Debug.Log($"move {_ogParent} {inspectable}", _ogParent);
-            
             _examinationObject.gameObject.SetActive(true);
             _examinationObject.parent = InspectionObjectParent;
             _examinationObject.localPosition = inspectable.InspectionPosOffset;
@@ -178,9 +177,6 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         public void HandleInteractionInitialize(InspectableBase inspectable)
         {
-            Debug.Log($"HandleInteractionInitialize {_ogParent} {inspectable}", 
-                inspectable.GetInspectionTarget().parent);
-
             _inspectionBackgroundCanvas.worldCamera = _mainCamera;
             _inspectionBackgroundCanvas.gameObject.SetActive(true);
             //urp camera stacking
@@ -193,11 +189,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             _isDragging = false;
             _isInspecting = true;
             
-            // InspectionObjectParent.transform.parent = Player;
-            // InspectionObjectParent.localPosition = inspectable.InspectionOffset;
-            
-            //#TODO fix the render texture issue and update this
-            Dlog("start inspection " + inspectable);
             _examinationObject = inspectable.GetInspectionTarget();
             MoveInspectableForInspection(inspectable);
         }
@@ -222,7 +213,6 @@ namespace Studio23.SS2.InteractionSystem.Core
         public void HandleInspectableCompleted(InspectableBase inspectable)
         {
             _isInspecting = false;
-            Dlog("end inspection " + inspectable);
             // InspectionObjectParent.transform.parent = this.transform;
             UnMoveInspectableForInspection(inspectable);
             
@@ -266,5 +256,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             await ExaminationTask(inspectable, token);
         }
+
+        public ICategoryLogger<InteractionLogCategory> Logger => InteractionManager.Instance.Logger;
     }
 }

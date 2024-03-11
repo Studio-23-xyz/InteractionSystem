@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.bdeshi.categorylogger": "1.0.9",
     "com.bdeshi.helpers": "https://github.com/BDeshiDev/BDeshiHelpers.git#upm",
     "com.cysharp.unitask": "2.4.1",
     "com.textus-games.serialized-reference-ui": "1.0.0",
@@ -52,7 +53,8 @@
       "scopes": [
         "com.cysharp.unitask",
         "com.textus-games.serialized-reference-ui",
-        "com.mackysoft.serializereference-extensions"
+        "com.mackysoft.serializereference-extensions",
+        "com.bdeshi"
       ]
     }
   ]
