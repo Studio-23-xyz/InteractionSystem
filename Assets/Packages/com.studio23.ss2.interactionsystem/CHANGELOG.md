@@ -1,5 +1,7 @@
 # Changelog
 
+## [v1.3.8]
+OnInterctionChain started/ended event fixed
 ## [v1.3.0]
 - Convert to URP
 - Use cam stacking instead of 
