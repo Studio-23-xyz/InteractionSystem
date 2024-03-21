@@ -2112,6 +2112,18 @@ references:
   commentId: E:Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionChainStarted
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionChainStarted
   nameWithType: InteractionManager.OnInteractionChainStarted
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionEnded
+  name: OnInteractionEnded
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_OnInteractionEnded
+  commentId: E:Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionEnded
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionEnded
+  nameWithType: InteractionManager.OnInteractionEnded
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionStarted
+  name: OnInteractionStarted
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_OnInteractionStarted
+  commentId: E:Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionStarted
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.OnInteractionStarted
+  nameWithType: InteractionManager.OnInteractionStarted
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.ShowNewInteractables(System.Collections.Generic.List{Studio23.SS2.InteractionSystem.Abstract.InteractableBase})
   name: ShowNewInteractables(List<InteractableBase>)
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_ShowNewInteractables_System_Collections_Generic_List_Studio23_SS2_InteractionSystem_Abstract_InteractableBase__
