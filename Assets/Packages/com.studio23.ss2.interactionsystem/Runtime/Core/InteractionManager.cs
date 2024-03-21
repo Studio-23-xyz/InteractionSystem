@@ -33,6 +33,10 @@ namespace Studio23.SS2.InteractionSystem.Core
         /// Not fired when subinteractions are completed
         /// </summary>
         public event Action OnInteractionChainEnded;
+
+        public event Action OnInteractionStarted;
+        public event Action OnInteractionEnded;
+        
         public bool IsRunningInteraction => CurrentInteractable != null;
   
         public ICategoryLogger<InteractionLogCategory> Logger => _logger; 
@@ -41,13 +45,13 @@ namespace Studio23.SS2.InteractionSystem.Core
         public async UniTask DoInteraction()
         {
             OnInteractionChainStarted?.Invoke();
-
+            
             while (_interactionStack.Count > 0)
             {
                 //cache this so that we have the interrupted one after cancellation
                 _currentInteractable = _interactionStack[^1];
                 
-                Logger.Log(InteractionLogCategory.InteractionPop, $"{_currentInteractable}{_currentInteractable}", _currentInteractable);
+                Logger.Log(InteractionLogCategory.InteractionPop, $"{_currentInteractable}", _currentInteractable);
                 //the state of the interactable is saved
                 //if it was cancelled previously, we resume
                 //else it is an interaction we are newly intializing 
@@ -102,7 +106,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                         _interactionStack.RemoveAt(_interactionStack.Count - 1);
                     }
                     Logger.Log( InteractionLogCategory.InteractionPop,
-                        $"interaction Stack pop {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
+                        $"interaction Stack complete {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
                     if (_currentInteractable.LastEvaluationResult == InteractionConditionResult.Show)
                     {
                         _currentInteractable.CompleteInteraction();
@@ -166,33 +170,6 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _inputPromptsController.SetInteractables(interactables);
         }
-  
-        private void HandleInteractableConfirmationStarted(InteractableBase obj)
-        {
-            if (!IsRunningInteraction)
-            {
-                OnInteractionChainStarted?.Invoke();
-            }
-        }
-        
-        private void HandleInteractableConfirmationCancelled(InteractableBase obj)
-        {
-            if (!IsRunningInteraction)
-            {
-                // we weren't running interactions
-                // but we sent a OnInteractionChainStarted when the confirmation button hold started
-                // we need to tell listeners that the interaction chain ended
-                // IsRunningInteraction is true when a subinteraction is cancelled
-                // so cancellations for a suninteraction aren't an issue
-                OnInteractionChainEnded?.Invoke();
-            }
-        }
-        
-        private void Start()
-        {
-            _inputPromptsController.OnInteractableConfirmationStarted.AddListener(HandleInteractableConfirmationStarted);
-            _inputPromptsController.OnInteractableConfirmationCancelled.AddListener(HandleInteractableConfirmationCancelled);
-        }
 
         private void OnDestroy()
         {
@@ -200,12 +177,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             {
                 _subInteractionCancellationTokens.Cancel();
                 _subInteractionCancellationTokens.Dispose();
-            }
-
-            if (_inputPromptsController != null)
-            {
-                _inputPromptsController.OnInteractableConfirmationStarted.RemoveListener(HandleInteractableConfirmationStarted);
-                _inputPromptsController.OnInteractableConfirmationCancelled.RemoveListener(HandleInteractableConfirmationCancelled);
             }
         }
     }
