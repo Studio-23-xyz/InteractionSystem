@@ -48,7 +48,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             InteractionInputManager.Instance.InspectResetButton.AddPerformedCallback(gameObject, HandleInspectResetPerformed);
         }
 
-        private void HandleInspectResetPerformed()
+        public void HandleInspectResetPerformed()
         {
             if (_isInspecting && _examinationObject != null)
             {
@@ -56,18 +56,18 @@ namespace Studio23.SS2.InteractionSystem.Core
             }
         }
 
-        private void HandleInspectionCancelled()
+        public void HandleInspectionCancelled()
         {
             _wantsToCancel = true;
             _isInspecting = false;
         }
 
-        private void HandleInspectDragCancelled()
+        public void HandleInspectDragCancelled()
         {
             _isDragging = false;
         }
 
-        private void HandleInspectDragPerformed()
+        public void HandleInspectDragPerformed()
         {
             _isDragging = true;
         }
