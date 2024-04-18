@@ -1678,6 +1678,45 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.ExaminationYAxisInverted
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.ExaminationYAxisInverted
   nameWithType: InspectionManager.ExaminationYAxisInverted
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragCancelled
+  name: HandleInspectDragCancelled()
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectDragCancelled
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragCancelled
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragCancelled()
+  nameWithType: InspectionManager.HandleInspectDragCancelled()
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragCancelled*
+  name: HandleInspectDragCancelled
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectDragCancelled_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragCancelled
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragCancelled
+  nameWithType: InspectionManager.HandleInspectDragCancelled
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragPerformed
+  name: HandleInspectDragPerformed()
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectDragPerformed
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragPerformed
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragPerformed()
+  nameWithType: InspectionManager.HandleInspectDragPerformed()
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragPerformed*
+  name: HandleInspectDragPerformed
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectDragPerformed_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragPerformed
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectDragPerformed
+  nameWithType: InspectionManager.HandleInspectDragPerformed
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectResetPerformed
+  name: HandleInspectResetPerformed()
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectResetPerformed
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectResetPerformed
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectResetPerformed()
+  nameWithType: InspectionManager.HandleInspectResetPerformed()
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectResetPerformed*
+  name: HandleInspectResetPerformed
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectResetPerformed_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectResetPerformed
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectResetPerformed
+  nameWithType: InspectionManager.HandleInspectResetPerformed
 - uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectableCompleted(Studio23.SS2.InteractionSystem.Abstract.InspectableBase)
   name: HandleInspectableCompleted(InspectableBase)
   href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectableCompleted_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_
@@ -1717,6 +1756,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectableResumed
   nameWithType: InspectionManager.HandleInspectableResumed
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectionCancelled
+  name: HandleInspectionCancelled()
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectionCancelled
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectionCancelled
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectionCancelled()
+  nameWithType: InspectionManager.HandleInspectionCancelled()
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectionCancelled*
+  name: HandleInspectionCancelled
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInspectionCancelled_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectionCancelled
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInspectionCancelled
+  nameWithType: InspectionManager.HandleInspectionCancelled
 - uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.HandleInteractionInitialize(Studio23.SS2.InteractionSystem.Abstract.InspectableBase)
   name: HandleInteractionInitialize(InspectableBase)
   href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_HandleInteractionInitialize_Studio23_SS2_InteractionSystem_Abstract_InspectableBase_
