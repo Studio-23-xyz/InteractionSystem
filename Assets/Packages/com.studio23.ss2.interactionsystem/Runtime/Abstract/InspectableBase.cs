@@ -33,7 +33,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public float InspectionTargetMaxOffset => _inspectionTargetMaxOffset;
         public float InspectionTargetMaxZoom => _inspectionTargetMaxZoom;
         public float InspectionRotationSensitivity => _inspectionRotationSensitivity;
-        public override InputButtonSlot InputButton => InteractionInputManager.Instance.InspectButton;
+        public override InputButtonSlot InputButton => InteractionManager.Instance.InputHandler.InspectButton;
         public override bool CanBeInterrupted => _canBeInterrupted;
         public virtual bool CanExitInspection => true;
         public virtual bool ForceExitInspection => false;

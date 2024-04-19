@@ -41,9 +41,9 @@ namespace Studio23.SS2.InteractionSystem.UI
         {
             _promptsMap = new Dictionary<InputButtonSlot, InteractButtonPromptViewBase>
             {
-                [InteractionInputManager.Instance.InspectButton] = _inspectPromptView,
-                [InteractionInputManager.Instance.PickupButton] = _pickupPromptView,
-                [InteractionInputManager.Instance.ToggleButton] = _togglePromptView
+                [InteractionManager.Instance.InputHandler.InspectButton] = _inspectPromptView,
+                [InteractionManager.Instance.InputHandler.PickupButton] = _pickupPromptView,
+                [InteractionManager.Instance.InputHandler.ToggleButton] = _togglePromptView
             };
             foreach (var buttonPrompt in _promptsMap.Values)
             {

@@ -13,7 +13,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
     {
         [SerializeField] bool _isOpen = false;
         [SerializeField] protected string _objectName ="DarkSoulsDoor";
-        public override InputButtonSlot InputButton => InteractionInputManager.Instance.ToggleButton;
+        public override InputButtonSlot InputButton => InteractionManager.Instance.InputHandler.ToggleButton;
         protected abstract UniTask DoOpenInteraction(CancellationToken token);
 
         public UnityEvent OnOpened;

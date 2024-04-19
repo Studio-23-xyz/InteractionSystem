@@ -25,14 +25,15 @@ namespace Studio23.SS2.InteractionSystem.Core
             _view = GetComponent<InputPromptsViewBase>();
             _model.OnPromptsChanged += _view.UpdatePromptsView;
 
-            InteractionInputManager.Instance.InspectButton.AddPerformedCallback(gameObject, HandleInspectPressed);
-            InteractionInputManager.Instance.PickupButton.AddPerformedCallback(gameObject, HandlePickupPressed);
-            InteractionInputManager.Instance.ToggleButton.AddPerformedCallback(gameObject, HandleTogglePressed);
+            InteractionManager.Instance.InputHandler.InspectButton.AddPerformedCallback(gameObject, HandleInspectPressed);
+            InteractionManager.Instance.InputHandler.PickupButton.AddPerformedCallback(gameObject, HandlePickupPressed);
+            InteractionManager.Instance.InputHandler.ToggleButton.AddPerformedCallback(gameObject, HandleTogglePressed);
         }
 
         private async void HandleTogglePressed()
         {
-            if (_model.TryGetRegisteredInteractable(InteractionInputManager.Instance.ToggleButton,
+            if (_model.TryGetRegisteredInteractable(
+                InteractionManager.Instance.InputHandler.ToggleButton,
                     out var togglable))
             {
                 await ConfirmInteraction(togglable);
@@ -41,7 +42,8 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private async void HandlePickupPressed()
         {
-            if (_model.TryGetRegisteredInteractable(InteractionInputManager.Instance.PickupButton,
+            if (_model.TryGetRegisteredInteractable(
+                InteractionManager.Instance.InputHandler.PickupButton,
                     out var pickupable))
             {
                 await ConfirmInteraction(pickupable);
@@ -50,7 +52,8 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private async void HandleInspectPressed()
         {
-            if (_model.TryGetRegisteredInteractable(InteractionInputManager.Instance.InspectButton,
+            if (_model.TryGetRegisteredInteractable(
+                InteractionManager.Instance.InputHandler.InspectButton,
                     out var inspectable))
             {
                 await ConfirmInteraction(inspectable);

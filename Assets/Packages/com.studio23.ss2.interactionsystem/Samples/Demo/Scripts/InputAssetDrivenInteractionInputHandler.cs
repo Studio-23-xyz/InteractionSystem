@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Bdeshi.Helpers.Input;
 using Bdeshi.Helpers.Utility;
@@ -8,16 +9,10 @@ using UnityEngine.InputSystem;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
-    public class InteractionInputManager : MonoBehaviourSingletonPersistent<InteractionInputManager>
+    public class InputAssetDrivenInteractionInputHandler : InteractionInputHandlerBase
     {
         [SerializeField] private InputActionAsset _inputActionMap;
         // TODO: FOR gamepad this needs to be multiplied by time.deltatime
-        [SerializeField]Vector2 _inspectDragDelta; 
-        public Vector2 InspectDragDelta => _inspectDragDelta;
-        [SerializeField]private Vector2 _inspectionMoveInput;
-        public Vector2 InspectionMoveInput => _inspectionMoveInput;
-        [SerializeField]private float _inspectionZoomInput;
-        public float InspectionZoomInput => _inspectionZoomInput;
 
         #region Input Action Ref
 
@@ -34,28 +29,11 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         #endregion
 
-        #region Buttons
-
         public List<InputButtonSlot> Buttons ;
-        public InputButtonSlot InspectButton { get;  private set;}
-        public InputButtonSlot InspectionDragButton { get; private set; }
-        public InputButtonSlot ToggleButton { get; private set; }
-        public InputButtonSlot PickupButton { get; private set; }
-        public InputButtonSlot InteractCancelButton { get; private set; }
-        public InputButtonSlot InspectResetButton { get; private set; }
-        public InputButtonSlot Debug1Button { get; private set; }
-        #endregion
-        
-        protected override void Initialize()
+
+        private void Awake()
         {
             Buttons = new List<InputButtonSlot>();
-            InspectButton = new InputButtonSlot("InspectButton");
-            InspectionDragButton = new InputButtonSlot("InspectionDragButton");
-            ToggleButton = new InputButtonSlot(  "ToggleButton");
-            PickupButton = new InputButtonSlot("InteractButton");
-            InteractCancelButton = new InputButtonSlot("InteractCancelButton");
-            InspectResetButton = new InputButtonSlot("InspectResetButton");
-            Debug1Button = new InputButtonSlot("Debug1Button");
         }
 
         private void OnZoomCancelled(InputAction.CallbackContext obj)
@@ -108,11 +86,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             Bind(InspectionDragButton, _inspectDragAction);
             Bind(InteractCancelButton, _interactCancelAction);
             Bind(InspectResetButton, _inspectResetAction);
-
-#if UNITY_EDITOR
-            Bind(Debug1Button, _debug1Action);
-#endif
-
+            
             _inspectMoveAction.action.performed += OnMovePerformed;
             _inspectMoveAction.action.canceled += OnMoveCancelled;
             _inspectZoomAction.action.performed += OnZoomPerformed;
@@ -156,15 +130,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             _inspectDragDelta = obj.ReadValue<Vector2>();
         }
         
-        public static void PlayModeExitCleanUp()
-        {
-            if(Instance == null)
-                return;
-            foreach (var inputButtonSlot in Instance.Buttons)
-            {
-                inputButtonSlot.Cleanup();
-            }
-        }
 
         #endregion
     }

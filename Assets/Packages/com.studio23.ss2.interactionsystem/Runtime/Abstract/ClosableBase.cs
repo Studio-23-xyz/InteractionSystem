@@ -17,7 +17,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public UnityEvent OnClosed;
         [SerializeField] private bool _canBeInterrupted = false;
         public override bool CanBeInterrupted => _canBeInterrupted;
-        public override InputButtonSlot InputButton => InteractionInputManager.Instance.ToggleButton;
+        public override InputButtonSlot InputButton => InteractionManager.Instance.InputHandler.ToggleButton;
         
         protected override void HandleInteractionStarted()
         {
