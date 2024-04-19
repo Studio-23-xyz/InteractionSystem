@@ -129,8 +129,6 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _inspectDragDelta = obj.ReadValue<Vector2>();
         }
-        
-
         #endregion
     }
 }
