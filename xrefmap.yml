@@ -1609,6 +1609,31 @@ references:
   commentId: N:Studio23.SS2.InteractionSystem.Core
   fullName: Studio23.SS2.InteractionSystem.Core
   nameWithType: Studio23.SS2.InteractionSystem.Core
+- uid: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler
+  name: InputAssetDrivenInteractionInputHandler
+  href: api/Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.html
+  commentId: T:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler
+  fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler
+  nameWithType: InputAssetDrivenInteractionInputHandler
+- uid: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Bind(InputButtonSlot,InputActionReference)
+  name: Bind(InputButtonSlot, InputActionReference)
+  href: api/Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.html#Studio23_SS2_InteractionSystem_Core_InputAssetDrivenInteractionInputHandler_Bind_InputButtonSlot_InputActionReference_
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Bind(InputButtonSlot,InputActionReference)
+  fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Bind(InputButtonSlot, InputActionReference)
+  nameWithType: InputAssetDrivenInteractionInputHandler.Bind(InputButtonSlot, InputActionReference)
+- uid: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Bind*
+  name: Bind
+  href: api/Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.html#Studio23_SS2_InteractionSystem_Core_InputAssetDrivenInteractionInputHandler_Bind_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Bind
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Bind
+  nameWithType: InputAssetDrivenInteractionInputHandler.Bind
+- uid: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Buttons
+  name: Buttons
+  href: api/Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.html#Studio23_SS2_InteractionSystem_Core_InputAssetDrivenInteractionInputHandler_Buttons
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Buttons
+  fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Buttons
+  nameWithType: InputAssetDrivenInteractionInputHandler.Buttons
 - uid: Studio23.SS2.InteractionSystem.Core.InputPromptsController
   name: InputPromptsController
   href: api/Studio23.SS2.InteractionSystem.Core.InputPromptsController.html
@@ -1840,187 +1865,147 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.ShowInspectable
   nameWithType: InspectionManager.ShowInspectable
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager
-  name: InteractionInputManager
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html
-  commentId: T:Studio23.SS2.InteractionSystem.Core.InteractionInputManager
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager
-  nameWithType: InteractionInputManager
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind(InputButtonSlot,InputActionReference)
-  name: Bind(InputButtonSlot, InputActionReference)
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Bind_InputButtonSlot_InputActionReference_
-  commentId: M:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind(InputButtonSlot,InputActionReference)
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind(InputButtonSlot, InputActionReference)
-  nameWithType: InteractionInputManager.Bind(InputButtonSlot, InputActionReference)
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind*
-  name: Bind
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Bind_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Bind
-  nameWithType: InteractionInputManager.Bind
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Buttons
-  name: Buttons
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Buttons
-  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Buttons
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Buttons
-  nameWithType: InteractionInputManager.Buttons
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Debug1Button
-  name: Debug1Button
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Debug1Button
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Debug1Button
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Debug1Button
-  nameWithType: InteractionInputManager.Debug1Button
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Debug1Button*
-  name: Debug1Button
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Debug1Button_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Debug1Button
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Debug1Button
-  nameWithType: InteractionInputManager.Debug1Button
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Initialize
-  name: Initialize()
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Initialize
-  commentId: M:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Initialize
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Initialize()
-  nameWithType: InteractionInputManager.Initialize()
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Initialize*
-  name: Initialize
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_Initialize_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Initialize
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.Initialize
-  nameWithType: InteractionInputManager.Initialize
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase
+  name: InteractionInputHandlerBase
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html
+  commentId: T:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase
+  nameWithType: InteractionInputHandlerBase
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
   name: InspectButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectButton
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectButton
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectButton
-  nameWithType: InteractionInputManager.InspectButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectButton*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectButton
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
+  nameWithType: InteractionInputHandlerBase.InspectButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton*
   name: InspectButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectButton_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectButton
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectButton_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectButton
-  nameWithType: InteractionInputManager.InspectButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectDragDelta
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
+  nameWithType: InteractionInputHandlerBase.InspectButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
   name: InspectDragDelta
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectDragDelta
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectDragDelta
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectDragDelta
-  nameWithType: InteractionInputManager.InspectDragDelta
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectDragDelta*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectDragDelta
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
+  nameWithType: InteractionInputHandlerBase.InspectDragDelta
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta*
   name: InspectDragDelta
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectDragDelta_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectDragDelta
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectDragDelta_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectDragDelta
-  nameWithType: InteractionInputManager.InspectDragDelta
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectResetButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
+  nameWithType: InteractionInputHandlerBase.InspectDragDelta
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton
   name: InspectResetButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectResetButton
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectResetButton
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectResetButton
-  nameWithType: InteractionInputManager.InspectResetButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectResetButton*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectResetButton
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton
+  nameWithType: InteractionInputHandlerBase.InspectResetButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton*
   name: InspectResetButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectResetButton_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectResetButton
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectResetButton_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectResetButton
-  nameWithType: InteractionInputManager.InspectResetButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionDragButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton
+  nameWithType: InteractionInputHandlerBase.InspectResetButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionDragButton
   name: InspectionDragButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectionDragButton
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionDragButton
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionDragButton
-  nameWithType: InteractionInputManager.InspectionDragButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionDragButton*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectionDragButton
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionDragButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionDragButton
+  nameWithType: InteractionInputHandlerBase.InspectionDragButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionDragButton*
   name: InspectionDragButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectionDragButton_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionDragButton
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectionDragButton_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionDragButton
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionDragButton
-  nameWithType: InteractionInputManager.InspectionDragButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionMoveInput
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionDragButton
+  nameWithType: InteractionInputHandlerBase.InspectionDragButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionMoveInput
   name: InspectionMoveInput
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectionMoveInput
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionMoveInput
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionMoveInput
-  nameWithType: InteractionInputManager.InspectionMoveInput
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionMoveInput*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectionMoveInput
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionMoveInput
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionMoveInput
+  nameWithType: InteractionInputHandlerBase.InspectionMoveInput
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionMoveInput*
   name: InspectionMoveInput
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectionMoveInput_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionMoveInput
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectionMoveInput_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionMoveInput
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionMoveInput
-  nameWithType: InteractionInputManager.InspectionMoveInput
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionZoomInput
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionMoveInput
+  nameWithType: InteractionInputHandlerBase.InspectionMoveInput
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionZoomInput
   name: InspectionZoomInput
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectionZoomInput
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionZoomInput
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionZoomInput
-  nameWithType: InteractionInputManager.InspectionZoomInput
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionZoomInput*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectionZoomInput
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionZoomInput
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionZoomInput
+  nameWithType: InteractionInputHandlerBase.InspectionZoomInput
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionZoomInput*
   name: InspectionZoomInput
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InspectionZoomInput_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionZoomInput
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectionZoomInput_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionZoomInput
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InspectionZoomInput
-  nameWithType: InteractionInputManager.InspectionZoomInput
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InteractCancelButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectionZoomInput
+  nameWithType: InteractionInputHandlerBase.InspectionZoomInput
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InteractCancelButton
   name: InteractCancelButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InteractCancelButton
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InteractCancelButton
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InteractCancelButton
-  nameWithType: InteractionInputManager.InteractCancelButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InteractCancelButton*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InteractCancelButton
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InteractCancelButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InteractCancelButton
+  nameWithType: InteractionInputHandlerBase.InteractCancelButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InteractCancelButton*
   name: InteractCancelButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_InteractCancelButton_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InteractCancelButton
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InteractCancelButton_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InteractCancelButton
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.InteractCancelButton
-  nameWithType: InteractionInputManager.InteractCancelButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PickupButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InteractCancelButton
+  nameWithType: InteractionInputHandlerBase.InteractCancelButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.PickupButton
   name: PickupButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_PickupButton
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PickupButton
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PickupButton
-  nameWithType: InteractionInputManager.PickupButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PickupButton*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_PickupButton
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.PickupButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.PickupButton
+  nameWithType: InteractionInputHandlerBase.PickupButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.PickupButton*
   name: PickupButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_PickupButton_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PickupButton
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_PickupButton_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.PickupButton
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PickupButton
-  nameWithType: InteractionInputManager.PickupButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PlayModeExitCleanUp
-  name: PlayModeExitCleanUp()
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_PlayModeExitCleanUp
-  commentId: M:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PlayModeExitCleanUp
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PlayModeExitCleanUp()
-  nameWithType: InteractionInputManager.PlayModeExitCleanUp()
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PlayModeExitCleanUp*
-  name: PlayModeExitCleanUp
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_PlayModeExitCleanUp_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PlayModeExitCleanUp
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.PlayModeExitCleanUp
-  nameWithType: InteractionInputManager.PlayModeExitCleanUp
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.PickupButton
+  nameWithType: InteractionInputHandlerBase.PickupButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.ToggleButton
   name: ToggleButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_ToggleButton
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton
-  nameWithType: InteractionInputManager.ToggleButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton*
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_ToggleButton
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.ToggleButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.ToggleButton
+  nameWithType: InteractionInputHandlerBase.ToggleButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.ToggleButton*
   name: ToggleButton
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputManager.html#Studio23_SS2_InteractionSystem_Core_InteractionInputManager_ToggleButton_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_ToggleButton_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.ToggleButton
   isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputManager.ToggleButton
-  nameWithType: InteractionInputManager.ToggleButton
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.ToggleButton
+  nameWithType: InteractionInputHandlerBase.ToggleButton
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectDragDelta
+  name: _inspectDragDelta
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase__inspectDragDelta
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectDragDelta
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectDragDelta
+  nameWithType: InteractionInputHandlerBase._inspectDragDelta
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectionMoveInput
+  name: _inspectionMoveInput
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase__inspectionMoveInput
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectionMoveInput
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectionMoveInput
+  nameWithType: InteractionInputHandlerBase._inspectionMoveInput
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectionZoomInput
+  name: _inspectionZoomInput
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase__inspectionZoomInput
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectionZoomInput
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase._inspectionZoomInput
+  nameWithType: InteractionInputHandlerBase._inspectionZoomInput
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionLogCategory
   name: InteractionLogCategory
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionLogCategory.html
@@ -2126,6 +2111,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.Initialize
   nameWithType: InteractionManager.Initialize
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.InputHandler
+  name: InputHandler
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_InputHandler
+  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionManager.InputHandler
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.InputHandler
+  nameWithType: InteractionManager.InputHandler
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.InputHandler*
+  name: InputHandler
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_InputHandler_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionManager.InputHandler
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionManager.InputHandler
+  nameWithType: InteractionManager.InputHandler
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionManager.IsRunningInteraction
   name: IsRunningInteraction
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionManager.html#Studio23_SS2_InteractionSystem_Core_InteractionManager_IsRunningInteraction
