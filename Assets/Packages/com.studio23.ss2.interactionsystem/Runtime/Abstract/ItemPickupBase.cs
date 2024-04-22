@@ -24,6 +24,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             Debug.Log("item added to inventory" + this, this);
         }
 
-        public override InputButtonSlot InputButton => InteractionInputManager.Instance.PickupButton;
+        public override InputButtonSlot InputButton => InteractionManager.Instance.InputHandler.PickupButton;
     }
 }
