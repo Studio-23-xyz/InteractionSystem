@@ -11,6 +11,7 @@ namespace Studio23.SS2.InteractionSystem.Core
     public class InspectionManager:MonoBehaviourSingletonPersistent<InspectionManager>, ISubLoggerMixin<InteractionLogCategory>
     {
         [SerializeField] private bool _isDebug = false;
+
         public Transform InspectionObjectParent;
 
         [SerializeField] private PlayerInteractionFinder _subInteractionFinder;
@@ -42,10 +43,10 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             FindMainCamera();
 
-            InteractionInputManager.Instance.InspectionDragButton.AddPerformedCallback(gameObject, HandleInspectDragPerformed);
-            InteractionInputManager.Instance.InspectionDragButton.AddCancelledCallback(gameObject, HandleInspectDragCancelled);
-            InteractionInputManager.Instance.InteractCancelButton.AddPerformedCallback(gameObject, HandleInspectionCancelled);
-            InteractionInputManager.Instance.InspectResetButton.AddPerformedCallback(gameObject, HandleInspectResetPerformed);
+            InteractionManager.Instance.InputHandler.InspectionDragButton.AddPerformedCallback(gameObject, HandleInspectDragPerformed);
+            InteractionManager.Instance.InputHandler.InspectionDragButton.AddCancelledCallback(gameObject, HandleInspectDragCancelled);
+            InteractionManager.Instance.InputHandler.InteractCancelButton.AddPerformedCallback(gameObject, HandleInspectionCancelled);
+            InteractionManager.Instance.InputHandler.InspectResetButton.AddPerformedCallback(gameObject, HandleInspectResetPerformed);
         }
 
         public void HandleInspectResetPerformed()
@@ -114,12 +115,12 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void UpdateInspectableMove(InspectableBase inspectableBase)
         {
-            
-            if (InteractionInputManager.Instance.InspectionMoveInput != Vector2.zero || 
-                InteractionInputManager.Instance.InspectionZoomInput != 0)
+            var inputHandler = InteractionManager.Instance.InputHandler;
+            if (inputHandler.InspectionMoveInput != Vector2.zero || 
+                inputHandler.InspectionZoomInput != 0)
             {
-                Vector3 moveAmount = InteractionInputManager.Instance.InspectionMoveInput;
-                var zoomAmount = InteractionInputManager.Instance.InspectionZoomInput;
+                Vector3 moveAmount = inputHandler.InspectionMoveInput;
+                var zoomAmount = inputHandler.InspectionZoomInput;
                 moveAmount = _inspectionCamera.transform.right * moveAmount.x 
                              + _inspectionCamera.transform.up * moveAmount.y
                              ;
@@ -238,7 +239,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void UpdateDrag(InspectableBase inspectableBase, Transform spawnedExaminationObject)
         {
-            Vector2 dragDelta = InteractionInputManager.Instance.InspectDragDelta;
+            Vector2 dragDelta = InteractionManager.Instance.InputHandler.InspectDragDelta;
             float dragSensitivity = _examinationSensitivity * inspectableBase.InspectionRotationSensitivity;
             if (_isDragging && dragDelta != Vector2.zero)
             {
