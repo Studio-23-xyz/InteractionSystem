@@ -1871,6 +1871,19 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase
   nameWithType: InteractionInputHandlerBase
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.GetInspectDragDeltaThisFrame
+  name: GetInspectDragDeltaThisFrame()
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_GetInspectDragDeltaThisFrame
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.GetInspectDragDeltaThisFrame
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.GetInspectDragDeltaThisFrame()
+  nameWithType: InteractionInputHandlerBase.GetInspectDragDeltaThisFrame()
+- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.GetInspectDragDeltaThisFrame*
+  name: GetInspectDragDeltaThisFrame
+  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_GetInspectDragDeltaThisFrame_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.GetInspectDragDeltaThisFrame
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.GetInspectDragDeltaThisFrame
+  nameWithType: InteractionInputHandlerBase.GetInspectDragDeltaThisFrame
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
   name: InspectButton
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectButton
@@ -1884,19 +1897,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectButton
   nameWithType: InteractionInputHandlerBase.InspectButton
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
-  name: InspectDragDelta
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectDragDelta
-  commentId: P:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
-  nameWithType: InteractionInputHandlerBase.InspectDragDelta
-- uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta*
-  name: InspectDragDelta
-  href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectDragDelta_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectDragDelta
-  nameWithType: InteractionInputHandlerBase.InspectDragDelta
 - uid: Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.InspectResetButton
   name: InspectResetButton
   href: api/Studio23.SS2.InteractionSystem.Core.InteractionInputHandlerBase.html#Studio23_SS2_InteractionSystem_Core_InteractionInputHandlerBase_InspectResetButton
