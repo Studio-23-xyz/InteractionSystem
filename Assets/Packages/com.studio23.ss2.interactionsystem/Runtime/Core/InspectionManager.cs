@@ -239,7 +239,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         private void UpdateDrag(InspectableBase inspectableBase, Transform spawnedExaminationObject)
         {
-            Vector2 dragDelta = InteractionManager.Instance.InputHandler.InspectDragDelta;
+            Vector2 dragDelta = InteractionManager.Instance.InputHandler.GetInspectDragDeltaThisFrame();
             float dragSensitivity = _examinationSensitivity * inspectableBase.InspectionRotationSensitivity;
             if (_isDragging && dragDelta != Vector2.zero)
             {
