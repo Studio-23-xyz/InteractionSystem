@@ -1634,6 +1634,19 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Buttons
   fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.Buttons
   nameWithType: InputAssetDrivenInteractionInputHandler.Buttons
+- uid: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame
+  name: GetInspectDragDeltaThisFrame()
+  href: api/Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.html#Studio23_SS2_InteractionSystem_Core_InputAssetDrivenInteractionInputHandler_GetInspectDragDeltaThisFrame
+  commentId: M:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame
+  fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame()
+  nameWithType: InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame()
+- uid: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame*
+  name: GetInspectDragDeltaThisFrame
+  href: api/Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.html#Studio23_SS2_InteractionSystem_Core_InputAssetDrivenInteractionInputHandler_GetInspectDragDeltaThisFrame_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Core.InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame
+  nameWithType: InputAssetDrivenInteractionInputHandler.GetInspectDragDeltaThisFrame
 - uid: Studio23.SS2.InteractionSystem.Core.InputPromptsController
   name: InputPromptsController
   href: api/Studio23.SS2.InteractionSystem.Core.InputPromptsController.html
