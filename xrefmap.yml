@@ -2355,6 +2355,12 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.Hide
   fullName: Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.Hide
   nameWithType: InteractionConditionResult.Hide
+- uid: Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.Passthrough
+  name: Passthrough
+  href: api/Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.html#Studio23_SS2_InteractionSystem_Data_InteractionConditionResult_Passthrough
+  commentId: F:Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.Passthrough
+  fullName: Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.Passthrough
+  nameWithType: InteractionConditionResult.Passthrough
 - uid: Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.Show
   name: Show
   href: api/Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.html#Studio23_SS2_InteractionSystem_Data_InteractionConditionResult_Show

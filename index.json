@@ -122,7 +122,7 @@
   "api/Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.html": {
     "href": "api/Studio23.SS2.InteractionSystem.Data.InteractionConditionResult.html",
     "title": "Enum InteractionConditionResult | |",
-    "keywords": "Enum InteractionConditionResult Namespace Studio23.SS2.InteractionSystem.Data public enum InteractionConditionResult Fields Disable = 1 Hide = 2 Show = 0"
+    "keywords": "Enum InteractionConditionResult Namespace Studio23.SS2.InteractionSystem.Data public enum InteractionConditionResult Fields Disable = 1 Hide = 2 Passthrough = 3 Show = 0"
   },
   "api/Studio23.SS2.InteractionSystem.Data.InteractionState.html": {
     "href": "api/Studio23.SS2.InteractionSystem.Data.InteractionState.html",
