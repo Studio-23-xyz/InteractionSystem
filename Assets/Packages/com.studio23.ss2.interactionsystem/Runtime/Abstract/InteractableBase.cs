@@ -137,8 +137,14 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             foreach (var condition in _interactionConditions)
             {
                 result = condition.Evaluate(interactionFinder);
-                if (result != InteractionConditionResult.Show)
+                if (result != InteractionConditionResult.Show &&
+                    result != InteractionConditionResult.Passthrough)
                     return result;
+            }
+
+            if (result == InteractionConditionResult.Passthrough)
+            {
+                return InteractionConditionResult.Hide;
             }
             return result;
         }
