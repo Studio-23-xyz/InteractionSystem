@@ -590,6 +590,7 @@ GameObject:
   - component: {fileID: 266383145}
   - component: {fileID: 266383147}
   - component: {fileID: 266383148}
+  - component: {fileID: 266383149}
   m_Layer: 14
   m_Name: Switch triggered door (1)
   m_TagString: Untagged
@@ -676,6 +677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curState: 0
   _lastEvaluationResult: 0
+  _hoverBehavior: {fileID: 0}
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -727,6 +729,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: -0.000000029802322, z: 0}
+--- !u!114 &266383149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266383143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7ac957acb4b20a681c426b6105ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalMat: {fileID: 0}
+  HoverMat: {fileID: 2100000, guid: 44634a7023cdba446bb7442de6994a1c, type: 2}
 --- !u!1 &269511435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,7 +1999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347792993751961535, guid: fabe8172498ff1e46b45619c3fa1cf04, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 163.505
       objectReference: {fileID: 0}
     - target: {fileID: 5347792993751961535, guid: fabe8172498ff1e46b45619c3fa1cf04, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3056,6 +3072,7 @@ GameObject:
   - component: {fileID: 896482860}
   - component: {fileID: 896482859}
   - component: {fileID: 896482858}
+  - component: {fileID: 896482862}
   m_Layer: 14
   m_Name: Open only door (4)
   m_TagString: Untagged
@@ -3092,6 +3109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curState: 0
   _lastEvaluationResult: 0
+  _hoverBehavior: {fileID: 0}
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -3193,6 +3211,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896482856}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &896482862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896482856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7ac957acb4b20a681c426b6105ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalMat: {fileID: 0}
+  HoverMat: {fileID: 2100000, guid: 44634a7023cdba446bb7442de6994a1c, type: 2}
 --- !u!1 &952265454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,6 +4097,7 @@ GameObject:
   - component: {fileID: 1298668027}
   - component: {fileID: 1298668029}
   - component: {fileID: 1298668030}
+  - component: {fileID: 1298668031}
   m_Layer: 14
   m_Name: Switch triggered door
   m_TagString: Untagged
@@ -4151,6 +4184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curState: 0
   _lastEvaluationResult: 0
+  _hoverBehavior: {fileID: 0}
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -4202,6 +4236,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1298668031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298668025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7ac957acb4b20a681c426b6105ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalMat: {fileID: 0}
+  HoverMat: {fileID: 2100000, guid: 44634a7023cdba446bb7442de6994a1c, type: 2}
 --- !u!1 &1340845024
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,7 +4461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347792993751961535, guid: fabe8172498ff1e46b45619c3fa1cf04, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 163.505
       objectReference: {fileID: 0}
     - target: {fileID: 5347792993751961535, guid: fabe8172498ff1e46b45619c3fa1cf04, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5505,7 +5553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347792993751961535, guid: fabe8172498ff1e46b45619c3fa1cf04, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 163.505
       objectReference: {fileID: 0}
     - target: {fileID: 5347792993751961535, guid: fabe8172498ff1e46b45619c3fa1cf04, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6311,6 +6359,7 @@ GameObject:
   - component: {fileID: 3704035465914384844}
   - component: {fileID: 7100947738156205436}
   - component: {fileID: 7100947738156205437}
+  - component: {fileID: 7100947738156205438}
   m_Layer: 14
   m_Name: Switch triggered door (1)
   m_TagString: Untagged
@@ -6446,6 +6495,7 @@ GameObject:
   - component: {fileID: 8029690844032318631}
   - component: {fileID: 8029690844032318632}
   - component: {fileID: 8029690844032318633}
+  - component: {fileID: 8029690844032318634}
   m_Layer: 14
   m_Name: Switch triggered door
   m_TagString: Untagged
@@ -6490,6 +6540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curState: 0
   _lastEvaluationResult: 0
+  _hoverBehavior: {fileID: 0}
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -6541,6 +6592,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: -0.000000029802322, z: -0.00000047683716}
+--- !u!114 &7100947738156205438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197209818066217227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7ac957acb4b20a681c426b6105ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalMat: {fileID: 0}
+  HoverMat: {fileID: 2100000, guid: 44634a7023cdba446bb7442de6994a1c, type: 2}
 --- !u!1001 &7215961616163664917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6654,6 +6719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curState: 0
   _lastEvaluationResult: 0
+  _hoverBehavior: {fileID: 0}
   _interactionHoldTime: 0
   OnInteractionStarted:
     m_PersistentCalls:
@@ -6705,6 +6771,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8029690844032318634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518323630053020768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7ac957acb4b20a681c426b6105ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalMat: {fileID: 0}
+  HoverMat: {fileID: 2100000, guid: 44634a7023cdba446bb7442de6994a1c, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
     {
         [SerializeField] InteractionState _curState;
         [SerializeField] private InteractionConditionResult _lastEvaluationResult = InteractionConditionResult.Show;
+        [SerializeField] protected InteractableHoverBehaviorBase _hoverBehavior;
         /// <summary>
         /// If interactionHoldTime <= 0, no hold interaction
         /// </summary>
@@ -77,6 +78,9 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// <returns></returns>
         public abstract UniTask DoNormalInteraction(CancellationToken token);
         public abstract UniTask DoDisabledInteraction(CancellationToken token);
+        
+        public void HandleHoveredStart() => _hoverBehavior.HandleHoverStarted();
+        public void HandleHoveredEnd() => _hoverBehavior.HandleHoverEnded();
 
         public void InitializeInteraction()
         {
@@ -105,6 +109,8 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             HandleInteractionResumed();
             OnInteractionResumed?.Invoke(this);
         }
+
+
         
         /// <summary>
         /// External code should call this to evaluate the interaction conditions
@@ -150,6 +156,8 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             
         private void Start()
         {
+            _hoverBehavior = GetComponent<InteractableHoverBehaviorBase>();
+            _hoverBehavior.HandleHoverEnded();
             Initialize();
         }
     }
