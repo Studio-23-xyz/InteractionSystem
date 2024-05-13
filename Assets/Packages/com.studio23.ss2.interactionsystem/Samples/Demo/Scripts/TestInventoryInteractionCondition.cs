@@ -14,7 +14,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         [SerializeField] private InteractionConditionResult _resultIfConditionPassed = InteractionConditionResult.Show;
         [SerializeField] private InteractionConditionResult _resultIfConditionFailed = InteractionConditionResult.Disable;
         [SerializeField] string _itemName = "Shinpachi's Shinpachis";
-        public override InteractionConditionResult Evaluate(PlayerInteractionFinder playerInteractionFinder)
+        public override InteractionConditionResult Evaluate()
         {
             bool hasItem = TestInventory.Instance.ContainsItem(_itemName);
             return hasItem? _resultIfConditionPassed: _resultIfConditionFailed;

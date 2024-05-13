@@ -13,6 +13,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// </summary>
         /// <param name="playerInteractionFinder"></param>
         /// <returns></returns>
-        public abstract InteractionConditionResult Evaluate(PlayerInteractionFinder playerInteractionFinder);
+        public abstract InteractionConditionResult Evaluate();
     }
 }

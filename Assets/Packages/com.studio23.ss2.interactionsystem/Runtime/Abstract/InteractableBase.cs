@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Threading;
-using Bdeshi.Helpers;
 using Bdeshi.Helpers.Input;
 using Studio23.SS2.InteractionSystem.Core;
 using Studio23.SS2.InteractionSystem.Data;
@@ -79,8 +78,10 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public abstract UniTask DoNormalInteraction(CancellationToken token);
         public abstract UniTask DoDisabledInteraction(CancellationToken token);
         
-        public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
-        public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
+        public abstract Sprite MarkerIcon { get; }
+
+        public void HandleHoveredStart() => _hoverBehavior.HandleHoverStarted();
+        public void HandleHoveredEnd() => _hoverBehavior.HandleHoverEnded();
 
         public void InitializeInteraction()
         {
@@ -118,9 +119,9 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// </summary>
         /// <param name="interactionFinder"></param>
         /// <returns></returns>
-        public InteractionConditionResult EvaluateInteractionConditions(PlayerInteractionFinder interactionFinder)
+        public InteractionConditionResult EvaluateInteractionConditions()
         {
-            _lastEvaluationResult = EvaluateInteractionConditionsInternal(interactionFinder);
+            _lastEvaluationResult = EvaluateInteractionConditionsInternal();
             return _lastEvaluationResult;
         }
         
@@ -129,7 +130,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// </summary>
         /// <param name="interactionFinder"></param>
         /// <returns></returns>
-        protected virtual InteractionConditionResult EvaluateInteractionConditionsInternal(PlayerInteractionFinder interactionFinder)
+        protected virtual InteractionConditionResult EvaluateInteractionConditionsInternal()
         {
             if (_curState != InteractionState.Inactive && CanBeInterrupted)
                 return InteractionConditionResult.Hide;
@@ -142,7 +143,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             // stop evaluating and just return that
             foreach (var condition in _interactionConditions)
             {
-                result = condition.Evaluate(interactionFinder);
+                result = condition.Evaluate();
                 if (result != InteractionConditionResult.Passthrough)
                     return result;
             }
