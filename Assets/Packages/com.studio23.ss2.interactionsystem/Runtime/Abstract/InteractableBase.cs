@@ -79,8 +79,8 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public abstract UniTask DoNormalInteraction(CancellationToken token);
         public abstract UniTask DoDisabledInteraction(CancellationToken token);
         
-        public void HandleHoveredStart() => _hoverBehavior.HandleHoverStarted();
-        public void HandleHoveredEnd() => _hoverBehavior.HandleHoverEnded();
+        public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
+        public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
 
         public void InitializeInteraction()
         {
@@ -157,7 +157,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         private void Start()
         {
             _hoverBehavior = GetComponent<InteractableHoverBehaviorBase>();
-            _hoverBehavior.HandleHoverEnded();
+            HandleHoveredEnd();
             Initialize();
         }
     }
