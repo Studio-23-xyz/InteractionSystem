@@ -14,8 +14,12 @@ namespace Studio23.SS2.InteractionSystem.UI
         
         public override void showInteractable(InteractableBase interactableBase)
         {
-            _promptTMP.text = interactableBase.GetPromptPrefix() + ":"+ interactableBase.GetPromptSuffix();
-            _disabledIndicator.gameObject.SetActive(interactableBase.LastEvaluationResult != InteractionConditionResult.Show);
+            CurInteractable = interactableBase;
+            if (interactableBase != null)
+            {            
+                _promptTMP.text = interactableBase.GetPromptPrefix() + ":"+ interactableBase.GetPromptSuffix();
+                _disabledIndicator.gameObject.SetActive(interactableBase.LastEvaluationResult != InteractionConditionResult.Show);
+            }
         }
         
         public override void ToggleProgressSlider(bool shouldShowSlider)

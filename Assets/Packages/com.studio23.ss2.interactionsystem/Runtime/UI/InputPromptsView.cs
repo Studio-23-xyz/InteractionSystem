@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Bdeshi.Helpers.Input;
+using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Core;
 using Studio23.SS2.InteractionSystem.Data;
 using UnityEngine;
@@ -24,6 +25,8 @@ namespace Studio23.SS2.InteractionSystem.UI
             foreach (var kv in _promptsMap)
             {
                 var promptView = _promptsMap[kv.Key];
+                var prevInteractableUnderButton = promptView.CurInteractable;
+
                 if (model.TryGetRegisteredInteractable(kv.Key, out var interactable))
                 {
                     promptView.gameObject.SetActive(true);
@@ -33,6 +36,25 @@ namespace Studio23.SS2.InteractionSystem.UI
                 {
                     promptView.gameObject.SetActive(false);
                 }
+                UpdateCurInteractableUnderButton(promptView,prevInteractableUnderButton, interactable);
+            }
+        }
+
+        private void UpdateCurInteractableUnderButton(InteractButtonPromptViewBase promptView, InteractableBase prevInteractable, InteractableBase curInteractable)
+        {
+            if (curInteractable != prevInteractable)
+            {
+                if (prevInteractable != null)
+                {
+                    prevInteractable.HandleHoveredEnd();
+                }
+                
+                if (curInteractable != null)
+                {
+                    curInteractable.HandleHoveredStart();
+                }
+                
+                promptView.showInteractable(curInteractable);
             }
         }
 

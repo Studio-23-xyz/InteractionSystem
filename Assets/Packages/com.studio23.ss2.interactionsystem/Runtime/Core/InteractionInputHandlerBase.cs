@@ -3,12 +3,13 @@ using UnityEngine;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
-    public class InteractionInputHandlerBase : MonoBehaviour
+    public abstract class InteractionInputHandlerBase : MonoBehaviour
     {
         [SerializeField] protected Vector2 _inspectDragDelta;
         [SerializeField] protected Vector2 _inspectionMoveInput;
         [SerializeField] protected float _inspectionZoomInput;
-        public Vector2 InspectDragDelta => _inspectDragDelta;
+
+        public abstract Vector2 GetInspectDragDeltaThisFrame();
         public Vector2 InspectionMoveInput => _inspectionMoveInput;
         public float InspectionZoomInput => _inspectionZoomInput;
         public InputButtonSlot InspectButton { get;  protected set;}  = new InputButtonSlot("InspectButton");

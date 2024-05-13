@@ -124,7 +124,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             _interactionStack.Add(newInteractableBase);
         }
 
-        public async void StartNewInteraction(InteractableBase newInteractableBase)
+        public async UniTask StartNewInteraction(InteractableBase newInteractableBase)
         {
             if(_currentInteractable != null && !_currentInteractable.CanBeInterrupted)
             {
