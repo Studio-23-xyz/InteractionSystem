@@ -8,7 +8,6 @@ using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
@@ -125,7 +124,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             _interactionStack.Add(newInteractableBase);
         }
 
-        public async void StartNewInteraction(InteractableBase newInteractableBase)
+        public async UniTask StartNewInteraction(InteractableBase newInteractableBase)
         {
             if(_currentInteractable != null && !_currentInteractable.CanBeInterrupted)
             {
