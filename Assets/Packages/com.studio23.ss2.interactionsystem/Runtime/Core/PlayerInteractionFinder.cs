@@ -53,7 +53,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                     
                         //remove all interactables that we need to hide
                         //allow interactables that return disabled and show status
-                        if (result.EvaluateInteractionConditions(this) == InteractionConditionResult.Hide)
+                        if (result.EvaluateInteractionConditions() == InteractionConditionResult.Hide)
                         {
                             results.RemoveAt(i);
                         }

@@ -60,11 +60,11 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             }
         }
 
-        protected override InteractionConditionResult EvaluateInteractionConditionsInternal(PlayerInteractionFinder finder)
+        protected override InteractionConditionResult EvaluateInteractionConditionsInternal()
         {
             if (_isOpen)
                 return InteractionConditionResult.Hide;
-            return base.EvaluateInteractionConditionsInternal(finder);
+            return base.EvaluateInteractionConditionsInternal();
         }
 
         public override string GetPromptPrefix() => "Open";

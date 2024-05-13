@@ -10,7 +10,8 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         [SerializeField] Material _inactiveMateral;
         [SerializeField] private GameObject _matSwapTarget;
         private Renderer _renderer;
-        
+        [SerializeField] private Sprite _markerIcon;
+        public override Sprite MarkerIcon => _markerIcon;
         protected override void Initialize()
         {
             _renderer = _matSwapTarget.GetComponent<Renderer>();
