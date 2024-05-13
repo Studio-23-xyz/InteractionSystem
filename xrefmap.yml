@@ -332,12 +332,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.ClosableBase.DoNormalInteraction
   nameWithType: ClosableBase.DoNormalInteraction
-- uid: Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  name: EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
-  href: api/Studio23.SS2.InteractionSystem.Abstract.ClosableBase.html#Studio23_SS2_InteractionSystem_Abstract_ClosableBase_EvaluateInteractionConditionsInternal_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_
-  commentId: M:Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  fullName: Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  nameWithType: ClosableBase.EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
+- uid: Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal
+  name: EvaluateInteractionConditionsInternal()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.ClosableBase.html#Studio23_SS2_InteractionSystem_Abstract_ClosableBase_EvaluateInteractionConditionsInternal
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal
+  fullName: Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal()
+  nameWithType: ClosableBase.EvaluateInteractionConditionsInternal()
 - uid: Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal*
   name: EvaluateInteractionConditionsInternal
   href: api/Studio23.SS2.InteractionSystem.Abstract.ClosableBase.html#Studio23_SS2_InteractionSystem_Abstract_ClosableBase_EvaluateInteractionConditionsInternal_
@@ -862,12 +862,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoNormalInteraction
   nameWithType: InteractableBase.DoNormalInteraction
-- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  name: EvaluateInteractionConditions(PlayerInteractionFinder)
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditions_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_
-  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  nameWithType: InteractableBase.EvaluateInteractionConditions(PlayerInteractionFinder)
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions
+  name: EvaluateInteractionConditions()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditions
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions()
+  nameWithType: InteractableBase.EvaluateInteractionConditions()
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions*
   name: EvaluateInteractionConditions
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditions_
@@ -875,12 +875,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditions
   nameWithType: InteractableBase.EvaluateInteractionConditions
-- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  name: EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditionsInternal_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_
-  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  nameWithType: InteractableBase.EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal
+  name: EvaluateInteractionConditionsInternal()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditionsInternal
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal()
+  nameWithType: InteractableBase.EvaluateInteractionConditionsInternal()
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.EvaluateInteractionConditionsInternal*
   name: EvaluateInteractionConditionsInternal
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditionsInternal_
@@ -1070,6 +1070,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.LastEvaluationResult
   nameWithType: InteractableBase.LastEvaluationResult
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.MarkerIcon
+  nameWithType: InteractableBase.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.MarkerIcon
+  nameWithType: InteractableBase.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.OnInteractionCompleted
   name: OnInteractionCompleted
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_OnInteractionCompleted
@@ -1170,12 +1183,12 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.Abstract.InteractionCondition
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition
   nameWithType: InteractionCondition
-- uid: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  name: Evaluate(PlayerInteractionFinder)
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.html#Studio23_SS2_InteractionSystem_Abstract_InteractionCondition_Evaluate_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_
-  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  nameWithType: InteractionCondition.Evaluate(PlayerInteractionFinder)
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate
+  name: Evaluate()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.html#Studio23_SS2_InteractionSystem_Abstract_InteractionCondition_Evaluate
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate()
+  nameWithType: InteractionCondition.Evaluate()
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.Evaluate*
   name: Evaluate
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.html#Studio23_SS2_InteractionSystem_Abstract_InteractionCondition_Evaluate_
@@ -1312,12 +1325,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.OpenableBase.DoOpenInteraction
   nameWithType: OpenableBase.DoOpenInteraction
-- uid: Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  name: EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
-  href: api/Studio23.SS2.InteractionSystem.Abstract.OpenableBase.html#Studio23_SS2_InteractionSystem_Abstract_OpenableBase_EvaluateInteractionConditionsInternal_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_
-  commentId: M:Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  fullName: Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  nameWithType: OpenableBase.EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
+- uid: Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal
+  name: EvaluateInteractionConditionsInternal()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.OpenableBase.html#Studio23_SS2_InteractionSystem_Abstract_OpenableBase_EvaluateInteractionConditionsInternal
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal
+  fullName: Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal()
+  nameWithType: OpenableBase.EvaluateInteractionConditionsInternal()
 - uid: Studio23.SS2.InteractionSystem.Abstract.OpenableBase.EvaluateInteractionConditionsInternal*
   name: EvaluateInteractionConditionsInternal
   href: api/Studio23.SS2.InteractionSystem.Abstract.OpenableBase.html#Studio23_SS2_InteractionSystem_Abstract_OpenableBase_EvaluateInteractionConditionsInternal_
@@ -2455,6 +2468,31 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Data.InteractionState.Paused
   fullName: Studio23.SS2.InteractionSystem.Data.InteractionState.Paused
   nameWithType: InteractionState.Paused
+- uid: Studio23.SS2.InteractionSystem.Editor
+  name: Studio23.SS2.InteractionSystem.Editor
+  href: api/Studio23.SS2.InteractionSystem.Editor.html
+  commentId: N:Studio23.SS2.InteractionSystem.Editor
+  fullName: Studio23.SS2.InteractionSystem.Editor
+  nameWithType: Studio23.SS2.InteractionSystem.Editor
+- uid: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner
+  name: InteractionBillBoardAssigner
+  href: api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html
+  commentId: T:Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner
+  fullName: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner
+  nameWithType: InteractionBillBoardAssigner
+- uid: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html#Studio23_SS2_InteractionSystem_Editor_InteractionBillBoardAssigner_OnInspectorGUI
+  commentId: M:Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
+  fullName: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI()
+  nameWithType: InteractionBillBoardAssigner.OnInspectorGUI()
+- uid: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html#Studio23_SS2_InteractionSystem_Editor_InteractionBillBoardAssigner_OnInspectorGUI_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
+  nameWithType: InteractionBillBoardAssigner.OnInspectorGUI
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1
   name: Studio23.SS2.InteractionSystem.Samples.Demo1
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.html
@@ -2519,6 +2557,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.Initialize
   nameWithType: BasicInstantSwitch.Initialize
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BasicInstantSwitch_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.MarkerIcon
+  nameWithType: BasicInstantSwitch.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BasicInstantSwitch_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.MarkerIcon
+  nameWithType: BasicInstantSwitch.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.SnapToActivatedState
   name: SnapToActivatedState()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BasicInstantSwitch_SnapToActivatedState
@@ -2667,6 +2718,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.Initialize
   nameWithType: BiWayDoor.Initialize
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BiWayDoor_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.MarkerIcon
+  nameWithType: BiWayDoor.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BiWayDoor_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.MarkerIcon
+  nameWithType: BiWayDoor.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.SnapToActivatedState
   name: SnapToActivatedState()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BiWayDoor_SnapToActivatedState
@@ -2751,6 +2815,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.GetPromptSuffix
   nameWithType: ClosableDoor.GetPromptSuffix
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_ClosableDoor_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.MarkerIcon
+  nameWithType: ClosableDoor.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_ClosableDoor_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.MarkerIcon
+  nameWithType: ClosableDoor.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.SnapToClosedState
   name: SnapToClosedState()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_ClosableDoor_SnapToClosedState
@@ -2975,6 +3052,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.Initialize
   nameWithType: OpenableDoor.Initialize
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_OpenableDoor_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.MarkerIcon
+  nameWithType: OpenableDoor.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_OpenableDoor_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.MarkerIcon
+  nameWithType: OpenableDoor.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.SnapToClosedState
   name: SnapToClosedState()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_OpenableDoor_SnapToClosedState
@@ -3303,6 +3393,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.Initialize
   nameWithType: TestInspectable.Initialize
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInspectable_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.MarkerIcon
+  nameWithType: TestInspectable.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInspectable_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.MarkerIcon
+  nameWithType: TestInspectable.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventory
   name: TestInventory
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventory.html
@@ -3376,12 +3479,12 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition
   nameWithType: TestInventoryInteractionCondition
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  name: Evaluate(PlayerInteractionFinder)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInventoryInteractionCondition_Evaluate_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)
-  nameWithType: TestInventoryInteractionCondition.Evaluate(PlayerInteractionFinder)
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate
+  name: Evaluate()
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInventoryInteractionCondition_Evaluate
+  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate()
+  nameWithType: TestInventoryInteractionCondition.Evaluate()
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.Evaluate*
   name: Evaluate
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInventoryInteractionCondition.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInventoryInteractionCondition_Evaluate_
@@ -3499,6 +3602,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.Initialize
   nameWithType: TestItemPickup.Initialize
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.MarkerIcon
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestItemPickup_MarkerIcon
+  commentId: P:Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.MarkerIcon
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.MarkerIcon
+  nameWithType: TestItemPickup.MarkerIcon
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.MarkerIcon*
+  name: MarkerIcon
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestItemPickup_MarkerIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.MarkerIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.MarkerIcon
+  nameWithType: TestItemPickup.MarkerIcon
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.PickUpName
   name: PickUpName
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestItemPickup_PickUpName
@@ -3749,3 +3865,112 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.showInteractable
   nameWithType: InteractButtonPromptViewBase.showInteractable
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour
+  name: InteractionBillboardBehaviour
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html
+  commentId: T:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour
+  nameWithType: InteractionBillboardBehaviour
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Hide
+  name: Hide()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html#Studio23_SS2_InteractionSystem_UI_InteractionBillboardBehaviour_Hide
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Hide
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Hide()
+  nameWithType: InteractionBillboardBehaviour.Hide()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Hide*
+  name: Hide
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html#Studio23_SS2_InteractionSystem_UI_InteractionBillboardBehaviour_Hide_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Hide
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Hide
+  nameWithType: InteractionBillboardBehaviour.Hide
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Show(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)
+  name: Show(InteractableBase)
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html#Studio23_SS2_InteractionSystem_UI_InteractionBillboardBehaviour_Show_Studio23_SS2_InteractionSystem_Abstract_InteractableBase_
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Show(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Show(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)
+  nameWithType: InteractionBillboardBehaviour.Show(InteractableBase)
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Show*
+  name: Show
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html#Studio23_SS2_InteractionSystem_UI_InteractionBillboardBehaviour_Show_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Show
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.Show
+  nameWithType: InteractionBillboardBehaviour.Show
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.StartAnimating
+  name: StartAnimating()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html#Studio23_SS2_InteractionSystem_UI_InteractionBillboardBehaviour_StartAnimating
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.StartAnimating
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.StartAnimating()
+  nameWithType: InteractionBillboardBehaviour.StartAnimating()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.StartAnimating*
+  name: StartAnimating
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html#Studio23_SS2_InteractionSystem_UI_InteractionBillboardBehaviour_StartAnimating_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.StartAnimating
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.StartAnimating
+  nameWithType: InteractionBillboardBehaviour.StartAnimating
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase
+  name: InteractionMarkerBase
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.html
+  commentId: T:Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase
+  nameWithType: InteractionMarkerBase
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Hide
+  name: Hide()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerBase_Hide
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Hide
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Hide()
+  nameWithType: InteractionMarkerBase.Hide()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Hide*
+  name: Hide
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerBase_Hide_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Hide
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Hide
+  nameWithType: InteractionMarkerBase.Hide
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Show(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)
+  name: Show(InteractableBase)
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerBase_Show_Studio23_SS2_InteractionSystem_Abstract_InteractableBase_
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Show(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Show(Studio23.SS2.InteractionSystem.Abstract.InteractableBase)
+  nameWithType: InteractionMarkerBase.Show(InteractableBase)
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Show*
+  name: Show
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerBase_Show_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Show
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.Show
+  nameWithType: InteractionMarkerBase.Show
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController
+  name: InteractionMarkerController
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html
+  commentId: T:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController
+  nameWithType: InteractionMarkerController
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable
+  name: GetCurActiveInteractable()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_GetCurActiveInteractable
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable()
+  nameWithType: InteractionMarkerController.GetCurActiveInteractable()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable*
+  name: GetCurActiveInteractable
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_GetCurActiveInteractable_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable
+  nameWithType: InteractionMarkerController.GetCurActiveInteractable
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon
+  name: UpdateIcon()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_UpdateIcon
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon()
+  nameWithType: InteractionMarkerController.UpdateIcon()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon*
+  name: UpdateIcon
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_UpdateIcon_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon
+  nameWithType: InteractionMarkerController.UpdateIcon

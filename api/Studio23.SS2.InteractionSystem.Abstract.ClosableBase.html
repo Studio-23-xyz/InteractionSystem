@@ -164,6 +164,9 @@ Class ClosableBase  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_DoDisabledInteraction_System_Threading_CancellationToken_">InteractableBase.DoDisabledInteraction(CancellationToken)</a>
     </div>
     <div>
+      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_MarkerIcon">InteractableBase.MarkerIcon</a>
+    </div>
+    <div>
       <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleHoveredStart">InteractableBase.HandleHoveredStart()</a>
     </div>
     <div>
@@ -182,7 +185,7 @@ Class ClosableBase  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_ResumeInteraction">InteractableBase.ResumeInteraction()</a>
     </div>
     <div>
-      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditions_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_">InteractableBase.EvaluateInteractionConditions(PlayerInteractionFinder)</a>
+      <a class="xref" href="Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_EvaluateInteractionConditions">InteractableBase.EvaluateInteractionConditions()</a>
     </div>
   </dd></dl>
 
@@ -402,8 +405,8 @@ The interactable should assume that it can be interrupted any time during intera
 
   <a id="Studio23_SS2_InteractionSystem_Abstract_ClosableBase_EvaluateInteractionConditionsInternal_" data-uid="Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal*"></a>
 
-  <h3 id="Studio23_SS2_InteractionSystem_Abstract_ClosableBase_EvaluateInteractionConditionsInternal_Studio23_SS2_InteractionSystem_Core_PlayerInteractionFinder_" data-uid="Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal(Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder)">
-  EvaluateInteractionConditionsInternal(PlayerInteractionFinder)
+  <h3 id="Studio23_SS2_InteractionSystem_Abstract_ClosableBase_EvaluateInteractionConditionsInternal" data-uid="Studio23.SS2.InteractionSystem.Abstract.ClosableBase.EvaluateInteractionConditionsInternal">
+  EvaluateInteractionConditionsInternal()
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/InteractionSystem/blob/main/Assets/Packages/com.studio23.ss2.interactionsystem/Runtime/Abstract/ClosableBase.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -412,14 +415,9 @@ The interactable should assume that it can be interrupted any time during intera
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override InteractionConditionResult EvaluateInteractionConditionsInternal(PlayerInteractionFinder finder)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override InteractionConditionResult EvaluateInteractionConditionsInternal()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>finder</code> <a class="xref" href="Studio23.SS2.InteractionSystem.Core.PlayerInteractionFinder.html">PlayerInteractionFinder</a></dt>
-    <dd></dd>
-  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">

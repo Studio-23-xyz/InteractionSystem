@@ -295,6 +295,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.Editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.yml",
       "output": {
         ".html": {
@@ -479,6 +499,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractionBillboardBehaviour.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html"
         }
       },
       "version": ""
