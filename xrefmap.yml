@@ -914,6 +914,32 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.GetPromptSuffix
   nameWithType: InteractableBase.GetPromptSuffix
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredEnd
+  name: HandleHoveredEnd()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleHoveredEnd
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredEnd
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredEnd()
+  nameWithType: InteractableBase.HandleHoveredEnd()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredEnd*
+  name: HandleHoveredEnd
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleHoveredEnd_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredEnd
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredEnd
+  nameWithType: InteractableBase.HandleHoveredEnd
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredStart
+  name: HandleHoveredStart()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleHoveredStart
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredStart
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredStart()
+  nameWithType: InteractableBase.HandleHoveredStart()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredStart*
+  name: HandleHoveredStart
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleHoveredStart_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredStart
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleHoveredStart
+  nameWithType: InteractableBase.HandleHoveredStart
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.HandleInteractionCompleted
   name: HandleInteractionCompleted()
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_HandleInteractionCompleted
@@ -1094,12 +1120,50 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.ResumeInteraction
   nameWithType: InteractableBase.ResumeInteraction
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase._hoverBehavior
+  name: _hoverBehavior
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase__hoverBehavior
+  commentId: F:Studio23.SS2.InteractionSystem.Abstract.InteractableBase._hoverBehavior
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase._hoverBehavior
+  nameWithType: InteractableBase._hoverBehavior
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase._interactionConditions
   name: _interactionConditions
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase__interactionConditions
   commentId: F:Studio23.SS2.InteractionSystem.Abstract.InteractableBase._interactionConditions
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase._interactionConditions
   nameWithType: InteractableBase._interactionConditions
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase
+  name: InteractableHoverBehaviorBase
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.html
+  commentId: T:Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase
+  nameWithType: InteractableHoverBehaviorBase
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverEnded
+  name: HandleHoverEnded()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableHoverBehaviorBase_HandleHoverEnded
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverEnded
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverEnded()
+  nameWithType: InteractableHoverBehaviorBase.HandleHoverEnded()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverEnded*
+  name: HandleHoverEnded
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableHoverBehaviorBase_HandleHoverEnded_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverEnded
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverEnded
+  nameWithType: InteractableHoverBehaviorBase.HandleHoverEnded
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverStarted
+  name: HandleHoverStarted()
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableHoverBehaviorBase_HandleHoverStarted
+  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverStarted
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverStarted()
+  nameWithType: InteractableHoverBehaviorBase.HandleHoverStarted()
+- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverStarted*
+  name: HandleHoverStarted
+  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableHoverBehaviorBase_HandleHoverStarted_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverStarted
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableHoverBehaviorBase.HandleHoverStarted
+  nameWithType: InteractableHoverBehaviorBase.HandleHoverStarted
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractionCondition
   name: InteractionCondition
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractionCondition.html
@@ -2797,6 +2861,50 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.InstantSwitch.HandleInteractionStarted
   nameWithType: InstantSwitch.HandleInteractionStarted
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior
+  name: MatChangeInteractableHoverBehavior
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html
+  commentId: T:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior
+  nameWithType: MatChangeInteractableHoverBehavior
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverEnded
+  name: HandleHoverEnded()
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html#Studio23_SS2_InteractionSystem_Samples_Demo1_MatChangeInteractableHoverBehavior_HandleHoverEnded
+  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverEnded
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverEnded()
+  nameWithType: MatChangeInteractableHoverBehavior.HandleHoverEnded()
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverEnded*
+  name: HandleHoverEnded
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html#Studio23_SS2_InteractionSystem_Samples_Demo1_MatChangeInteractableHoverBehavior_HandleHoverEnded_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverEnded
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverEnded
+  nameWithType: MatChangeInteractableHoverBehavior.HandleHoverEnded
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverStarted
+  name: HandleHoverStarted()
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html#Studio23_SS2_InteractionSystem_Samples_Demo1_MatChangeInteractableHoverBehavior_HandleHoverStarted
+  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverStarted
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverStarted()
+  nameWithType: MatChangeInteractableHoverBehavior.HandleHoverStarted()
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverStarted*
+  name: HandleHoverStarted
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html#Studio23_SS2_InteractionSystem_Samples_Demo1_MatChangeInteractableHoverBehavior_HandleHoverStarted_
+  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverStarted
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HandleHoverStarted
+  nameWithType: MatChangeInteractableHoverBehavior.HandleHoverStarted
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HoverMat
+  name: HoverMat
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html#Studio23_SS2_InteractionSystem_Samples_Demo1_MatChangeInteractableHoverBehavior_HoverMat
+  commentId: F:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HoverMat
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.HoverMat
+  nameWithType: MatChangeInteractableHoverBehavior.HoverMat
+- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.NormalMat
+  name: NormalMat
+  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.html#Studio23_SS2_InteractionSystem_Samples_Demo1_MatChangeInteractableHoverBehavior_NormalMat
+  commentId: F:Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.NormalMat
+  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.MatChangeInteractableHoverBehavior.NormalMat
+  nameWithType: MatChangeInteractableHoverBehavior.NormalMat
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor
   name: OpenableDoor
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html
@@ -3583,6 +3691,19 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase
   fullName: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase
   nameWithType: InteractButtonPromptViewBase
+- uid: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.CurInteractable
+  name: CurInteractable
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.html#Studio23_SS2_InteractionSystem_UI_InteractButtonPromptViewBase_CurInteractable
+  commentId: P:Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.CurInteractable
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.CurInteractable
+  nameWithType: InteractButtonPromptViewBase.CurInteractable
+- uid: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.CurInteractable*
+  name: CurInteractable
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.html#Studio23_SS2_InteractionSystem_UI_InteractButtonPromptViewBase_CurInteractable_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.CurInteractable
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.CurInteractable
+  nameWithType: InteractButtonPromptViewBase.CurInteractable
 - uid: Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.SetProgress(System.Single)
   name: SetProgress(float)
   href: api/Studio23.SS2.InteractionSystem.UI.InteractButtonPromptViewBase.html#Studio23_SS2_InteractionSystem_UI_InteractButtonPromptViewBase_SetProgress_System_Single_
