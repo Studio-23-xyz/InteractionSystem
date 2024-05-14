@@ -3948,6 +3948,19 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController
   fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController
   nameWithType: InteractionMarkerController
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.Awake
+  name: Awake()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_Awake
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.Awake
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.Awake()
+  nameWithType: InteractionMarkerController.Awake()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.Awake*
+  name: Awake
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_Awake_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.Awake
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.Awake
+  nameWithType: InteractionMarkerController.Awake
 - uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable
   name: GetCurActiveInteractable()
   href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_GetCurActiveInteractable
@@ -3961,6 +3974,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.GetCurActiveInteractable
   nameWithType: InteractionMarkerController.GetCurActiveInteractable
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.OnEnable
+  name: OnEnable()
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_OnEnable
+  commentId: M:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.OnEnable
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.OnEnable()
+  nameWithType: InteractionMarkerController.OnEnable()
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.OnEnable*
+  name: OnEnable
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_OnEnable_
+  commentId: Overload:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.OnEnable
+  isSpec: "True"
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.OnEnable
+  nameWithType: InteractionMarkerController.OnEnable
 - uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon
   name: UpdateIcon()
   href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController_UpdateIcon

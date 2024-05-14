@@ -257,7 +257,7 @@
   "api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html": {
     "href": "api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html",
     "title": "Class InteractionMarkerController | |",
-    "keywords": "Class InteractionMarkerController Namespace Studio23.SS2.InteractionSystem.UI public class InteractionMarkerController : MonoBehaviour Inheritance object InteractionMarkerController Methods GetCurActiveInteractable() public InteractableBase GetCurActiveInteractable() Returns InteractableBase UpdateIcon() public virtual void UpdateIcon()"
+    "keywords": "Class InteractionMarkerController Namespace Studio23.SS2.InteractionSystem.UI public class InteractionMarkerController : MonoBehaviour Inheritance object InteractionMarkerController Methods Awake() protected virtual void Awake() GetCurActiveInteractable() public InteractableBase GetCurActiveInteractable() Returns InteractableBase OnEnable() protected virtual void OnEnable() UpdateIcon() public virtual void UpdateIcon()"
   },
   "api/Studio23.SS2.InteractionSystem.UI.html": {
     "href": "api/Studio23.SS2.InteractionSystem.UI.html",
