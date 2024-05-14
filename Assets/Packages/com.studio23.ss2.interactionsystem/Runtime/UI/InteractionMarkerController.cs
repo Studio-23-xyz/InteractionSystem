@@ -11,7 +11,7 @@ namespace Studio23.SS2.InteractionSystem.UI
         [SerializeField] private List<InteractableBase> _interactables;
         [SerializeField] private InteractionMarkerBase _markerBehavior;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             GetComponents(_interactables);
             if (_markerBehavior == null)
@@ -20,7 +20,7 @@ namespace Studio23.SS2.InteractionSystem.UI
             }
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             UpdateIcon();
         }
