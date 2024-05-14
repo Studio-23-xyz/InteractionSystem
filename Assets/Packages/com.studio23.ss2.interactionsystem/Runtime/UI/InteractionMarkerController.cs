@@ -8,8 +8,9 @@ namespace Studio23.SS2.InteractionSystem.UI
 {
     public class InteractionMarkerController:MonoBehaviour
     {
-        [SerializeField] private List<InteractableBase> _interactables;
-        [SerializeField] private InteractionMarkerBase _markerBehavior;
+        [SerializeField] protected List<InteractableBase> _interactables;
+        [SerializeField] protected InteractionMarkerBase _markerBehavior;
+        protected InteractableBase _curInteractable;
 
         protected virtual void Awake()
         {
@@ -40,15 +41,15 @@ namespace Studio23.SS2.InteractionSystem.UI
 
         public virtual void UpdateIcon()
         {
-            var interactable = GetCurActiveInteractable();
+            _curInteractable = GetCurActiveInteractable();
             
-            if (interactable == null)
+            if (_curInteractable == null)
             {
                 _markerBehavior.Hide();
             }
             else
             {
-                _markerBehavior.Show(interactable);
+                _markerBehavior.Show(_curInteractable);
             }
         }
     }
