@@ -9,7 +9,8 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
     public class TestInspectable:InspectableBase
     {
         Collider _collider;
-
+        [SerializeField] private Sprite _markerIcon;
+        public override Sprite MarkerIcon => _markerIcon;
         protected override void Awake()
         {
             base.Awake();

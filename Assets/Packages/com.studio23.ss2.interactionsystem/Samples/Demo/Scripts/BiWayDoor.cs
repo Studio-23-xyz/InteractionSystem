@@ -14,7 +14,8 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         private Vector3 _openedEulerAngles;
         [SerializeField] private float _doorOpenAngle = 90;
         [SerializeField] private float _disabledDoorPunchAmount = .0315f;
-
+        [SerializeField] private Sprite _markerIcon;
+        public override Sprite MarkerIcon => _markerIcon;
         protected override void Initialize()
         {
             _closedEulerAngles = transform.rotation.eulerAngles;
