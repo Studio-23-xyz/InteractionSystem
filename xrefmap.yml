@@ -4000,3 +4000,21 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.UpdateIcon
   nameWithType: InteractionMarkerController.UpdateIcon
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._curInteractable
+  name: _curInteractable
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController__curInteractable
+  commentId: F:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._curInteractable
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._curInteractable
+  nameWithType: InteractionMarkerController._curInteractable
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._interactables
+  name: _interactables
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController__interactables
+  commentId: F:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._interactables
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._interactables
+  nameWithType: InteractionMarkerController._interactables
+- uid: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._markerBehavior
+  name: _markerBehavior
+  href: api/Studio23.SS2.InteractionSystem.UI.InteractionMarkerController.html#Studio23_SS2_InteractionSystem_UI_InteractionMarkerController__markerBehavior
+  commentId: F:Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._markerBehavior
+  fullName: Studio23.SS2.InteractionSystem.UI.InteractionMarkerController._markerBehavior
+  nameWithType: InteractionMarkerController._markerBehavior
