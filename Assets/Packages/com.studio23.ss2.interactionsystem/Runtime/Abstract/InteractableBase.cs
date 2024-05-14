@@ -79,9 +79,8 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public abstract UniTask DoDisabledInteraction(CancellationToken token);
         
         public abstract Sprite MarkerIcon { get; }
-
-        public void HandleHoveredStart() => _hoverBehavior.HandleHoverStarted();
-        public void HandleHoveredEnd() => _hoverBehavior.HandleHoverEnded();
+        public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
+        public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
 
         public void InitializeInteraction()
         {
@@ -158,7 +157,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         private void Start()
         {
             _hoverBehavior = GetComponent<InteractableHoverBehaviorBase>();
-            HandleHoveredEnd();
+            _hoverBehavior?.HandleHoverEnded();
             Initialize();
         }
     }
