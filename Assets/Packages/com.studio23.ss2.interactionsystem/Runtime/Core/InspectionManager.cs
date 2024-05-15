@@ -4,6 +4,7 @@ using BDeshi.Logging;
 using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 
 namespace Studio23.SS2.InteractionSystem.Core
@@ -34,6 +35,10 @@ namespace Studio23.SS2.InteractionSystem.Core
         [SerializeField] Camera _mainCamera;
         [SerializeField] Camera  _inspectionCamera;
         [SerializeField] private Canvas _inspectionBackgroundCanvas;
+
+        public UnityEvent OnInspectionStarted;
+        public UnityEvent OnInspectionEnded;
+        
         protected override void Initialize()
         {
             _subInteractionFinder = GetComponentInChildren<PlayerInteractionFinder>();
@@ -86,7 +91,8 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         private async UniTask ExaminationTask(InspectableBase inspectable, CancellationToken token)
         {
-            Logger.Log(InteractionLogCategory.DoInteraction, "examine TASK start");
+            Logger.Log(InteractionLogCategory.DoInteraction, $"examine {inspectable} TASK start");
+            OnInspectionStarted.Invoke();
             while (true)
             {
                 if((_wantsToCancel && inspectable.CanExitInspection) || inspectable.ForceExitInspection)
@@ -99,7 +105,8 @@ namespace Studio23.SS2.InteractionSystem.Core
                 await UniTask.Yield(token);
                 await UniTask.NextFrame(token);
             }
-            Logger.Log(InteractionLogCategory.DoInteraction,"examine TASK end");
+            Logger.Log(InteractionLogCategory.DoInteraction,$"examine {inspectable} TASK end");
+            OnInspectionEnded.Invoke();
         }
         
         public void Dlog(string message, UnityEngine.Object context = null)

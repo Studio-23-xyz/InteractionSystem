@@ -67,19 +67,9 @@ namespace Studio23.SS2.InteractionSystem.Core
                     _currentInteractable.InitializeInteraction();
                 }
 
-                bool isCancelled;
-                if (_currentInteractable.LastEvaluationResult == InteractionConditionResult.Show)
-                {
-                    isCancelled = await _currentInteractable
-                        .DoNormalInteraction(_subInteractionCancellationTokens.Token)
-                        .SuppressCancellationThrow();
-                }
-                else
-                {
-                    isCancelled = await _currentInteractable
-                        .DoDisabledInteraction(_subInteractionCancellationTokens.Token)
-                        .SuppressCancellationThrow();
-                }
+                bool isCancelled = await _currentInteractable
+                    .DoNormalInteraction(_subInteractionCancellationTokens.Token)
+                    .SuppressCancellationThrow();
                 
                 Logger.Log(InteractionLogCategory.InteractionEnd,
                     $"{_currentInteractable} interaction task end, Cancelled: {isCancelled}", _currentInteractable);
@@ -108,10 +98,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                     }
                     Logger.Log( InteractionLogCategory.InteractionPop,
                         $"interaction Stack complete {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
-                    if (_currentInteractable.LastEvaluationResult == InteractionConditionResult.Show)
-                    {
-                        _currentInteractable.CompleteInteraction();
-                    }
+                    _currentInteractable.CompleteInteraction();
                 }
  
             }
