@@ -836,19 +836,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.CurState
   nameWithType: InteractableBase.CurState
-- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: InteractableBase.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoDisabledInteraction
-  nameWithType: InteractableBase.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Abstract.InteractableBase.DoNormalInteraction(System.Threading.CancellationToken)
   name: DoNormalInteraction(CancellationToken)
   href: api/Studio23.SS2.InteractionSystem.Abstract.InteractableBase.html#Studio23_SS2_InteractionSystem_Abstract_InteractableBase_DoNormalInteraction_System_Threading_CancellationToken_
@@ -1929,6 +1916,18 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.Logger
   nameWithType: InspectionManager.Logger
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.OnInspectionEnded
+  name: OnInspectionEnded
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_OnInspectionEnded
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.OnInspectionEnded
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.OnInspectionEnded
+  nameWithType: InspectionManager.OnInspectionEnded
+- uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.OnInspectionStarted
+  name: OnInspectionStarted
+  href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_OnInspectionStarted
+  commentId: F:Studio23.SS2.InteractionSystem.Core.InspectionManager.OnInspectionStarted
+  fullName: Studio23.SS2.InteractionSystem.Core.InspectionManager.OnInspectionStarted
+  nameWithType: InspectionManager.OnInspectionStarted
 - uid: Studio23.SS2.InteractionSystem.Core.InspectionManager.SetGameCamera(Camera)
   name: SetGameCamera(Camera)
   href: api/Studio23.SS2.InteractionSystem.Core.InspectionManager.html#Studio23_SS2_InteractionSystem_Core_InspectionManager_SetGameCamera_Camera_
@@ -2468,31 +2467,6 @@ references:
   commentId: F:Studio23.SS2.InteractionSystem.Data.InteractionState.Paused
   fullName: Studio23.SS2.InteractionSystem.Data.InteractionState.Paused
   nameWithType: InteractionState.Paused
-- uid: Studio23.SS2.InteractionSystem.Editor
-  name: Studio23.SS2.InteractionSystem.Editor
-  href: api/Studio23.SS2.InteractionSystem.Editor.html
-  commentId: N:Studio23.SS2.InteractionSystem.Editor
-  fullName: Studio23.SS2.InteractionSystem.Editor
-  nameWithType: Studio23.SS2.InteractionSystem.Editor
-- uid: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner
-  name: InteractionBillBoardAssigner
-  href: api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html
-  commentId: T:Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner
-  fullName: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner
-  nameWithType: InteractionBillBoardAssigner
-- uid: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
-  name: OnInspectorGUI()
-  href: api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html#Studio23_SS2_InteractionSystem_Editor_InteractionBillBoardAssigner_OnInspectorGUI
-  commentId: M:Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
-  fullName: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI()
-  nameWithType: InteractionBillBoardAssigner.OnInspectorGUI()
-- uid: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI*
-  name: OnInspectorGUI
-  href: api/Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.html#Studio23_SS2_InteractionSystem_Editor_InteractionBillBoardAssigner_OnInspectorGUI_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Editor.InteractionBillBoardAssigner.OnInspectorGUI
-  nameWithType: InteractionBillBoardAssigner.OnInspectorGUI
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1
   name: Studio23.SS2.InteractionSystem.Samples.Demo1
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.html
@@ -2531,19 +2505,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDeactivateInteraction
   nameWithType: BasicInstantSwitch.DoDeactivateInteraction
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BasicInstantSwitch_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: BasicInstantSwitch.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BasicInstantSwitch_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.DoDisabledInteraction
-  nameWithType: BasicInstantSwitch.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.Initialize
   name: Initialize()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BasicInstantSwitch.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BasicInstantSwitch_Initialize
@@ -2628,19 +2589,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDeactivateInteraction
   nameWithType: BiWayDoor.DoDeactivateInteraction
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BiWayDoor_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: BiWayDoor.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BiWayDoor_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoDisabledInteraction
-  nameWithType: BiWayDoor.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.DoorAnimTime
   name: DoorAnimTime
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.BiWayDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_BiWayDoor_DoorAnimTime
@@ -2789,19 +2737,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoCloseInteraction
   nameWithType: ClosableDoor.DoCloseInteraction
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_ClosableDoor_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: ClosableDoor.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_ClosableDoor_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.DoDisabledInteraction
-  nameWithType: ClosableDoor.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.GetPromptSuffix
   name: GetPromptSuffix()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.ClosableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_ClosableDoor_GetPromptSuffix
@@ -2988,19 +2923,6 @@ references:
   commentId: T:Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor
   nameWithType: OpenableDoor
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_OpenableDoor_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: OpenableDoor.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_OpenableDoor_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoDisabledInteraction
-  nameWithType: OpenableDoor.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.DoOpenInteraction(System.Threading.CancellationToken)
   name: DoOpenInteraction(CancellationToken)
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.OpenableDoor.html#Studio23_SS2_InteractionSystem_Samples_Demo1_OpenableDoor_DoOpenInteraction_System_Threading_CancellationToken_
@@ -3302,19 +3224,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.Awake
   nameWithType: TestInspectable.Awake
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInspectable_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: TestInspectable.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInspectable_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.DoDisabledInteraction
-  nameWithType: TestInspectable.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.GetPromptSuffix
   name: GetPromptSuffix()
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestInspectable.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestInspectable_GetPromptSuffix
@@ -3524,19 +3433,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.CanBeInterrupted
   nameWithType: TestItemPickup.CanBeInterrupted
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoDisabledInteraction(System.Threading.CancellationToken)
-  name: DoDisabledInteraction(CancellationToken)
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestItemPickup_DoDisabledInteraction_System_Threading_CancellationToken_
-  commentId: M:Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoDisabledInteraction(System.Threading.CancellationToken)
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoDisabledInteraction(System.Threading.CancellationToken)
-  nameWithType: TestItemPickup.DoDisabledInteraction(CancellationToken)
-- uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoDisabledInteraction*
-  name: DoDisabledInteraction
-  href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestItemPickup_DoDisabledInteraction_
-  commentId: Overload:Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoDisabledInteraction
-  isSpec: "True"
-  fullName: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoDisabledInteraction
-  nameWithType: TestItemPickup.DoDisabledInteraction
 - uid: Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.DoNormalInteraction(System.Threading.CancellationToken)
   name: DoNormalInteraction(CancellationToken)
   href: api/Studio23.SS2.InteractionSystem.Samples.Demo1.TestItemPickup.html#Studio23_SS2_InteractionSystem_Samples_Demo1_TestItemPickup_DoNormalInteraction_System_Threading_CancellationToken_
