@@ -51,12 +51,5 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         {
             return _objectName;
         }
-
-        public override async UniTask DoDisabledInteraction(CancellationToken token)
-        {
-            Debug.Log("can't inspect " + _objectName);
-
-            await UniTask.Yield();
-        }
     }
 }
