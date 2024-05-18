@@ -13,6 +13,7 @@ Shader "Sprites/Billboard"
         [PerRendererData] _EnableExternalAlpha("Enable External Alpha", Float) = 0
         _ScaleX("Scale X", Float) = 1.0
         _ScaleY("Scale Y", Float) = 1.0
+        _MaxDistance("Max Render Distance", Float) = 50.0
     }
 
         SubShader
@@ -41,6 +42,9 @@ Shader "Sprites/Billboard"
                 #pragma multi_compile_local _ PIXELSNAP_ON
                 #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
                 #include "BillboardSprites.cginc"
+
+
+
             ENDCG
             }
         }

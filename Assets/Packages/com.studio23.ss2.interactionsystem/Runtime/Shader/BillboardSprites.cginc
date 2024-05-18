@@ -53,6 +53,7 @@ inline float4 UnityFlipSprite(in float3 pos, in fixed2 flip)
 
 uniform float _ScaleX;
 uniform float _ScaleY;
+uniform float _MaxDistance;
 
 inline float4 Billboard(float4 vertex)
 {
@@ -69,10 +70,18 @@ v2f SpriteVert(appdata_t IN)
     UNITY_SETUP_INSTANCE_ID(IN);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
 
+    float3 worldPos = mul(UNITY_MATRIX_M, IN.vertex).xyz;
+    float3 camPos = _WorldSpaceCameraPos; // Camera's world position
+    float distance = length(camPos - worldPos);
+
+    // Adjust alpha based on distance
+    float alphaMultiplier = saturate(1.0 - (distance - _MaxDistance) / 5.0); // Gradually fade over 5 units
+
     OUT.vertex = UnityFlipSprite(IN.vertex, _Flip);
     OUT.vertex = Billboard(OUT.vertex);
     OUT.texcoord = IN.texcoord;
     OUT.color = IN.color * _Color * _RendererColor;
+    OUT.color.a *= alphaMultiplier; // Apply the alpha fade
 
 #ifdef PIXELSNAP_ON
     OUT.vertex = UnityPixelSnap(OUT.vertex);
