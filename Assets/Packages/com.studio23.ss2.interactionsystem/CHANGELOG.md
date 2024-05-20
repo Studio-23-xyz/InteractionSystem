@@ -1,6 +1,6 @@
 # Changelog
 
-## [v1.5.2]
+## [v1.5.3]
 Interaction Shader Update. Now blended hide with range
 
 ## [v1.3.8]
