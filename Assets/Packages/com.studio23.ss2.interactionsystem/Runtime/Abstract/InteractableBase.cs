@@ -158,5 +158,12 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             _hoverBehavior?.HandleHoverEnded();
             Initialize();
         }
+
+        public virtual void PushAndStartInteraction() => InteractionManager.Instance.StartNewInteraction(this).Forget();
+        public virtual void QueueInteraction() {
+            InteractionManager.Instance.QueueInteraction(this);
+        }
+        
+        public virtual void RunIndependentInteraction() => InteractionManager.Instance.RunIndependentInteraction(this);
     }
 }
