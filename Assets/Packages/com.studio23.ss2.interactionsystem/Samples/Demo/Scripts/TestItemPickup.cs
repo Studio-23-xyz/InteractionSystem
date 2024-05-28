@@ -13,7 +13,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         public override bool CanBeInterrupted => _canBeInterrupted;
         public override string PickUpName => _pickUpName;
         [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+        public override string Name => "TestItemPickup";
 
         protected override void Initialize()
         {

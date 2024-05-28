@@ -6,12 +6,13 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
 {
     public class BasicInstantSwitch:InstantSwitch
     {
+        public override string Name => "BasicInstantSwitch";
         [SerializeField] Material _activeMateral;
         [SerializeField] Material _inactiveMateral;
         [SerializeField] private GameObject _matSwapTarget;
         private Renderer _renderer;
         [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+      
         protected override void Initialize()
         {
             _renderer = _matSwapTarget.GetComponent<Renderer>();

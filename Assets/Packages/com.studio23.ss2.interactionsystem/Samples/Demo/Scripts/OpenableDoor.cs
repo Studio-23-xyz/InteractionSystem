@@ -8,6 +8,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
 {
     public class OpenableDoor: OpenableBase
     {
+        public override string Name => "OpenableDoor";
         public float DoorAnimTime = 1.2f;
         public GameObject DoorObject;
         private Vector3 _closedEulerAngles;
@@ -15,7 +16,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         [SerializeField] private float _doorOpenAngle = 90;
         [SerializeField] private float _disabledDoorPunchAmount = .0315f;
         [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+        
         protected override async UniTask DoOpenInteraction(CancellationToken token)
         {
             await AnimateDoor(_openedEulerAngles)

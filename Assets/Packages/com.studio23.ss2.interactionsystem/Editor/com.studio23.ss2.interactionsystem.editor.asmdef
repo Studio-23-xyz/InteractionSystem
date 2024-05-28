@@ -1,0 +1,18 @@
+{
+    "name": "com.studio23.ss2.interactionsystem.editor",
+    "rootNamespace": "Studio23.SS2.InteractionSystem.Editor",
+    "references": [
+        "GUID:db5614bf148ea0c4daa5d9de3e14af45"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

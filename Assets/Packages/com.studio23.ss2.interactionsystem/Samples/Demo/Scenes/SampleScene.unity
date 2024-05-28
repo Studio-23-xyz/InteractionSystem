@@ -705,7 +705,6 @@ MonoBehaviour:
   DoorObject: {fileID: 266383143}
   _doorOpenAngle: 90
   _disabledDoorPunchAmount: 0.0315
-  _markerIcon: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -3239,7 +3238,6 @@ MonoBehaviour:
   DoorObject: {fileID: 896482856}
   _doorOpenAngle: 90
   _disabledDoorPunchAmount: 0.0315
-  _markerIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   references:
     version: 2
     RefIds: []
@@ -4329,7 +4327,6 @@ MonoBehaviour:
   DoorObject: {fileID: 1298668025}
   _doorOpenAngle: 90
   _disabledDoorPunchAmount: 0.0315
-  _markerIcon: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -6686,7 +6683,6 @@ MonoBehaviour:
   DoorObject: {fileID: 1197209818066217227}
   _doorOpenAngle: 90
   _disabledDoorPunchAmount: 0.0315
-  _markerIcon: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -6866,7 +6862,6 @@ MonoBehaviour:
   DoorObject: {fileID: 5518323630053020768}
   _doorOpenAngle: 90
   _disabledDoorPunchAmount: 0.0315
-  _markerIcon: {fileID: 0}
   references:
     version: 2
     RefIds: []

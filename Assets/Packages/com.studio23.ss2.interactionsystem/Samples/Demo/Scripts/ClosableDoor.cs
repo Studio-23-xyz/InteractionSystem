@@ -14,7 +14,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         private Vector3 _closedEulerAngles;
         private Vector3 _opendedEulerAngles;
         [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+        public override string Name => "ClosableDoor";
         protected  void Awake()
         {
             _closedEulerAngles = transform.rotation.eulerAngles;
