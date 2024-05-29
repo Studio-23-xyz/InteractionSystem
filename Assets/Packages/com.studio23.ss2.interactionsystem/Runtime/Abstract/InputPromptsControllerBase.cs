@@ -10,5 +10,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public UnityEvent<InteractableBase> OnInteractableConfirmationCancelled;
 
         public abstract void SetInteractables(List<InteractableBase> interactables);
+
     }
 }

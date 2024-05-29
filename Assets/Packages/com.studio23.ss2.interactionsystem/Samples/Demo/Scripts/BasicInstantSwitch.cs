@@ -18,12 +18,6 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             base.Initialize();
         }
 
-        public override async UniTask DoDisabledInteraction(CancellationToken token)
-        {
-            UnityEngine.Debug.Log("can't interact with switch ");
-            await UniTask.Yield();
-        }
-
         protected override async UniTask DoActivateInteraction(CancellationToken cancellationToken)
         {
             await base.DoActivateInteraction(cancellationToken);

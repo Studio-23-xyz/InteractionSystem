@@ -46,13 +46,5 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             
             await UniTask.Yield();  
         }
-
-        public override async UniTask  DoDisabledInteraction(CancellationToken token)
-        {
-            Debug.Log("can't add " + _pickUpName + " to inventory");
-            
-            await UniTask.Yield();  
-        }
-
     }
 }

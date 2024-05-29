@@ -72,14 +72,5 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             return DoorObject.transform.DORotate(endAngles, DoorAnimTime)
                 .SetEase(Ease.Linear);
         }
-        
-        public override UniTask DoDisabledInteraction(CancellationToken token)
-        {
-            Debug.Log(this + " Door is disabled " , this);
-
-            return DoorObject.transform.DOShakePosition(DoorAnimTime *.5f, Vector3.one * _disabledDoorPunchAmount)
-                .SetEase(Ease.OutCirc)
-                .WithCancellation(token);
-        }
     }
 }
