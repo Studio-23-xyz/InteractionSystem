@@ -1,4 +1,3 @@
-using System;
 using Studio23.SS2.InteractionSystem.Abstract;
 using UnityEngine;
 

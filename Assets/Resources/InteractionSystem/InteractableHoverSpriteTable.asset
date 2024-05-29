@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e94deddc86dd94fbb52724679429fc, type: 3}
+  m_Name: InteractableHoverSpriteTable
+  m_EditorClassIdentifier: 
+  Icons:
+  - Name: ClosableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: InspectableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: ItemPickupBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: OpenableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: TogglableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

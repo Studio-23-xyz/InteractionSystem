@@ -1,4 +1,4 @@
-using System;
+
 using DG.Tweening;
 using Studio23.SS2.InteractionSystem.Abstract;
 using UnityEngine;
@@ -37,7 +37,7 @@ namespace Studio23.SS2.InteractionSystem.UI
         public override void Show(InteractableBase Interactable)
         {
             gameObject.SetActive(true);
-            _spriteRenderer.sprite = Interactable.MarkerIcon;
+            _spriteRenderer.sprite = Interactable.HoverIcon;
         }
 
         public override void Hide()

@@ -1,16 +1,34 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using Bdeshi.Helpers.Input;
-using Studio23.SS2.InteractionSystem.Core;
 using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using Studio23.SS2.InteractionSystem.Core;
 
 namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class InteractableBase:MonoBehaviour
     {
+        public string Name
+        {
+            get
+            {
+                Type currentType = this.GetType();
+                while (currentType != null && currentType.BaseType != null)
+                {
+                    if (currentType.BaseType.IsAbstract)
+                        return currentType.BaseType.Name;
+                    currentType = currentType.BaseType;
+                }
+
+                return currentType.Name;
+            }
+        }
+        public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name).Sprite;
+
         [SerializeField] InteractionState _curState;
         [SerializeField] private InteractionConditionResult _lastEvaluationResult = InteractionConditionResult.Show;
         [SerializeField] protected InteractableHoverBehaviorBase _hoverBehavior;
@@ -76,7 +94,10 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// <param name="token"></param>
         /// <returns></returns>
         public abstract UniTask DoNormalInteraction(CancellationToken token);
-        public abstract Sprite MarkerIcon { get; }
+        public abstract UniTask DoDisabledInteraction(CancellationToken token);
+        
+     
+
         public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
         public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
 

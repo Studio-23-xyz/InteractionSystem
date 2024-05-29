@@ -23,6 +23,9 @@ namespace Studio23.SS2.InteractionSystem.Core
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
+        
+
+        public InteractableHoverSpriteTable InteractableIconTable;
         /// <summary>
         /// Fired when we start the first interaction on the stack
         /// Not fired when subinteractions are started 
@@ -174,6 +177,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         protected override void Initialize()
         {
+            InteractableIconTable= Resources.Load<InteractableHoverSpriteTable>("InteractionSystem/InteractableHoverSpriteTable");
             RefreshCancellationToken();
         }
 
