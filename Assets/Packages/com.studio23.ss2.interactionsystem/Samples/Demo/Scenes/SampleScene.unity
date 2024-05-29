@@ -4699,6 +4699,10 @@ PrefabInstance:
       propertyPath: _inputHandler
       value: 
       objectReference: {fileID: 552245856}
+    - target: {fileID: 3736995290755899810, guid: 5982ff6378aeb7544982df7e95508ebd, type: 3}
+      propertyPath: InteractableIconTable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6336354998906870515, guid: 5982ff6378aeb7544982df7e95508ebd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.55

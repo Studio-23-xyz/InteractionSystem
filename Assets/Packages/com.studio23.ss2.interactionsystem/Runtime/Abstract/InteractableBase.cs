@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using Bdeshi.Helpers.Input;
@@ -11,7 +12,23 @@ namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class InteractableBase:MonoBehaviour
     {
-        public abstract string Name {  get; }
+        public string Name
+        {
+            get
+            {
+                Type currentType = this.GetType();
+                while (currentType != null && currentType.BaseType != null)
+                {
+                    if (currentType.BaseType.IsAbstract)
+                        return currentType.BaseType.Name;
+                    currentType = currentType.BaseType;
+                }
+
+                return currentType.Name;
+            }
+        }
+        public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name).Sprite;
+
         [SerializeField] InteractionState _curState;
         [SerializeField] private InteractionConditionResult _lastEvaluationResult = InteractionConditionResult.Show;
         [SerializeField] protected InteractableHoverBehaviorBase _hoverBehavior;
@@ -79,7 +96,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public abstract UniTask DoNormalInteraction(CancellationToken token);
         public abstract UniTask DoDisabledInteraction(CancellationToken token);
         
-        public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name).Sprite;
+     
         public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
         public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
 

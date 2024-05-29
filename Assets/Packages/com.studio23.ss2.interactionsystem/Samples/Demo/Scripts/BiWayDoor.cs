@@ -8,7 +8,6 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
 {
     public class BiWayDoor:TogglableBase
     {
-        public override string Name => "BiWayDoor";
         public float DoorAnimTime = 1.2f;
         public GameObject DoorObject;
         private Vector3 _closedEulerAngles;

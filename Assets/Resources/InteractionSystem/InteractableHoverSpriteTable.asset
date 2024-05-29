@@ -13,15 +13,13 @@ MonoBehaviour:
   m_Name: InteractableHoverSpriteTable
   m_EditorClassIdentifier: 
   Icons:
-  - Name: BasicInstantSwitch
-    Sprite: {fileID: 0}
-  - Name: BiWayDoor
-    Sprite: {fileID: 0}
-  - Name: ClosableDoor
-    Sprite: {fileID: 0}
-  - Name: OpenableDoor
-    Sprite: {fileID: 0}
-  - Name: TestInspectable
-    Sprite: {fileID: 0}
-  - Name: TestItemPickup
-    Sprite: {fileID: 0}
+  - Name: ClosableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: InspectableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: ItemPickupBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: OpenableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: TogglableBase
+    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

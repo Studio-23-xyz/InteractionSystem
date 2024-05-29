@@ -1,6 +1,6 @@
 {
     "name": "com.studio23.ss2.interactionsystem",
-    "version": "1.5.3",
+    "version": "1.5.5",
     "displayName": "Interaction System",
     "description": "An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interactions",
     "unity": "2022.3",

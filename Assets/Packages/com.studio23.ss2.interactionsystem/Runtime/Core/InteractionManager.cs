@@ -151,6 +151,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         protected override void Initialize()
         {
+            InteractableIconTable= Resources.Load<InteractableHoverSpriteTable>("InteractionSystem/InteractableHoverSpriteTable");
             RefreshCancellationToken();
         }
 

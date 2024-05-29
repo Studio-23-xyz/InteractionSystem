@@ -1,7 +1,6 @@
 using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Data;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
@@ -49,6 +48,7 @@ namespace Studio23.SS2.InteractionSystem.Editor
                 Directory.CreateDirectory(assetPath);
             }
             AssetDatabase.CreateAsset(spriteTable, assetPath + "/InteractableHoverSpriteTable.asset");
+            spriteTable.Icons = new List<HoverSpriteData>();
             AssetDatabase.SaveAssets();
             EditorUtility.FocusProjectWindow();
             Selection.activeObject = spriteTable;
@@ -66,20 +66,13 @@ namespace Studio23.SS2.InteractionSystem.Editor
                 return;
             }
 
-            if (GUILayout.Button("Add New Icon"))
-            {
-                spriteTable.Icons.Add(new HoverSpriteData());
-                EditorUtility.SetDirty(spriteTable);
-                AssetDatabase.SaveAssets();
-            }
-
             // Button to automatically find and add interactable classes.
             if (GUILayout.Button("Auto Find Interactables"))
             {
-                var interactables = FindInteractableClasses();
+                var interactables = FindInteractableFirstChildrenNames();
                 foreach (var interactable in interactables)
                 {
-                    var newIcon = new HoverSpriteData { Name = interactable.Name };
+                    var newIcon = new HoverSpriteData { Name = interactable };
                     spriteTable.Icons.Add(newIcon);
                 }
                 EditorUtility.SetDirty(spriteTable);
@@ -87,34 +80,30 @@ namespace Studio23.SS2.InteractionSystem.Editor
             }
 
             scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
-            for (int i = 0; i < spriteTable.Icons.Count; i++)
+
+            // Adjusting styles for a more fitting content
+            GUIStyle boldBorderStyle = new GUIStyle(GUI.skin.box);
+            boldBorderStyle.border = new RectOffset(2, 2, 2, 2);
+            boldBorderStyle.margin = new RectOffset(5, 5, 5, 5);
+
+            // Table with 2 columns: Label and Sprite
+            foreach (var hoverSpriteData in spriteTable.Icons)
             {
-                EditorGUILayout.BeginVertical("box");
-                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.BeginHorizontal("box"); // Start a horizontal row with box style
 
-                spriteTable.Icons[i].Sprite = (Sprite)EditorGUILayout.ObjectField(
-                    spriteTable.Icons[i].Sprite, typeof(Sprite), false, GUILayout.Width(70), GUILayout.Height(70));
-
-                EditorGUILayout.BeginVertical();
-                EditorGUILayout.LabelField("Key", GUILayout.Width(50));
-                spriteTable.Icons[i].Name = EditorGUILayout.TextField(
-                    spriteTable.Icons[i].Name, GUILayout.Width(135), GUILayout.MaxWidth(135));
+                // First Column: Label
+                EditorGUILayout.BeginVertical(boldBorderStyle, GUILayout.ExpandWidth(true)); // Flexible width
+                EditorGUILayout.LabelField(hoverSpriteData.Name);
                 EditorGUILayout.EndVertical();
 
-                GUILayout.FlexibleSpace();
+                // Second Column: Sprite
+                hoverSpriteData.Sprite = (Sprite)EditorGUILayout.ObjectField(
+                    hoverSpriteData.Sprite, typeof(Sprite), false, GUILayout.Width(70), GUILayout.Height(70));
 
-                if (GUILayout.Button("X", GUILayout.Width(30), GUILayout.Height(70)))
-                {
-                    spriteTable.Icons.RemoveAt(i);
-                    EditorUtility.SetDirty(spriteTable);
-                    AssetDatabase.SaveAssets();
-                    continue;
-                }
-
-                EditorGUILayout.EndHorizontal();
-                EditorGUILayout.EndVertical();
+                EditorGUILayout.EndHorizontal(); // End horizontal row
             }
-            EditorGUILayout.EndScrollView();
+
+            EditorGUILayout.EndScrollView(); // End the scroll view
 
             if (GUI.changed)
             {
@@ -123,23 +112,27 @@ namespace Studio23.SS2.InteractionSystem.Editor
             }
         }
 
-        // Helper method to find all non-abstract classes inheriting from InteractableBase.
-        private IEnumerable<InteractableBase> FindInteractableClasses()
+
+
+
+        private IEnumerable<string> FindInteractableFirstChildrenNames()
         {
-            var interactables = new List<InteractableBase>();
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            var interactables = new List<string>();
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies()) 
             {
-                foreach (var type in assembly.GetTypes())
+                foreach (var type in assembly.GetTypes()) 
                 {
-                    if (type.IsClass && !type.IsAbstract && type.IsSubclassOf(typeof(InteractableBase)))
+                    if (type.IsClass  && type.BaseType  == typeof(InteractableBase)) 
                     {
-                        var instance = (InteractableBase)Activator.CreateInstance(type);
-                        interactables.Add(instance);
+                        
+                        interactables.Add(type.Name);
                     }
                 }
             }
             return interactables;
         }
+
+
 
 
     }

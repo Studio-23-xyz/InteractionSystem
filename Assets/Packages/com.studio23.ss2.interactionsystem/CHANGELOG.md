@@ -1,5 +1,8 @@
 # Changelog
 
+## [v1.5.4]
++ Added New Editor Tool to manage HoverIcons
+
 ## [v1.5.3]
 Interaction Shader Update. Now blended hide with range
 
