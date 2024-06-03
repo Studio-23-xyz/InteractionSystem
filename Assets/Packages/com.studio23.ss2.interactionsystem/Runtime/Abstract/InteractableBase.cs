@@ -12,6 +12,10 @@ namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class InteractableBase:MonoBehaviour
     {
+        //#TODO #Optimize this is bad
+        //this while loop type check is done everytime name is called.
+        //Also, this breaks icons if we rename files
+        //this should be redone
         public string Name
         {
             get
@@ -27,7 +31,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
                 return currentType.Name;
             }
         }
-        public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name).Sprite;
+        public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name)?.Sprite;
 
         [SerializeField] InteractionState _curState;
         [SerializeField] private InteractionConditionResult _lastEvaluationResult = InteractionConditionResult.Show;
