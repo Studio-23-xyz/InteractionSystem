@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.5.7]
++ Hover Icon is now for all classes that inherit interaction base and not Abstract for better control.
++ Hover Icon now moves with parent
+
 ## [v1.5.4]
 + Added New Editor Tool to manage HoverIcons
 

@@ -51,5 +51,10 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         {
             return _objectName;
         }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
