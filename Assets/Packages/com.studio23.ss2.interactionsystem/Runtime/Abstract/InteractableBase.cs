@@ -13,24 +13,9 @@ namespace Studio23.SS2.InteractionSystem.Abstract
     public abstract class InteractableBase:MonoBehaviour
     {
         //#TODO #Optimize this is bad
-        //this while loop type check is done everytime name is called.
-        //Also, this breaks icons if we rename files
+        //This breaks icons if we rename files
         //this should be redone
-        public string Name
-        {
-            get
-            {
-                Type currentType = this.GetType();
-                while (currentType != null && currentType.BaseType != null)
-                {
-                    if (currentType.BaseType.IsAbstract)
-                        return currentType.BaseType.Name;
-                    currentType = currentType.BaseType;
-                }
-
-                return currentType.Name;
-            }
-        }
+        public string Name => GetType().Name;
         public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name)?.Sprite;
 
         [SerializeField] InteractionState _curState;

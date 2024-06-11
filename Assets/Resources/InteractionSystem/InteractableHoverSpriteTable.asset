@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: InteractableHoverSpriteTable
   m_EditorClassIdentifier: 
   Icons:
-  - Name: ClosableBase
-    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - Name: InspectableBase
-    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - Name: ItemPickupBase
-    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - Name: OpenableBase
-    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - Name: TogglableBase
-    Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: BasicInstantSwitch
+    Sprite: {fileID: 142313342, guid: 282f0f6e4dcd10f41b2c029c5e8fc394, type: 3}
+  - Name: BiWayDoor
+    Sprite: {fileID: 1900987333, guid: 282f0f6e4dcd10f41b2c029c5e8fc394, type: 3}
+  - Name: ClosableDoor
+    Sprite: {fileID: -1880277809, guid: 282f0f6e4dcd10f41b2c029c5e8fc394, type: 3}
+  - Name: OpenableDoor
+    Sprite: {fileID: 1910921923, guid: 282f0f6e4dcd10f41b2c029c5e8fc394, type: 3}
+  - Name: TestInspectable
+    Sprite: {fileID: 1433913677, guid: 282f0f6e4dcd10f41b2c029c5e8fc394, type: 3}
+  - Name: TestItemPickup
+    Sprite: {fileID: -37344225, guid: 282f0f6e4dcd10f41b2c029c5e8fc394, type: 3}

@@ -3,6 +3,8 @@ using Studio23.SS2.InteractionSystem.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
@@ -67,11 +69,12 @@ namespace Studio23.SS2.InteractionSystem.Editor
             }
 
             // Button to automatically find and add interactable classes.
-            if (GUILayout.Button("Auto Find Interactables"))
+            if (GUILayout.Button("Auto Find New Interactables"))
             {
-                var interactables = FindInteractableFirstChildrenNames();
+                var interactables = FindInteractables();
                 foreach (var interactable in interactables)
                 {
+                    if(spriteTable.Icons.FirstOrDefault(r=>r.Name==interactable)!=null)continue;
                     var newIcon = new HoverSpriteData { Name = interactable };
                     spriteTable.Icons.Add(newIcon);
                 }
@@ -115,20 +118,28 @@ namespace Studio23.SS2.InteractionSystem.Editor
 
 
 
-        private IEnumerable<string> FindInteractableFirstChildrenNames()
+        public IEnumerable<string> FindInteractables()
         {
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
             var interactables = new List<string>();
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies()) 
+
+            foreach (var assembly in assemblies)
             {
-                foreach (var type in assembly.GetTypes()) 
+                Type[] types;
+                try
                 {
-                    if (type.IsClass  && type.BaseType  == typeof(InteractableBase)) 
-                    {
-                        
-                        interactables.Add(type.Name);
-                    }
+                    types = assembly.GetTypes();
                 }
+                catch (ReflectionTypeLoadException ex)
+                {
+                    types = ex.Types.Where(t => t != null).ToArray();
+                }
+
+                interactables.AddRange(
+                    types.Where(type => !type.IsAbstract && type.IsClass && typeof(InteractableBase).IsAssignableFrom(type))
+                        .Select(type => type.Name));
             }
+
             return interactables;
         }
 
