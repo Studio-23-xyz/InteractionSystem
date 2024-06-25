@@ -12,8 +12,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
 
         public override bool CanBeInterrupted => _canBeInterrupted;
         public override string PickUpName => _pickUpName;
-        [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+
 
         protected override void Initialize()
         {
@@ -46,6 +45,11 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             AddPickupToInventory();
             
             await UniTask.Yield();  
+        }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

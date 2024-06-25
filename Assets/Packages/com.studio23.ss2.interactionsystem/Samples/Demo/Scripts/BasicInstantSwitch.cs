@@ -11,11 +11,16 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         [SerializeField] private GameObject _matSwapTarget;
         private Renderer _renderer;
         [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+      
         protected override void Initialize()
         {
             _renderer = _matSwapTarget.GetComponent<Renderer>();
             base.Initialize();
+        }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            throw new System.NotImplementedException();
         }
 
         protected override async UniTask DoActivateInteraction(CancellationToken cancellationToken)

@@ -10,7 +10,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
     {
         Collider _collider;
         [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
+
         protected override void Awake()
         {
             base.Awake();
@@ -50,6 +50,11 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         public override string GetPromptSuffix()
         {
             return _objectName;
+        }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

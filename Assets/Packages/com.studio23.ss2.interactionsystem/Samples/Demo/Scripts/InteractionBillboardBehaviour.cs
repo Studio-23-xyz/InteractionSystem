@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using Studio23.SS2.InteractionSystem.Abstract;
 using UnityEngine;
@@ -8,7 +7,7 @@ namespace Studio23.SS2.InteractionSystem.UI
     public class InteractionBillboardBehaviour : InteractionMarkerBase
     {
         [SerializeField] private SpriteRenderer _spriteRenderer;
-        
+
         [SerializeField]
         private float maxHeight = 0.3f;
 
@@ -19,9 +18,9 @@ namespace Studio23.SS2.InteractionSystem.UI
 
         public void StartAnimating()
         {
-            Vector3 initialPosition = transform.position;
-            var targetPosition = initialPosition + Vector3.up * maxHeight;
-            transform.DOMove(targetPosition, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+            var initialLocalPosition = transform.localPosition;
+            var targetLocalPosition = initialLocalPosition + Vector3.up * maxHeight;
+            transform.DOLocalMove(targetLocalPosition, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         }
 
         private void OnEnable()
@@ -33,11 +32,11 @@ namespace Studio23.SS2.InteractionSystem.UI
         {
             transform.DOKill();
         }
-        
+
         public override void Show(InteractableBase Interactable)
         {
             gameObject.SetActive(true);
-            _spriteRenderer.sprite = Interactable.MarkerIcon;
+            _spriteRenderer.sprite = Interactable.HoverIcon;
         }
 
         public override void Hide()

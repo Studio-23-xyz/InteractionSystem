@@ -1,16 +1,23 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using Bdeshi.Helpers.Input;
-using Studio23.SS2.InteractionSystem.Core;
 using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using Studio23.SS2.InteractionSystem.Core;
 
 namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class InteractableBase:MonoBehaviour
     {
+        //#TODO #Optimize this is bad
+        //This breaks icons if we rename files
+        //this should be redone
+        public string Name => GetType().Name;
+        public Sprite HoverIcon => InteractionManager.Instance.InteractableIconTable.GetHoverSpriteData(Name)?.Sprite;
+
         [SerializeField] InteractionState _curState;
         [SerializeField] private InteractionConditionResult _lastEvaluationResult = InteractionConditionResult.Show;
         [SerializeField] protected InteractableHoverBehaviorBase _hoverBehavior;
@@ -76,7 +83,10 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// <param name="token"></param>
         /// <returns></returns>
         public abstract UniTask DoNormalInteraction(CancellationToken token);
-        public abstract Sprite MarkerIcon { get; }
+        public abstract UniTask DoDisabledInteraction(CancellationToken token);
+        
+     
+
         public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
         public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
 
@@ -158,5 +168,12 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             _hoverBehavior?.HandleHoverEnded();
             Initialize();
         }
+
+        public virtual void PushAndStartInteraction() => InteractionManager.Instance.StartNewInteraction(this).Forget();
+        public virtual void QueueInteraction() {
+            InteractionManager.Instance.QueueInteraction(this);
+        }
+        
+        public virtual void RunIndependentInteraction() => InteractionManager.Instance.RunIndependentInteraction(this);
     }
 }

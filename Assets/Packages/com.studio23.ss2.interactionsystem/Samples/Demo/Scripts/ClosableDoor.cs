@@ -13,8 +13,6 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         [SerializeField] float _disabledDoorPunchAmount = .0315f;
         private Vector3 _closedEulerAngles;
         private Vector3 _opendedEulerAngles;
-        [SerializeField] private Sprite _markerIcon;
-        public override Sprite MarkerIcon => _markerIcon;
         protected  void Awake()
         {
             _closedEulerAngles = transform.rotation.eulerAngles;
@@ -48,6 +46,11 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
         public override string GetPromptSuffix()
         {
             return _objectName;
+        }
+
+        public override UniTask DoDisabledInteraction(CancellationToken token)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

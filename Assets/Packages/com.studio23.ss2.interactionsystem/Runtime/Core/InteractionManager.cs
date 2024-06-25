@@ -23,6 +23,9 @@ namespace Studio23.SS2.InteractionSystem.Core
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
+        
+
+        public InteractableHoverSpriteTable InteractableIconTable;
         /// <summary>
         /// Fired when we start the first interaction on the stack
         /// Not fired when subinteractions are started 
@@ -96,9 +99,11 @@ namespace Studio23.SS2.InteractionSystem.Core
                     {
                         _interactionStack.RemoveAt(_interactionStack.Count - 1);
                     }
-                    Logger.Log( InteractionLogCategory.InteractionPop,
+                    Logger.Log( InteractionLogCategory.InteractionComplete,
                         $"interaction Stack complete {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
-                    _currentInteractable.CompleteInteraction();
+                    var completedInteractable = _currentInteractable;
+                    _currentInteractable = null;
+                    completedInteractable.CompleteInteraction();
                 }
  
             }
@@ -109,6 +114,8 @@ namespace Studio23.SS2.InteractionSystem.Core
         void AddInteraction(InteractableBase newInteractableBase)
         {
             _interactionStack.Add(newInteractableBase);
+            Logger.Log( InteractionLogCategory.InteractionQueue,
+                $"interaction Stack add {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
         }
 
         public async UniTask StartNewInteraction(InteractableBase newInteractableBase)
@@ -132,9 +139,45 @@ namespace Studio23.SS2.InteractionSystem.Core
                 await DoInteraction();
             }
         }
+    
+        
+        /// <summary>
+        /// push on interaction stack but  keep current interaction running
+        /// passed interaction will be started when the current one is done
+        /// If you want to start an interaction in the OnComplete of another, this is what you use
+        /// </summary>
+        /// <param name="interactableBase"></param>
+        public void QueueInteraction(InteractableBase interactableBase)
+        {
+            if (_currentInteractable == null && _interactionStack.Count <= 0)
+            {
+                StartNewInteraction(interactableBase).Forget();
+            }
+            else
+            {
+                AddInteraction(interactableBase);
+            }
+        }
+        
+        /// <summary>
+        /// Run interaction without pushing onto stack
+        /// Note: this doesn't call onInteractionChainStarted or ended
+        /// </summary>
+        /// <param name="interactableBase"></param>
+        public void RunIndependentInteraction(InteractableBase interactableBase)
+        {
+            Logger.Log(InteractionLogCategory.InteractionStart, $"independent interaction: {interactableBase}", interactableBase);
+            interactableBase.InitializeInteraction();
+            interactableBase.DoNormalInteraction(default);
+            interactableBase.CompleteInteraction();
+            Logger.Log(InteractionLogCategory.InteractionEnd,
+                $"{interactableBase} interaction task end", interactableBase);
+        }
+
         
         protected override void Initialize()
         {
+            InteractableIconTable= Resources.Load<InteractableHoverSpriteTable>("InteractionSystem/InteractableHoverSpriteTable");
             RefreshCancellationToken();
         }
 
@@ -158,6 +201,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _inputPromptsController.SetInteractables(interactables);
         }
+        
 
         private void OnDestroy()
         {
@@ -176,10 +220,11 @@ namespace Studio23.SS2.InteractionSystem.Core
         InteractionPause = 1 << 1,
         InteractionResume = 1 << 2,
         InteractionPop = 1 << 3,
-        InteractionChain = 1 << 4,
+        InteractionComplete = 1 << 4,
         InteractionStart = 1 << 5,
         InteractionEnd = 1 << 6,
         InteractionCancelled = 1 << 7,
         DoInteraction = 1 << 8,
+        InteractionQueue = 1 << 9,
     }
 }
