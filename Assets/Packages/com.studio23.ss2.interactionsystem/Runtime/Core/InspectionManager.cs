@@ -185,6 +185,8 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         public void HandleInteractionInitialize(InspectableBase inspectable)
         {
+            FindMainCamera();
+
             _inspectionBackgroundCanvas.worldCamera = _mainCamera;
             _inspectionBackgroundCanvas.gameObject.SetActive(true);
             //urp camera stacking
