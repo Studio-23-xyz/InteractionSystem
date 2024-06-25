@@ -53,11 +53,6 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             
         }
 
-        public override UniTask DoDisabledInteraction(CancellationToken token)
-        {
-            throw new System.NotImplementedException();
-        }
-
         protected override async UniTask DoActivateInteraction(CancellationToken token)
         {
             //basic door opening

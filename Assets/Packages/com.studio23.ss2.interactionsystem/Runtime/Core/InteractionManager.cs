@@ -23,7 +23,6 @@ namespace Studio23.SS2.InteractionSystem.Core
         private InputPromptsControllerBase _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
-        
 
         public InteractableHoverSpriteTable InteractableIconTable;
         /// <summary>
@@ -71,7 +70,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 }
 
                 bool isCancelled = await _currentInteractable
-                    .DoNormalInteraction(_subInteractionCancellationTokens.Token)
+                    .DoInteraction(_subInteractionCancellationTokens.Token)
                     .SuppressCancellationThrow();
                 
                 Logger.Log(InteractionLogCategory.InteractionEnd,
@@ -168,7 +167,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             Logger.Log(InteractionLogCategory.InteractionStart, $"independent interaction: {interactableBase}", interactableBase);
             interactableBase.InitializeInteraction();
-            interactableBase.DoNormalInteraction(default);
+            interactableBase.DoInteraction(default);
             interactableBase.CompleteInteraction();
             Logger.Log(InteractionLogCategory.InteractionEnd,
                 $"{interactableBase} interaction task end", interactableBase);

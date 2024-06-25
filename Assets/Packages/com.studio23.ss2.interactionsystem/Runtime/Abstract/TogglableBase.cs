@@ -59,7 +59,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             }
         }
         
-        public override async UniTask DoNormalInteraction(CancellationToken token)
+        public override async UniTask DoInteraction(CancellationToken token)
         {
             await Toggle(token);
         }

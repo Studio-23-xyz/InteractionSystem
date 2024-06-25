@@ -52,7 +52,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             OnClosed.Invoke();
         }
 
-        public override async UniTask DoNormalInteraction(CancellationToken token)
+        public override async UniTask DoInteraction(CancellationToken token)
         {
             if (_isOpen)
             {

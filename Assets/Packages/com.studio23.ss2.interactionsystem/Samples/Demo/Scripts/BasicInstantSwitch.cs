@@ -18,11 +18,6 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             base.Initialize();
         }
 
-        public override UniTask DoDisabledInteraction(CancellationToken token)
-        {
-            throw new System.NotImplementedException();
-        }
-
         protected override async UniTask DoActivateInteraction(CancellationToken cancellationToken)
         {
             await base.DoActivateInteraction(cancellationToken);

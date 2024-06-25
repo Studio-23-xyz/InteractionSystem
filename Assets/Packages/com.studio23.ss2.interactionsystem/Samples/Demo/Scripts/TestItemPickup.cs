@@ -40,16 +40,12 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             TestInventory.Instance.AddItem(this.PickUpName);
         }
 
-        public override async UniTask DoNormalInteraction(CancellationToken token)
+        public override async UniTask DoInteraction(CancellationToken token)
         {
             AddPickupToInventory();
             
             await UniTask.Yield();  
         }
 
-        public override UniTask DoDisabledInteraction(CancellationToken token)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

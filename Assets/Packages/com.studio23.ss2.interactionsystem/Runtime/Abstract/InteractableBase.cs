@@ -82,10 +82,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>
-        public abstract UniTask DoNormalInteraction(CancellationToken token);
-        public abstract UniTask DoDisabledInteraction(CancellationToken token);
-        
-     
+        public abstract UniTask DoInteraction(CancellationToken token);
 
         public void HandleHoveredStart() => _hoverBehavior?.HandleHoverStarted();
         public void HandleHoveredEnd() => _hoverBehavior?.HandleHoverEnded();
