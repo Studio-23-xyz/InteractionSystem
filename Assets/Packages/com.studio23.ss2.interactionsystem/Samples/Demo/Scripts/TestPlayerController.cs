@@ -1,3 +1,4 @@
+using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Core;
 using Studio23.SS2.InteractionSystem.Samples.Demo1;
 using UnityEngine;
@@ -10,13 +11,13 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1.Scripts
         private TestCharacterController _controller;
         [SerializeField] private bool _isPaused = false;
 
-        private void HandleInteractionStart()
+        private void HandleInteractionStart(InteractableBase interactableBase)
         {
             _isPaused = true;
             _controller.Toggle(false);
         }
 
-        private void HandleInteractionEnded()
+        private void HandleInteractionEnded(InteractableBase interactableBase)
         {
             _isPaused = false;
             _controller.Toggle(true);

@@ -29,16 +29,16 @@ namespace Studio23.SS2.InteractionSystem.Core
         /// Fired when we start the first interaction on the stack
         /// Not fired when subinteractions are started 
         /// </summary>
-        public event Action OnInteractionChainStarted;
+        public event Action<InteractableBase> OnInteractionChainStarted;
         /// <summary>
         /// Fired when we complete all the interactions on the stack
         /// Or when we cancel the interaction confirmation without anything in the stack
         /// Not fired when subinteractions are completed
         /// </summary>
-        public event Action OnInteractionChainEnded;
+        public event Action<InteractableBase> OnInteractionChainEnded;
 
-        public event Action OnInteractionStarted;
-        public event Action OnInteractionEnded;
+        public event Action<InteractableBase> OnInteractionStarted;
+        public event Action<InteractableBase> OnInteractionEnded;
         
         public bool IsRunningInteraction => CurrentInteractable != null;
   
@@ -47,7 +47,12 @@ namespace Studio23.SS2.InteractionSystem.Core
         
         public async UniTask DoInteraction()
         {
-            OnInteractionChainStarted?.Invoke();
+            if (_interactionStack.Count <=0)
+            {
+                return;
+            }
+            var firstInteractableInChain = _interactionStack[^1];
+            OnInteractionChainStarted?.Invoke(firstInteractableInChain);
             
             while (_interactionStack.Count > 0)
             {
@@ -107,7 +112,7 @@ namespace Studio23.SS2.InteractionSystem.Core
  
             }
             _currentInteractable = null;
-            OnInteractionChainEnded?.Invoke();
+            OnInteractionChainEnded?.Invoke(firstInteractableInChain);
         }
 
         void AddInteraction(InteractableBase newInteractableBase)
