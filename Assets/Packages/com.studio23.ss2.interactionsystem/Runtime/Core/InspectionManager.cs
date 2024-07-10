@@ -190,9 +190,8 @@ namespace Studio23.SS2.InteractionSystem.Core
             _inspectionBackgroundCanvas.worldCamera = _mainCamera;
             _inspectionBackgroundCanvas.gameObject.SetActive(true);
             //urp camera stacking
-            var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
-            cameraData.cameraStack.Add(_inspectionCamera);
-            
+            ActivateInspectionCamStacking();
+
             _subInteractionFinder.SetCam(_inspectionCamera);
 
             _wantsToCancel = false;
@@ -203,6 +202,11 @@ namespace Studio23.SS2.InteractionSystem.Core
             MoveInspectableForInspection(inspectable);
         }
 
+        public void ActivateInspectionCamStacking()
+        {
+            var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
+            cameraData.cameraStack.Add(_inspectionCamera);
+        }
 
 
         private void FindMainCamera()
@@ -227,6 +231,11 @@ namespace Studio23.SS2.InteractionSystem.Core
             UnMoveInspectableForInspection(inspectable);
             
             _inspectionBackgroundCanvas.gameObject.SetActive(false);
+            DeactivateInspectionCamStacking();
+        }
+
+        public void DeactivateInspectionCamStacking()
+        {
             //urp camera stacking undo
             var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
             cameraData.cameraStack.Remove(_inspectionCamera);

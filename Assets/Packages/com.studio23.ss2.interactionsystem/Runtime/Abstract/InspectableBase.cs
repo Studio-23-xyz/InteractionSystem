@@ -77,5 +77,17 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         {
             await InspectionManager.Instance.ShowInspectable(this, token);
         }
+
+        public void ToggleCamStacking(bool shouldCamStackingBeActive)
+        {
+            if (shouldCamStackingBeActive)
+            {
+                InspectionManager.Instance.ActivateInspectionCamStacking();
+            }
+            else
+            {
+                InspectionManager.Instance.DeactivateInspectionCamStacking();
+            }
+        }
     }
 }
