@@ -26,6 +26,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         private bool _wantsToCancel = false;
         private bool _isInspecting = false;
         [Header("Examination Controls")]
+        [SerializeField] InspectableBase _curInspectable;
         [SerializeField] private float _examinationSensitivity = 69;
         [SerializeField] private float _moveSpeed = 2;
         [SerializeField] private float _zoomSpeed = 8/120f;
@@ -38,7 +39,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         public UnityEvent OnInspectionStarted;
         public UnityEvent OnInspectionEnded;
-        
+
         protected override void Initialize()
         {
             _subInteractionFinder = GetComponentInChildren<PlayerInteractionFinder>();
@@ -58,7 +59,8 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             if (_isInspecting && _examinationObject != null)
             {
-                _examinationObject.localPosition = Vector3.zero;
+                _examinationObject.localPosition = _curInspectable.InspectionPosOffset;
+                _examinationObject.localRotation = _curInspectable.InspectionRotOffset;
             }
         }
 
@@ -197,7 +199,8 @@ namespace Studio23.SS2.InteractionSystem.Core
             _wantsToCancel = false;
             _isDragging = false;
             _isInspecting = true;
-            
+
+            _curInspectable = inspectable;
             _examinationObject = inspectable.GetInspectionTarget();
             MoveInspectableForInspection(inspectable);
         }
@@ -232,6 +235,8 @@ namespace Studio23.SS2.InteractionSystem.Core
             
             _inspectionBackgroundCanvas.gameObject.SetActive(false);
             DeactivateInspectionCamStacking();
+
+            _curInspectable = null;
         }
 
         public void DeactivateInspectionCamStacking()
