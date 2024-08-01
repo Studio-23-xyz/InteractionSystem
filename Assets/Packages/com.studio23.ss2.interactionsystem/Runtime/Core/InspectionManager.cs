@@ -272,7 +272,6 @@ namespace Studio23.SS2.InteractionSystem.Core
 
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.up, rotationAmountX);
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.right, rotationAmountY);
-                spawnedExaminationObject.localPosition = Vector3.zero;
             }
         }
 
