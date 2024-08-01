@@ -60,7 +60,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             if (_isInspecting && _examinationObject != null)
             {
                 _examinationObject.localPosition = _curInspectable.InspectionPosOffset;
-                _examinationObject.localRotation = _curInspectable.InspectionRotOffset;
+                _examinationObject.localRotation = Quaternion.Euler(_curInspectable.InspectionRotOffset);
             }
         }
 
@@ -272,7 +272,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.up, rotationAmountX);
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.right, rotationAmountY);
-                // spawnedExaminationObject.localPosition = Vector3.zero;
+                spawnedExaminationObject.localPosition = Vector3.zero;
             }
         }
 
