@@ -9,7 +9,7 @@ namespace Studio23.SS2.InteractionSystem.Core
     /// <summary>
     /// Looks for Interactables on scene based on camera position and orientation
     /// </summary>
-    public class PlayerInteractionFinder: MonoBehaviour
+    public class PlayerInteractionFinder: InteractionFinderBase
     {
         public Vector3 InteractionFindDirection => _cam.transform.forward;
         public Vector3 InteractionRayOrigin => _cam.transform.position;
@@ -34,7 +34,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         /// Optimize if needed
         /// </summary>
         /// <returns> a list of interactables </returns>
-        public List<InteractableBase> FindInteractables()
+        public override List<InteractableBase> FindInteractables()
         {
             var mask = _interactionLayerMask | _obstacleLayerMask;
             List<InteractableBase> results = new List<InteractableBase>();

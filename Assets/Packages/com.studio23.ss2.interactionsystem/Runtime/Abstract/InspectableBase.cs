@@ -77,6 +77,12 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         {
             await InspectionManager.Instance.ShowInspectable(this, token);
         }
+        
+        public virtual void HandleRotation(bool isRotationActive)
+        {
+            
+        }
+        
 
         public void ToggleCamStacking(bool shouldCamStackingBeActive)
         {

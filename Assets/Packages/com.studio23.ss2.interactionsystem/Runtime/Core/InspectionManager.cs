@@ -15,7 +15,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         public Transform InspectionObjectParent;
 
-        [SerializeField] private PlayerInteractionFinder _subInteractionFinder;
+        [SerializeField] private InteractionFinderBase _subInteractionFinder;
         
         private Transform _examinationObject;
         private Transform _ogParent;
@@ -42,7 +42,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         protected override void Initialize()
         {
-            _subInteractionFinder = GetComponentInChildren<PlayerInteractionFinder>();
+            
         }
 
         private void Start()
@@ -54,7 +54,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             InteractionManager.Instance.InputHandler.InteractCancelButton.AddPerformedCallback(gameObject, HandleInspectionCancelled);
             InteractionManager.Instance.InputHandler.InspectResetButton.AddPerformedCallback(gameObject, HandleInspectResetPerformed);
         }
-
+        
         public void HandleInspectResetPerformed()
         {
             if (_isInspecting && _examinationObject != null)
@@ -194,8 +194,6 @@ namespace Studio23.SS2.InteractionSystem.Core
             //urp camera stacking
             ActivateInspectionCamStacking();
 
-            _subInteractionFinder.SetCam(_inspectionCamera);
-
             _wantsToCancel = false;
             _isDragging = false;
             _isInspecting = true;
@@ -273,6 +271,8 @@ namespace Studio23.SS2.InteractionSystem.Core
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.up, rotationAmountX);
                 spawnedExaminationObject.RotateAround(spawnedExaminationObject.position, _inspectionCamera.transform.right, rotationAmountY);
             }
+
+            _curInspectable.HandleRotation(_isDragging);
         }
 
         public async UniTask ShowInspectable(InspectableBase inspectable, CancellationToken token)
