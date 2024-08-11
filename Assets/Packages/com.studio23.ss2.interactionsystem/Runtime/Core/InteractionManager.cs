@@ -15,6 +15,7 @@ namespace Studio23.SS2.InteractionSystem.Core
     {
         [SerializeField] 
         private List<InteractableBase> _interactionStack;
+        public List<InteractableBase> InteractionStack => _interactionStack;
         [SerializeField] 
         private InteractableBase _currentInteractable;
         [SerializeField] private InteractionInputHandlerBase _inputHandler;

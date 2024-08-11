@@ -10,6 +10,7 @@ namespace Studio23.SS2.InteractionSystem.Data
     {
         public event Action<InputPromptsModel> OnPromptsChanged;
         private Dictionary<InputButtonSlot, InteractableBase> _registeredInteractables = new Dictionary<InputButtonSlot, InteractableBase>();
+        public IEnumerable<InteractableBase> RegisteredInteractables => _registeredInteractables.Values;
         
         public bool TryGetRegisteredInteractable(InputButtonSlot button, out InteractableBase interactableBase)
         {
@@ -24,6 +25,16 @@ namespace Studio23.SS2.InteractionSystem.Data
                 _registeredInteractables[interactable.InputButton] = interactable;
             }
             OnPromptsChanged?.Invoke(this);
+        }
+
+        [ContextMenu("Print Input promtps")]
+        public void LogInputPrompts()
+        {
+            Debug.Log($"InputPrompts x {_registeredInteractables.Count}", this);
+            foreach ((var Button, var registeredInteractable) in _registeredInteractables)
+            {
+                Debug.Log($"{Button.ButtonName}: {registeredInteractable}");
+            }
         }
 
         public void ClearPrompts()
