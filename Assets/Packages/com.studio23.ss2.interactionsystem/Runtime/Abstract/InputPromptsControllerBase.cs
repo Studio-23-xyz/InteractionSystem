@@ -11,6 +11,7 @@ namespace Studio23.SS2.InteractionSystem.Abstract
     {
         public abstract InputPromptsModel Model { get; }
         public abstract InputPromptsViewBase View { get; }
+        
         public UnityEvent<InteractableBase> OnInteractableConfirmationStarted;
         public UnityEvent<InteractableBase> OnInteractableConfirmationCancelled;
         public event Action<InputPromptsControllerBase> OnActionPromptsChanged;
