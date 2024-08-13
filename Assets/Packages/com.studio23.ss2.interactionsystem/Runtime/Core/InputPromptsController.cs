@@ -11,7 +11,9 @@ namespace Studio23.SS2.InteractionSystem.Core
     public class InputPromptsController: InputPromptsControllerBase
     {
         private InputPromptsModel _model;
+        public override InputPromptsModel Model => _model;
         private InputPromptsViewBase _view;
+        public override InputPromptsViewBase View => _view;
         [SerializeField] private FiniteTimer _remainingPressTimer = new FiniteTimer(-69);
 
         private void Start()
@@ -104,6 +106,11 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             _model.SetInputPrompts(interactables);
             _view.ShowPrompts();
+        }
+
+        public override void ClearInteractables()
+        {
+            _model.ClearPrompts();
         }
     }
 }

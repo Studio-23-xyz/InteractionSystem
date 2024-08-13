@@ -13,6 +13,7 @@ namespace Studio23.SS2.InteractionSystem.Core
 {
     public class InteractionManager:MonoBehaviourSingletonPersistent<InteractionManager>
     {
+        
         [SerializeField] 
         private List<InteractableBase> _interactionStack;
         public List<InteractableBase> InteractionStack => _interactionStack;
@@ -199,14 +200,16 @@ namespace Studio23.SS2.InteractionSystem.Core
             }
             _subInteractionCancellationTokens = new CancellationTokenSource();
         }
-
     
-
         public void ShowNewInteractables(List<InteractableBase> interactables)
         {
             _inputPromptsController.SetInteractables(interactables);
         }
         
+        public void ClearShownInteractables()
+        {
+            _inputPromptsController.ClearInteractables();
+        }
 
         private void OnDestroy()
         {
