@@ -23,6 +23,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         public InteractionInputHandlerBase InputHandler => _inputHandler;
         [SerializeField] 
         private InputPromptsControllerBase _inputPromptsController;
+        public InputPromptsControllerBase InputPromptsController => _inputPromptsController;
         CancellationTokenSource _subInteractionCancellationTokens;
         [CanBeNull] public InteractableBase CurrentInteractable => _currentInteractable;
 
