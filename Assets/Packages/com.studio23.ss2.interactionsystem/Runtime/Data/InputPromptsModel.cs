@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Bdeshi.Helpers.Input;
 using Studio23.SS2.InteractionSystem.Abstract;
 using UnityEngine;
@@ -10,8 +11,9 @@ namespace Studio23.SS2.InteractionSystem.Data
     {
         public event Action<InputPromptsModel> OnPromptsChanged;
         private Dictionary<InputButtonSlot, InteractableBase> _registeredInteractables = new Dictionary<InputButtonSlot, InteractableBase>();
-        public IEnumerable<InteractableBase> RegisteredInteractables => _registeredInteractables.Values;
-        
+        public IEnumerable<KeyValuePair<InputButtonSlot, InteractableBase>> RegisteredInteractables => _registeredInteractables;
+        public InteractableBase FirstHoveringInteractable { get; private set; }
+
         public bool TryGetRegisteredInteractable(InputButtonSlot button, out InteractableBase interactableBase)
         {
             return _registeredInteractables.TryGetValue(button, out interactableBase);
@@ -19,6 +21,7 @@ namespace Studio23.SS2.InteractionSystem.Data
 
         public void SetInputPrompts(List<InteractableBase> prompts)
         {
+            FirstHoveringInteractable = prompts.FirstOrDefault();
             _registeredInteractables.Clear();
             foreach (var interactable in prompts)
             {
@@ -39,6 +42,7 @@ namespace Studio23.SS2.InteractionSystem.Data
 
         public void ClearPrompts()
         {
+            FirstHoveringInteractable = null;
             _registeredInteractables.Clear();
             OnPromptsChanged?.Invoke(this);
         }
