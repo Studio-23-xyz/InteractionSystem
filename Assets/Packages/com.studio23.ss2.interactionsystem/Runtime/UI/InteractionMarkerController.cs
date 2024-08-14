@@ -18,6 +18,8 @@ namespace Studio23.SS2.InteractionSystem.UI
             if (_markerBehavior == null)
             {
                 _markerBehavior = GetComponentInChildren<InteractionMarkerBase>();
+                if(_markerBehavior == null)
+                    Debug.LogError($"Marker hover not found in {gameObject.name}", gameObject);
             }
         }
 
