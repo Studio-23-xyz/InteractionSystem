@@ -21,8 +21,9 @@
         "com.cysharp.unitask": "2.4.1",
         "com.textus-games.serialized-reference-ui": "1.0.0",
         "com.unity.inputsystem": "1.7.0",
-        "com.unity.textmeshpro": "3.0.6"
-   },
+        "com.unity.textmeshpro": "3.0.6",
+        "com.unity.localization": "1.5.2"
+    },
    "keywords": [
       "Interaction",
       "Interaction System",

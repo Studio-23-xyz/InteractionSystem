@@ -7,6 +7,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using Studio23.SS2.InteractionSystem.Core;
+using UnityEngine.Localization;
 
 namespace Studio23.SS2.InteractionSystem.Abstract
 {
@@ -72,6 +73,18 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// </summary>
         /// <returns></returns>
         public abstract string GetPromptSuffix();
+        
+        /// <summary>
+        /// Interaction prompt prefix(ex: "Inspect")
+        /// </summary>
+        /// <returns></returns>
+        public abstract LocalizedString GetLocalizedPromptPrefix();
+        /// <summary>
+        /// Interaction prompt suffix that appears after the prompt
+        /// </summary>
+        /// <returns></returns>
+        public abstract  LocalizedString GetLocalizedPromptSuffix();
+        
         /// <summary>
         /// Prevents another subinteraction from starting when this is running
         /// </summary>
