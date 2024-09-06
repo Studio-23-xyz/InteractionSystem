@@ -1,4 +1,6 @@
 # Changelog
+## [v1.5.23]
++ Interaction Queue and Non-interrupting push added properly
 
 ## [v1.5.7]
 + Hover Icon is now for all classes that inherit interaction base and not Abstract for better control.

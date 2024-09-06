@@ -118,9 +118,16 @@ namespace Studio23.SS2.InteractionSystem.Core
             OnInteractionChainEnded?.Invoke(firstInteractableInChain);
         }
 
-        void AddInteraction(InteractableBase newInteractableBase)
+        void PushInteractionToStack(InteractableBase newInteractableBase)
         {
             _interactionStack.Add(newInteractableBase);
+            Logger.Log( InteractionLogCategory.InteractionQueue,
+                $"interaction Stack PUSH {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
+        }
+        
+        void QueueInteractionToStack(InteractableBase newInteractableBase)
+        {
+            _interactionStack.Insert(0,newInteractableBase);
             Logger.Log( InteractionLogCategory.InteractionQueue,
                 $"interaction Stack add {_currentInteractable} interactionStack.Count {_interactionStack.Count}");
         }
@@ -135,7 +142,7 @@ namespace Studio23.SS2.InteractionSystem.Core
                 return;
             }
             Logger.Log(InteractionLogCategory.InteractionPush,$" Push new interaction {newInteractableBase}");
-            AddInteraction(newInteractableBase);
+            PushInteractionToStack(newInteractableBase);
 
             if (_interactionStack.Count > 1)
             {
@@ -149,9 +156,27 @@ namespace Studio23.SS2.InteractionSystem.Core
     
         
         /// <summary>
-        /// push on interaction stack but  keep current interaction running
+        /// push on interaction stack but keep current interaction running
         /// passed interaction will be started when the current one is done
         /// If you want to start an interaction in the OnComplete of another, this is what you use
+        /// </summary>
+        /// <param name="interactableBase"></param>
+        public void PushInteractionWithoutInterruption(InteractableBase interactableBase)
+        {
+            if (_currentInteractable == null && _interactionStack.Count <= 0)
+            {
+                StartNewInteraction(interactableBase).Forget();
+            }
+            else
+            {
+                PushInteractionToStack(interactableBase);
+            }
+        }
+        
+        /// <summary>
+        /// push on interaction at bottom of stack
+        /// passed interaction will be started when the current chain ends
+        /// If you want to start an interaction after the entire current interaction ends, this is what you use
         /// </summary>
         /// <param name="interactableBase"></param>
         public void QueueInteraction(InteractableBase interactableBase)
@@ -162,9 +187,10 @@ namespace Studio23.SS2.InteractionSystem.Core
             }
             else
             {
-                AddInteraction(interactableBase);
+                QueueInteractionToStack(interactableBase);
             }
         }
+
         
         /// <summary>
         /// Run interaction without pushing onto stack
