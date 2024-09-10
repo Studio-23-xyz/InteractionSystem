@@ -5,19 +5,23 @@ using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class OpenableBase: InteractableBase
     {
         [SerializeField] bool _isOpen = false;
-        [SerializeField] protected string _objectName ="DarkSoulsDoor";
+        [SerializeField] protected string oldobjectName ="DarkSoulsDoor";
         public override InputButtonSlot InputButton => InteractionManager.Instance.InputHandler.ToggleButton;
         protected abstract UniTask DoOpenInteraction(CancellationToken token);
 
         public UnityEvent OnOpened;
         private bool _canBeInterrupted = false;
         public override bool CanBeInterrupted => _canBeInterrupted;
+
+        public LocalizedString ObjectName;
+        public LocalizedString PromptPrefix;
 
         protected override void HandleInteractionStarted()
         {
@@ -69,7 +73,17 @@ namespace Studio23.SS2.InteractionSystem.Abstract
 
         public override string GetPromptPrefix() => "Open";
 
-        public override string GetPromptSuffix() => _objectName;
+        public override string GetPromptSuffix() => oldobjectName;
+        
+        public override LocalizedString GetLocalizedPromptPrefix()
+        {
+            return PromptPrefix;
+        }
+
+        public override LocalizedString GetLocalizedPromptSuffix()
+        {
+            return ObjectName;
+        }
 
         protected override void Initialize()
         {

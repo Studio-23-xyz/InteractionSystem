@@ -5,13 +5,16 @@ using Studio23.SS2.InteractionSystem.Data;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class ClosableBase: InteractableBase
     {
         [SerializeField] private bool _isOpen = true;
-        [SerializeField] protected string _objectName ="Only Closable";
+        [SerializeField] protected string _oldObjectName ="Only Closable";
+        public LocalizedString _objectName;
+        public LocalizedString PromptPrefix;
 
         protected abstract UniTask DoCloseInteraction(CancellationToken token);
         public UnityEvent OnClosed;
@@ -68,6 +71,21 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         }
 
         public override string GetPromptPrefix() => "Close";
+        public override string GetPromptSuffix()
+        {
+            return _oldObjectName;
+        }
+        
+        public override LocalizedString GetLocalizedPromptPrefix()
+        {
+            return PromptPrefix;
+        }
+
+        public override LocalizedString GetLocalizedPromptSuffix()
+        {
+            return _objectName;
+        }
+        
         protected override void Initialize()
         {
             if (_isOpen)

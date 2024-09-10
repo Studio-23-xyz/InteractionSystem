@@ -4,12 +4,18 @@ using Studio23.SS2.InteractionSystem.Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 namespace Studio23.SS2.InteractionSystem.Abstract
 {
     public abstract class TogglableBase : InteractableBase
     {
-        [SerializeField] string _objectName ="Switch";
+        [SerializeField] private LocalizedString promptSuffix;
+        
+        [SerializeField] string oldobjectName ="Switch";
+        [SerializeField] LocalizedString _objectName;
+        public LocalizedString ActivatePrompt;
+        public LocalizedString DeactivatePrompt;
         [SerializeField]
         protected UnityEvent _onDeactivated;
         [SerializeField] 
@@ -69,9 +75,18 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             return _isActive ? "Deactivate" : "Activate";
         }
         
-        public override string GetPromptSuffix()
+        public override LocalizedString GetLocalizedPromptPrefix()
+        {
+            return _isActive ? DeactivatePrompt : ActivatePrompt;
+        }
+
+        public override LocalizedString GetLocalizedPromptSuffix()
         {
             return _objectName;
+        }
+        public override string GetPromptSuffix()
+        {
+            return oldobjectName;
         }
     }
 }
