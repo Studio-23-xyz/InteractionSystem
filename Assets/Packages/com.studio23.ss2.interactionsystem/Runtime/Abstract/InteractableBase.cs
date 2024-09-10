@@ -180,6 +180,9 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         }
 
         public virtual void PushAndStartInteraction() => InteractionManager.Instance.StartNewInteraction(this).Forget();
+        public virtual void PushInteractionWithoutInterrupting() {
+            InteractionManager.Instance.PushInteractionWithoutInterruption(this);
+        }
         public virtual void QueueInteraction() {
             InteractionManager.Instance.QueueInteraction(this);
         }
