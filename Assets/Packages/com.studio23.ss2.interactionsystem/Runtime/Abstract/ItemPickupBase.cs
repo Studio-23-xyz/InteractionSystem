@@ -14,9 +14,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
               Destroy(gameObject);
         }
 
-        public override string GetPromptPrefix() => "Pickup";
-
-        public override string GetPromptSuffix() => PickUpName;
         
         public virtual void AddPickupToInventory()
         {

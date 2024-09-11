@@ -63,16 +63,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         /// Called when an interaction is completed
         /// </summary>
         protected abstract void HandleInteractionCompleted();
-        /// <summary>
-        /// Interaction prompt prefix(ex: "Inspect")
-        /// </summary>
-        /// <returns></returns>
-        public abstract string GetPromptPrefix();
-        /// <summary>
-        /// Interaction prompt suffix that appears after the prompt
-        /// </summary>
-        /// <returns></returns>
-        public abstract string GetPromptSuffix();
         
         /// <summary>
         /// Interaction prompt prefix(ex: "Inspect")

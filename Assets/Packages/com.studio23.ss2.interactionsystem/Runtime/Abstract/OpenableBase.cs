@@ -12,7 +12,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
     public abstract class OpenableBase: InteractableBase
     {
         [SerializeField] bool _isOpen = false;
-        [SerializeField] protected string oldobjectName ="DarkSoulsDoor";
         public override InputButtonSlot InputButton => InteractionManager.Instance.InputHandler.ToggleButton;
         protected abstract UniTask DoOpenInteraction(CancellationToken token);
 
@@ -71,10 +70,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             return base.EvaluateInteractionConditionsInternal();
         }
 
-        public override string GetPromptPrefix() => "Open";
-
-        public override string GetPromptSuffix() => oldobjectName;
-        
         public override LocalizedString GetLocalizedPromptPrefix()
         {
             return PromptPrefix;

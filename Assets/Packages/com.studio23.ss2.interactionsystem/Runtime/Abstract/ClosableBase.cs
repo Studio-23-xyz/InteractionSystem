@@ -12,7 +12,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
     public abstract class ClosableBase: InteractableBase
     {
         [SerializeField] private bool _isOpen = true;
-        [SerializeField] protected string _oldObjectName ="Only Closable";
         public LocalizedString _objectName;
         public LocalizedString PromptPrefix;
 
@@ -70,12 +69,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
             return base.EvaluateInteractionConditionsInternal();
         }
 
-        public override string GetPromptPrefix() => "Close";
-        public override string GetPromptSuffix()
-        {
-            return _oldObjectName;
-        }
-        
         public override LocalizedString GetLocalizedPromptPrefix()
         {
             return PromptPrefix;

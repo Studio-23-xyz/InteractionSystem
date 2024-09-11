@@ -3,6 +3,7 @@ using Studio23.SS2.InteractionSystem.Abstract;
 using Studio23.SS2.InteractionSystem.Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Studio23.SS2.InteractionSystem.Samples.Demo1
 {
@@ -10,6 +11,8 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
     {
         Collider _collider;
         [SerializeField] private Sprite _markerIcon;
+        [SerializeField] private LocalizedString PromptPrefix;
+        [SerializeField] private LocalizedString PromptSuffix;
 
         protected override void Awake()
         {
@@ -47,10 +50,14 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             InspectionManager.Instance.HandleInspectableCompleted(this);
         }
 
-        public override string GetPromptSuffix()
+        public override LocalizedString GetLocalizedPromptPrefix()
         {
-            return _objectName;
+            return PromptPrefix;
         }
 
+        public override LocalizedString GetLocalizedPromptSuffix()
+        {
+            return PromptSuffix;
+        }
     }
 }

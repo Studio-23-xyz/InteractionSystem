@@ -43,9 +43,5 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             _doorObject.transform.rotation = Quaternion.Euler(_closedEulerAngles);
         }
 
-        public override string GetPromptSuffix()
-        {
-            return _objectName;
-        }
     }
 }

@@ -36,7 +36,6 @@ namespace Studio23.SS2.InteractionSystem.Abstract
         public override bool CanBeInterrupted => _canBeInterrupted;
         public virtual bool CanExitInspection => true;
         public virtual bool ForceExitInspection => false;
-        public override string GetPromptPrefix() => "Inspect";
 
         protected virtual void Awake()
         {

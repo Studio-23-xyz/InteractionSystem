@@ -47,9 +47,5 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
             base.Initialize();
         }
 
-        public override string GetPromptSuffix()
-        {
-            return _objectName;
-        }
     }
 }
