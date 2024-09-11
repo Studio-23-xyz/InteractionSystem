@@ -16,8 +16,12 @@ namespace Studio23.SS2.InteractionSystem.UI
         {
             CurInteractable = interactableBase;
             if (interactableBase != null)
-            {            
-                _promptTMP.text = interactableBase.GetPromptPrefix() + ":"+ interactableBase.GetPromptSuffix();
+            {
+                var localizedPromptPrefix = interactableBase.GetLocalizedPromptPrefix();
+                var localizedPromptSuffix = interactableBase.GetLocalizedPromptSuffix();
+                _promptTMP.text =   (localizedPromptPrefix.IsEmpty?"": localizedPromptPrefix.GetLocalizedString()) +
+                                    ":"+ 
+                                    (localizedPromptSuffix.IsEmpty?"": localizedPromptSuffix.GetLocalizedString());
                 _disabledIndicator.gameObject.SetActive(interactableBase.LastEvaluationResult != InteractionConditionResult.Show);
             }
         }
