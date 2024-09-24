@@ -53,7 +53,11 @@ namespace Studio23.SS2.InteractionSystem.Core
             InteractionManager.Instance.InputHandler.InspectionDragButton.AddCancelledCallback(gameObject, HandleInspectDragCancelled);
             InteractionManager.Instance.InputHandler.InteractCancelButton.AddPerformedCallback(gameObject, HandleInspectionCancelled);
             InteractionManager.Instance.InputHandler.InspectResetButton.AddPerformedCallback(gameObject, HandleInspectResetPerformed);
+
+            
         }
+
+
         
         public void HandleInspectResetPerformed()
         {
@@ -172,8 +176,8 @@ namespace Studio23.SS2.InteractionSystem.Core
             _ogOrientation = _examinationObject.localRotation;
 
             _examinationObject.gameObject.SetActive(true);
-            _examinationObject.parent = InspectionObjectParent;
-            _examinationObject.localPosition = inspectable.InspectionPosOffset;
+            //_examinationObject.parent = InspectionObjectParent;
+            _examinationObject.localPosition = Vector3.zero;
             _examinationObject.localRotation = Quaternion.Euler(inspectable.InspectionRotOffset);
             _examinationObject.localScale = inspectable.InspectionScale;
 
@@ -192,7 +196,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             _inspectionBackgroundCanvas.worldCamera = _mainCamera;
             _inspectionBackgroundCanvas.gameObject.SetActive(true);
             //urp camera stacking
-            ActivateInspectionCamStacking();
+            //ActivateInspectionCamStacking();
 
             _wantsToCancel = false;
             _isDragging = false;
@@ -232,7 +236,7 @@ namespace Studio23.SS2.InteractionSystem.Core
             UnMoveInspectableForInspection(inspectable);
             
             _inspectionBackgroundCanvas.gameObject.SetActive(false);
-            DeactivateInspectionCamStacking();
+            //DeactivateInspectionCamStacking();
 
             _curInspectable = null;
         }

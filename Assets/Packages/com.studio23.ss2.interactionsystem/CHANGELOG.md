@@ -1,4 +1,8 @@
 # Changelog
+
+## [v1.5.25]
++ Inspection manager camera stacking logic changed
+
 ## [v1.5.23]
 + Interaction Queue and Non-interrupting push added properly
 
