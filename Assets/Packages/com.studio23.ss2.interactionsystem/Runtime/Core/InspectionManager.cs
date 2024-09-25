@@ -34,6 +34,7 @@ namespace Studio23.SS2.InteractionSystem.Core
         public bool ExaminationYAxisInverted = false;
 
         [SerializeField] Camera _mainCamera;
+        [SerializeField] private bool _setMainCameraAsInspectCamera;
         [SerializeField] Camera  _inspectionCamera;
         [SerializeField] private Canvas _inspectionBackgroundCanvas;
 
@@ -220,6 +221,14 @@ namespace Studio23.SS2.InteractionSystem.Core
             {
                 _mainCamera = Camera.main;    
             }
+
+            if(_setMainCameraAsInspectCamera)
+                _inspectionCamera = _mainCamera;
+        }
+
+        public void SetInspectionCamera(Camera inspectionCamera)
+        {
+            _inspectionCamera = inspectionCamera;
         }
 
         public void HandleInspectablePaused(InspectableBase inspectable)

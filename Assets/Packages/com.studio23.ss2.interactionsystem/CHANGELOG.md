@@ -1,5 +1,8 @@
 # Changelog
 
+## [v1.5.26]
++ Added function to change inspection camera
+
 ## [v1.5.25]
 + Inspection manager camera stacking logic changed
 
