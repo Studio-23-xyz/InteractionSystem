@@ -1,7 +1,13 @@
 # Changelog
 
-## [v1.5.25]
+## [v1.5.27]
 + Inspection Reset Method added
+
+## [v1.5.26]
++ Added function to change inspection camera
+
+## [v1.5.25]
++ Inspection manager camera stacking logic changed
 
 ## [v1.5.24]
 + Localization Support added
