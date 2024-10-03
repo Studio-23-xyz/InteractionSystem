@@ -25,8 +25,7 @@ namespace Studio23.SS2.InteractionSystem.Samples.Demo1
 
         public override bool CanBeInterrupted => _canBeInterrupted;
         public override string PickUpName => _pickUpName;
-
-
+        
         protected override void Initialize()
         {
             

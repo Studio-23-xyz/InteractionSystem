@@ -59,6 +59,14 @@ namespace Studio23.SS2.InteractionSystem.Core
         {
             if (_isInspecting && _examinationObject != null)
             {
+                ForceResetInspectablePosition();
+            }
+        }
+
+        public void ForceResetInspectablePosition()
+        {
+            if (_examinationObject != null)
+            {
                 _examinationObject.localPosition = _curInspectable.InspectionPosOffset;
                 _examinationObject.localRotation = Quaternion.Euler(_curInspectable.InspectionRotOffset);
             }

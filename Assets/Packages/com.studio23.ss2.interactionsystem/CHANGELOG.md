@@ -1,4 +1,11 @@
 # Changelog
+
+## [v1.5.25]
++ Inspection Reset Method added
+
+## [v1.5.24]
++ Localization Support added
+
 ## [v1.5.23]
 + Interaction Queue and Non-interrupting push added properly
 
@@ -10,10 +17,11 @@
 + Added New Editor Tool to manage HoverIcons
 
 ## [v1.5.3]
-Interaction Shader Update. Now blended hide with range
++ Interaction Shader Update. Now blended hide with range
 
 ## [v1.3.8]
-OnInterctionChain started/ended event fixed
++ OnInterctionChain started/ended event fixed
+
 ## [v1.3.0]
 - Convert to URP
 - Use cam stacking 
