@@ -1,6 +1,6 @@
 {
   "name": "com.studio23.ss2.interactionsystem",
-    "version": "1.5.27",
+    "version": "1.5.28",
     "displayName": "Interaction System",
     "description": "An interaction system that supports: Toggleable, Pickups, Inspectable etc. types of interactions",
     "unity": "2022.3",
@@ -17,7 +17,8 @@
         ]
       }], 
     "dependencies": {
-        "com.bdeshi.helpers": "1.0.0",
+        "com.bdeshi.helpers": "2.0.7",
+		"com.bdeshi.categorylogger": "1.0.9",
         "com.cysharp.unitask": "2.4.1",
         "com.textus-games.serialized-reference-ui": "1.0.0",
         "com.unity.inputsystem": "1.7.0",
