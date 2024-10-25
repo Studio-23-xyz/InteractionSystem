@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7324983095167233199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5541998413395638529}
+  - component: {fileID: 7047449829121949829}
+  m_Layer: 14
+  m_Name: Inputmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5541998413395638529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324983095167233199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.55, y: 4.1, z: 2.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7047449829121949829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324983095167233199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d484eb9ffbf3c5640ab623c5844dfb27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputActionMap: {fileID: -944628639613478452, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _inspectDragDelta: {x: 0, y: 0}
+  _inspectionMoveInput: {x: 0, y: 0}
+  _inspectionZoomInput: 0
+  _inspectDragDeltaAction: {fileID: 2488449323615594244, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _inspectAction: {fileID: -2262873650457788455, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _inspectDragAction: {fileID: -4914992029526176230, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _interactCancelAction: {fileID: 3902100441362345109, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _toggleAction: {fileID: -786835380681755421, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _pickupAction: {fileID: -2366129405690060041, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _inspectMoveAction: {fileID: -7541509494385503876, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _inspectZoomAction: {fileID: 7734478303762384152, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _inspectResetAction: {fileID: 4364384690213093646, guid: 89683606aef49764b95756fefb79a569, type: 3}
+  _debug1Action: {fileID: 3001311777263575499, guid: 89683606aef49764b95756fefb79a569, type: 3}
