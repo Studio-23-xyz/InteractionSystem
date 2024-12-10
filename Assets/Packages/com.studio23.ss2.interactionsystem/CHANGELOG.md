@@ -1,5 +1,8 @@
 # Changelog
 
+## [v1.5.29]
++ Removed URP dependency
+
 ## [v1.5.27]
 + Inspection Reset Method added
 

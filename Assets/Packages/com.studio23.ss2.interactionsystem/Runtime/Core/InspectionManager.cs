@@ -5,7 +5,6 @@ using Studio23.SS2.InteractionSystem.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering.Universal;
 
 namespace Studio23.SS2.InteractionSystem.Core
 {
@@ -218,8 +217,8 @@ namespace Studio23.SS2.InteractionSystem.Core
 
         public void ActivateInspectionCamStacking()
         {
-            var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
-            cameraData.cameraStack.Add(_inspectionCamera);
+            //var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
+            //cameraData.cameraStack.Add(_inspectionCamera);
         }
 
 
@@ -261,8 +260,8 @@ namespace Studio23.SS2.InteractionSystem.Core
         public void DeactivateInspectionCamStacking()
         {
             //urp camera stacking undo
-            var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
-            cameraData.cameraStack.Remove(_inspectionCamera);
+            //var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
+            //cameraData.cameraStack.Remove(_inspectionCamera);
         }
 
         public void HandleInspectableResumed(InspectableBase inspectable)
