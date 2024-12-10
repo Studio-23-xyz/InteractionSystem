@@ -199,3 +199,5 @@ InteractionManager fires the following events to tell you that
         public bool IsRunningInteraction{get;}
 ```
 `InteractionManager.IsRunningInteraction` can also be used to synchronously check if an interaction is running
+
+Camera Stacking is removed
